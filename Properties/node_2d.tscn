@@ -5,3 +5,4 @@
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Zaki" type="Sprite2D" parent="."]
+[node name="Alex" type="Node" parent="."]
