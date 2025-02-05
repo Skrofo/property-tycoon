@@ -4,4 +4,8 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
+<<<<<<< Updated upstream
 [node name="Lucas" type="Node" parent="."]
+=======
+[node name="Alex" type="Node" parent="."]
+>>>>>>> Stashed changes
