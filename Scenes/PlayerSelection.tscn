@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c86moiv2bb8nc"]
+
+[node name="PlayerSelection" type="Node2D"]
