@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=2 format=3 uid="uid://crlrehjcgp2oh"]
+
+[ext_resource type="Texture2D" uid="uid://5j5tvlfju5oh" path="res://Assets/MonopolyTemplate.jpg" id="1_s0gxy"]
 
 [node name="Game" type="Node2D"]
+
+[node name="MonopolyTemplate" type="Sprite2D" parent="."]
+position = Vector2(323, 176)
+scale = Vector2(0.384787, 0.384787)
+texture = ExtResource("1_s0gxy")
