@@ -1,11 +1,27 @@
 [gd_scene load_steps=3 format=3 uid="uid://c86moiv2bb8nc"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerSelectionScreen.cs" id="1_7nsun"]
+[sub_resource type="CSharpScript" id="CSharpScript_2fdnd"]
+script/source = "using Godot;
+using System;
+
+public partial class PlayerSelectionScreen : Control
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_84ioh"]
 
 [node name="PlayerSelectionScreen" type="Node2D"]
-script = ExtResource("1_7nsun")
+script = SubResource("CSharpScript_2fdnd")
 
 [node name="PlayerSlot1" type="Control" parent="."]
 layout_mode = 3

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\david\\OneDrive - University of Sussex\\Documents\\Uni work\\year 2\\Software Eng\\property-tycoon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\david\\OneDrive - University of Sussex\\Documents\\Uni work\\year 2\\Software Eng\\property-tycoon\\Scripts\\PlayerSelectionScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Scripts\\PlayerSelectionScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\onedrive - university of sussex\\documents\\uni work\\year 2\\software eng\\property-tycoon\\scripts\\playerselectionscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\playerselectionscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\onedrive - university of sussex\\documents\\uni work\\year 2\\software eng\\property-tycoon\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Scripts\\PlayerSelectionScreen.cs",
               "ToolTip": "C:\\Users\\david\\OneDrive - University of Sussex\\Documents\\Uni work\\year 2\\Software Eng\\property-tycoon\\Scripts\\PlayerSelectionScreen.cs",
               "RelativeToolTip": "Scripts\\PlayerSelectionScreen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T17:47:31.456Z",
               "EditorCaption": ""
@@ -43,8 +43,7 @@
               "RelativeToolTip": "Scripts\\MainMenu.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T11:31:10.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T11:31:10.271Z"
             }
           ]
         }
