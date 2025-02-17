@@ -28,8 +28,8 @@ public partial class GameLoop : Node
     public Dictionary<Player, Vector2> movingPlayers;//Players currently being moved and to where
 
     private int currentPlayer; //Num of the player who's turn it is currently
-	private bool diceRolled;
-	private int[] diceResult;
+	private bool diceRolled; //Whether the diehave been rolled since the last frame
+	private int[] diceResult; //The result of both die
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -40,7 +40,7 @@ public partial class GameLoop : Node
 		diceResult = new int[2];
         movingPlayers = new Dictionary<Player, Vector2>();
 
-        TestGame(1, 0);
+        TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,30 +59,53 @@ public partial class GameLoop : Node
         //Waiting for player to roll dice
         if (diceRolled)
         {
+            //Moving the player
 			diceRolled = false;
 			int total = diceResult[0] + diceResult[1];
             Marker currentLocation = players[currentPlayer].location;
             players[currentPlayer].MoveForward(total);
+
+            //Chaning who's turn it is
+            if (currentPlayer == players.Length - 1)
+            {
+                currentPlayer = 0;
+            }
+            else
+            {
+                currentPlayer++;
+            }
         }
     }
 
-	//TODO:Make the actual dice roll. This is temperory
-	public  void RollDice()
+    //Runs when the roll die button is pressed
+    public void RollDiceButtonPressed()
+    {
+        if (players[currentPlayer].cpu == false) //Roll die button only works if current player is human
+        {
+            RollDie();
+        }
+    }
+
+    //TODO:Make the actual dice roll. This is temperory
+    public  void RollDie()
 	{
-		//Generatin random numbers
-		Random rnd = new Random();
-		int result1 = rnd.Next(1,7);
-		int result2 = rnd.Next(1, 7);
+        if (movingPlayers.Count == 0)//Making sure all player pieces are done moving before queing up more
+        {
+            //Generatin random numbers
+            Random rnd = new Random();
+            int result1 = rnd.Next(1, 7);
+            int result2 = rnd.Next(1, 7);
 
-		//Printing results  to UI
-		GD.Print("Dice Result: " + result1 + ", " + result2);
-		GetNode<Label>("UI/TMPDiceResult1").Text = ""+result1;
-        GetNode<Label>("UI/TMPDiceResult2").Text = "" + result2;
+            //Printing results  to UI
+            GD.Print("Dice Result: " + result1 + ", " + result2);
+            GetNode<Label>("UI/TMPDiceResult1").Text = "" + result1;
+            GetNode<Label>("UI/TMPDiceResult2").Text = "" + result2;
 
-		//Saving result
-		diceResult[0] = result1;
-		diceResult[1] = result2;
-        diceRolled = true;
+            //Saving result
+            diceResult[0] = result1;
+            diceResult[1] = result2;
+            diceRolled = true;
+        }
 		
 	}
 
@@ -126,6 +149,7 @@ public partial class GameLoop : Node
         StartGame(strtPlayers);
     }
 
+    //Moves the given player towards the given location. Need to be called every frame
     private void Move(double delta, Player player, Vector2 pos)
     {
         player.node.GlobalPosition = player.node.GlobalPosition.MoveToward(pos, (float)(delta * playerMoveSpeed));
