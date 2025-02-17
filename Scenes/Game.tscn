@@ -54,11 +54,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place1"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place1"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place1"]
 position = Vector2(23.3896, -20.7908)
@@ -80,11 +78,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place2"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place2"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place2"]
 position = Vector2(23.3896, -20.7908)
@@ -106,11 +102,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place3"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place3"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place3"]
 position = Vector2(23.3896, -20.7908)
@@ -132,11 +126,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place4"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place4"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place4"]
 position = Vector2(23.3896, -20.7908)
@@ -158,11 +150,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place5"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place5"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place5"]
 position = Vector2(23.3896, -20.7908)
@@ -184,11 +174,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place6"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place6"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place6"]
 position = Vector2(23.3896, -20.7908)
@@ -210,11 +198,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place7"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place7"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place7"]
 position = Vector2(23.3896, -20.7908)
@@ -236,11 +222,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place8"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place8"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place8"]
 position = Vector2(23.3896, -20.7908)
@@ -262,11 +246,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place9"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place9"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place9"]
 position = Vector2(23.3896, -20.7908)
@@ -288,11 +270,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Jail"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Jail"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Jail"]
 position = Vector2(23.3896, -20.7908)
@@ -315,11 +295,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place10"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place10"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place10"]
 position = Vector2(23.3896, -20.7908)
@@ -342,11 +320,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place11"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place11"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place11"]
 position = Vector2(23.3896, -20.7908)
@@ -369,11 +345,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place12"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place12"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place12"]
 position = Vector2(23.3896, -20.7908)
@@ -396,11 +370,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place13"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place13"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place13"]
 position = Vector2(23.3896, -20.7908)
@@ -423,11 +395,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place14"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place14"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place14"]
 position = Vector2(23.3896, -20.7908)
@@ -450,11 +420,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place15"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place15"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place15"]
 position = Vector2(23.3896, -20.7908)
@@ -477,11 +445,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place16"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place16"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place16"]
 position = Vector2(23.3896, -20.7908)
@@ -504,11 +470,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place17"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place17"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place17"]
 position = Vector2(23.3896, -20.7908)
@@ -531,11 +495,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place18"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place18"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place18"]
 position = Vector2(23.3896, -20.7908)
@@ -558,11 +520,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Parking"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Parking"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Parking"]
 position = Vector2(23.3896, -20.7908)
@@ -585,11 +545,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place19"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place19"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place19"]
 position = Vector2(23.3896, -20.7908)
@@ -612,11 +570,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place20"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place20"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place20"]
 position = Vector2(23.3896, -20.7908)
@@ -639,11 +595,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place21"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place21"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place21"]
 position = Vector2(23.3896, -20.7908)
@@ -666,11 +620,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place22"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place22"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place22"]
 position = Vector2(23.3896, -20.7908)
@@ -693,11 +645,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place23"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place23"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place23"]
 position = Vector2(23.3896, -20.7908)
@@ -720,11 +670,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place24"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place24"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place24"]
 position = Vector2(23.3896, -20.7908)
@@ -747,11 +695,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place25"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place25"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place25"]
 position = Vector2(23.3896, -20.7908)
@@ -774,11 +720,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place26"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place26"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place26"]
 position = Vector2(23.3896, -20.7908)
@@ -801,11 +745,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place27"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place27"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place27"]
 position = Vector2(23.3896, -20.7908)
@@ -828,11 +770,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/GoToJail"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/GoToJail"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/GoToJail"]
 position = Vector2(23.3896, -20.7908)
@@ -855,11 +795,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place28"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place28"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place28"]
 position = Vector2(23.3896, -20.7908)
@@ -882,11 +820,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place29"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place29"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place29"]
 position = Vector2(23.3896, -20.7908)
@@ -909,11 +845,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place30"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place30"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place30"]
 position = Vector2(23.3896, -20.7908)
@@ -936,11 +870,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place31"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place31"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place31"]
 position = Vector2(23.3896, -20.7908)
@@ -963,11 +895,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place32"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place32"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place32"]
 position = Vector2(23.3896, -20.7908)
@@ -990,11 +920,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place33"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place33"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place33"]
 position = Vector2(23.3896, -20.7908)
@@ -1017,11 +945,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place34"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place34"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place34"]
 position = Vector2(23.3896, -20.7908)
@@ -1044,11 +970,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place35"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place35"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place35"]
 position = Vector2(23.3896, -20.7908)
@@ -1071,11 +995,9 @@ position = Vector2(-20.7907, -20.7908)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/Place36"]
 position = Vector2(-20.7908, 5.19763)
-scale = Vector2(1, 1)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/Place36"]
 position = Vector2(-20.7908, 31.186)
-scale = Vector2(1, 1)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/Place36"]
 position = Vector2(23.3896, -20.7908)
@@ -1094,6 +1016,7 @@ offset_bottom = 359.0
 
 [node name="RollButton" type="Button" parent="UI"]
 custom_minimum_size = Vector2(120, 32)
+layout_mode = 0
 offset_left = 502.0
 offset_top = 306.0
 offset_right = 622.0
@@ -1119,4 +1042,4 @@ offset_right = 617.0
 offset_bottom = 292.0
 horizontal_alignment = 1
 
-[connection signal="pressed" from="UI/RollButton" to="." method="RollDice"]
+[connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
