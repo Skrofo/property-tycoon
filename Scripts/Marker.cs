@@ -5,8 +5,21 @@ using System.Collections.Generic;
 
 public partial class Marker : Node2D
 {
+    public enum SpaceType// The different types of spaces
+    {
+        Go,
+        Property,
+        PotLuck,
+        OpportunityKnocks,
+        FreeParking,
+        VisitingJail,
+        Jail,
+        GoToJail
+    }
 
     [Export] public Marker nextMarker;//The place on the board after this one
+
+    [Export] public SpaceType type = SpaceType.Property;
 
     private List<Player> players;//The players that are currently on this place
     private Vector2I[] markerPos;
