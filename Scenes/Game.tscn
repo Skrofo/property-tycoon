@@ -24,7 +24,6 @@ position = Vector2(472, 324)
 scale = Vector2(0.544792, 0.544792)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place1")
-type = 0
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Go"]
 position = Vector2(-20.7907, -20.7908)
@@ -265,7 +264,6 @@ position = Vector2(167, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place10")
-type = 5
 
 [node name="Marker1" type="Node2D" parent="Board/Places/VisitingJail"]
 position = Vector2(-20.7907, -20.7908)
@@ -516,7 +514,6 @@ rotation = 1.5708
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place19")
-type = 4
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Parking"]
 position = Vector2(-20.7907, -20.7908)
@@ -767,7 +764,6 @@ rotation = -3.14159
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place28")
-type = 7
 
 [node name="Marker1" type="Node2D" parent="Board/Places/GoToJail"]
 position = Vector2(-20.7907, -20.7908)
