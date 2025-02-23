@@ -37,6 +37,13 @@
               "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\MainMenu.cs",
               "RelativeToolTip": "Scripts\\MainMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeToolTip": "Scripts\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T14:01:34.879Z",
               "EditorCaption": ""
@@ -64,6 +71,16 @@
               "ViewState": "AgIAAFEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T14:01:33.805Z"
+              "DocumentIndex": 1,
+              "Title": "Marker.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeToolTip": "Scripts\\Marker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T19:17:58.927Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -74,6 +91,7 @@
               "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeToolTip": "Scripts\\GameLoop.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAYwGIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T14:01:33.809Z",
               "EditorCaption": ""

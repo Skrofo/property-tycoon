@@ -239,7 +239,7 @@ position = Vector2(23.3896, 33.7848)
 position = Vector2(209, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
-nextMarker = NodePath("../Jail")
+nextMarker = NodePath("../VisitingJail")
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Place9"]
 position = Vector2(-20.7907, -20.7908)
@@ -259,28 +259,28 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place9"]
 position = Vector2(23.3896, 33.7848)
 
-[node name="Jail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+[node name="VisitingJail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
 position = Vector2(167, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place10")
 
-[node name="Marker1" type="Node2D" parent="Board/Places/Jail"]
+[node name="Marker1" type="Node2D" parent="Board/Places/VisitingJail"]
 position = Vector2(-20.7907, -20.7908)
 
-[node name="Marker2" type="Node2D" parent="Board/Places/Jail"]
+[node name="Marker2" type="Node2D" parent="Board/Places/VisitingJail"]
 position = Vector2(-20.7908, 5.19763)
 
-[node name="Marker3" type="Node2D" parent="Board/Places/Jail"]
+[node name="Marker3" type="Node2D" parent="Board/Places/VisitingJail"]
 position = Vector2(-20.7908, 31.186)
 
-[node name="Marker4" type="Node2D" parent="Board/Places/Jail"]
+[node name="Marker4" type="Node2D" parent="Board/Places/VisitingJail"]
 position = Vector2(23.3896, -20.7908)
 
-[node name="Marker5" type="Node2D" parent="Board/Places/Jail"]
+[node name="Marker5" type="Node2D" parent="Board/Places/VisitingJail"]
 position = Vector2(23.3896, 5.1976)
 
-[node name="Marker6" type="Node2D" parent="Board/Places/Jail"]
+[node name="Marker6" type="Node2D" parent="Board/Places/VisitingJail"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place10" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]

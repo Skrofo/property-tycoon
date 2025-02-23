@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
               "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Player.cs",
               "RelativeToolTip": "Scripts\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T14:01:33.742Z"
             },
@@ -68,12 +68,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Marker.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeToolTip": "Scripts\\Marker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T19:17:58.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "GameLoop.cs",
               "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
               "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeToolTip": "Scripts\\GameLoop.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwCoAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T14:01:33.809Z"
             }
