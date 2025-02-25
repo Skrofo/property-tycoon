@@ -1,17 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\",
+  "WorkspaceRootPath": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -60,6 +66,17 @@
             },
             {
               "$type": "Document",
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "DocumentIndex": 2,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Player.cs",
@@ -69,10 +86,32 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T18:45:14.251Z",
+              "WhenOpened": "2025-02-19T14:01:34.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeToolTip": "Scripts\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:01:33.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Marker.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeToolTip": "Scripts\\Marker.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:01:33.805Z"
               "DocumentIndex": 1,
               "Title": "Marker.cs",
               "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
@@ -88,13 +127,15 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "GameLoop.cs",
-              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\GameLoop.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
-              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\GameLoop.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeToolTip": "Scripts\\GameLoop.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T16:43:34.47Z",
+              "WhenOpened": "2025-02-19T14:01:33.809Z",
               "EditorCaption": ""
             }
           ]
