@@ -75,7 +75,6 @@ offset_left = 128.0
 offset_top = 272.0
 offset_right = 512.0
 offset_bottom = 319.0
-disabled = true
 text = "Start"
 
 [node name="ErrorLabel" type="Label" parent="."]
