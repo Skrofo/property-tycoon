@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmgj24oe1n4xl"]
+
+[ext_resource type="Script" path="res://Scripts/AudioSettings.cs" id="1_k0y0p"]
+[ext_resource type="Script" path="res://Scripts/BackButton.cs" id="2_88twy"]
+
+[node name="Audio_Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k0y0p")
+
+[node name="header_label" type="Label" parent="."]
+offset_left = 235.0
+offset_top = 15.0
+offset_right = 396.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 50
+text = "AUDIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="master_hslider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 106.0
+offset_right = 313.0
+offset_bottom = 146.0
+max_value = 1.0
+
+[node name="master_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 80.0
+offset_right = 150.0
+offset_bottom = 103.0
+text = "Master Volume"
+
+[node name="music_hslider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 173.0
+offset_right = 314.0
+offset_bottom = 213.0
+max_value = 1.0
+
+[node name="music_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 147.0
+offset_right = 151.0
+offset_bottom = 170.0
+text = "Music Volume"
+
+[node name="sfx_hslider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 235.0
+offset_right = 315.0
+offset_bottom = 275.0
+max_value = 1.0
+
+[node name="sfx_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 209.0
+offset_right = 152.0
+offset_bottom = 232.0
+text = "SFX Volume"
+
+[node name="voice_hslider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 302.0
+offset_right = 319.0
+offset_bottom = 342.0
+max_value = 1.0
+
+[node name="voice_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 276.0
+offset_right = 156.0
+offset_bottom = 299.0
+text = "Voice Volume"
+
+[node name="mute_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 109.0
+offset_right = 617.0
+offset_bottom = 140.0
+text = "Mute All"
+
+[node name="back_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 176.0
+offset_right = 617.0
+offset_bottom = 207.0
+text = "Back"
+script = ExtResource("2_88twy")
+
+[node name="defaultsettings_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 308.0
+offset_right = 624.0
+offset_bottom = 339.0
+text = "Reset To Defaults"
