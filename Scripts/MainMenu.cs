@@ -14,7 +14,13 @@ public partial class MainMenu : Control
         Start_Button = GetNode<Button>("MarginContainer/HBoxContainer/VBoxContainer/Start_Button");
         Settings_Button = GetNode<Button>("MarginContainer/HBoxContainer/VBoxContainer/Settings_Button");
         Exit_Button = GetNode<Button>("MarginContainer/HBoxContainer/VBoxContainer/Exit_Button");
+<<<<<<< Updated upstream
 
+=======
+        PlayerSelect = (PackedScene)GD.Load(""); //add player select link after
+        OptionSelect = (PackedScene)GD.Load(""); //add options select link after
+        
+>>>>>>> Stashed changes
         Start_Button.Pressed += OnStartPressed;
         Settings_Button.Pressed += OnSettingsPressed;
         Exit_Button.Pressed += OnExitPressed;
