@@ -135,7 +135,7 @@ public partial class GameLoop : Node
     }
 
     //Used to test the game by generating a predefined number of human and ai players
-    private void TestGame(int humans, int bots)
+    public void TestGame(int humans, int bots)
     {
         TmpPlayer[] strtPlayers = new TmpPlayer[humans + bots];
         for (int i = 0; i < humans; i++)

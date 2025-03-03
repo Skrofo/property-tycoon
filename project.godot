@@ -33,4 +33,11 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg")
+
+[gdunit4]
+
+settings/test/test_lookup_folder="Tests"
+settings/test/test_discovery=true
+settings/test/flaky_check_enable=true
+ui/inspector/node_collapse=false
