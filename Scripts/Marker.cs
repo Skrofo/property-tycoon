@@ -59,7 +59,7 @@ public partial class Marker : Node2D
         player.node.ZIndex = players.Count + 1;
         if (players.Count<3)
         {
-            if (GetNode<Node2D>(".").Rotation == 0 || GetNode<Node2D>(".").Rotation == 180)
+            if (GetNode<Node2D>(".").Rotation == 0 || GetNode<Node2D>(".").Rotation == 270)
             {
                 destination = new Vector2I((int)GetNode<Node2D>(".").GlobalPosition.X, markerPos[players.Count].Y);
             }
