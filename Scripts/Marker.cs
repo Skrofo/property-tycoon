@@ -39,11 +39,12 @@ public partial class Marker : Node2D
     }
 
     //Gets the nth next position. E.g: The 3rd next position is the position 3  spaces  in front of this one.
-    public Marker GetNthNextPos(int pos)
+    public Marker GetNthNextPos(int pos, Player player)
     {
+        if (type == SpaceType.Go && player.jailTurns > 0) player.passedGo = true;
         if (pos > 0)
         {
-            return nextMarker.GetNthNextPos(pos-1);
+            return nextMarker.GetNthNextPos(pos-1, player);
         }
         else
         {
@@ -57,7 +58,7 @@ public partial class Marker : Node2D
         Vector2I destination;//coords the player is movin towards
 
         player.node.ZIndex = players.Count + 1;
-        if (players.Count<3)
+        if (players.Count<3 && type!= SpaceType.VisitingJail)
         {
             if (GetNode<Node2D>(".").Rotation == 0 || GetNode<Node2D>(".").Rotation == 270)
             {
@@ -68,7 +69,7 @@ public partial class Marker : Node2D
                 destination = new Vector2I(markerPos[players.Count].X, (int)GetNode<Node2D>(".").GlobalPosition.Y);
             }
         }
-        else if (players.Count>3)
+        else if (players.Count>3 || type == SpaceType.VisitingJail)
         {
             destination = markerPos[players.Count];
         }

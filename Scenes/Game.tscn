@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=7 format=3 uid="uid://crlrehjcgp2oh"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
 [ext_resource type="Script" path="res://Scripts/Marker.cs" id="2_jmhgw"]
 [ext_resource type="Texture2D" uid="uid://x5m8v5s76qiw" path="res://Assets/boardfirst.jpg" id="2_teryf"]
+[ext_resource type="Script" path="res://Scripts/CommandLine.cs" id="4_gfg0w"]
+[ext_resource type="PackedScene" uid="uid://dfi80cf2sd7mo" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
 font_names = PackedStringArray("Impact")
@@ -260,27 +262,53 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="VisitingJail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(167, 329)
+position = Vector2(163, 334)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place10")
+type = 5
 
 [node name="Marker1" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(-20.7907, -20.7908)
+position = Vector2(-15.5931, -59.7733)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(-20.7908, 5.19763)
+position = Vector2(-15.593, -31.1861)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(-20.7908, 31.186)
+position = Vector2(-15.593, -2.59884)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(23.3896, -20.7908)
+position = Vector2(-2.59884, 20.7907)
 
 [node name="Marker5" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(23.3896, 5.1976)
+position = Vector2(28.5872, 20.7907)
 
 [node name="Marker6" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(59.7733, 20.7908)
+
+[node name="Jail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(179, 318)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place10")
+type = 6
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Jail"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place10" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
@@ -757,6 +785,7 @@ rotation = -3.14159
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place28")
+type = 7
 
 [node name="Marker1" type="Node2D" parent="Board/Places/GoToJail"]
 position = Vector2(-20.7907, -20.7908)
@@ -1035,4 +1064,31 @@ offset_right = 617.0
 offset_bottom = 292.0
 horizontal_alignment = 1
 
+[node name="CommandLine" type="LineEdit" parent="UI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_gfg0w")
+
+[node name="JailBail" parent="UI" instance=ExtResource("5_0rhfv")]
+layout_mode = 1
+
+[node name="Money" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.775
+anchor_right = 1.0
+anchor_bottom = 0.131
+offset_left = -3.05176e-05
+offset_bottom = -0.0290031
+grow_horizontal = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
+[connection signal="text_submitted" from="UI/CommandLine" to="UI/CommandLine" method="CommandEntered"]

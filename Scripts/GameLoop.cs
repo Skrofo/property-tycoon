@@ -3,10 +3,12 @@ using PropertyTycoon.Scripts;
 using System;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class GameLoop : Node
 {
 	public const int MaxPlayerCount = 6;//Maximum  number  of players including bots
+    public const char moneySymbol = (char)163; //If you type the pound symbol in vs it can crash godot whenever it tries to load the file so just use this instead
 
     private const string playerPieceFileType = "svg"; //Filename extension for the filetype of the player icons without the: "."
 
@@ -26,19 +28,21 @@ public partial class GameLoop : Node
 
 	public Player[] players;
     public Dictionary<Player, Vector2> movingPlayers;//Players currently being moved and to where
-
-    private int currentPlayer; //Num of the player who's turn it is currently
-	private bool diceRolled; //Whether the diehave been rolled since the last frame
-	private int[] diceResult; //The result of both die
+    public int currentPlayer; //Num of the player who's turn it is currently
+	public bool diceRolled; //Whether the diehave been rolled since the last frame
+	public int[] diceResult; //The result of both die
+    private int parkingMoney; //How much money is on free parking
+    public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
 		//Setting startup variable values
-		currentPlayer = 0;
 		diceRolled = false;
 		diceResult = new int[2];
         movingPlayers = new Dictionary<Player, Vector2>();
+        justMoved = false;
+        parkingMoney = 0;
 
         TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
 	}
@@ -63,16 +67,41 @@ public partial class GameLoop : Node
 			diceRolled = false;
 			int total = diceResult[0] + diceResult[1];
             Marker currentLocation = players[currentPlayer].location;
+            justMoved = true;
             players[currentPlayer].MoveForward(total);
 
-            //Chaning who's turn it is
-            if (currentPlayer == players.Length - 1)
+            //Checking is player passed go
+            if (players[currentPlayer].passedGo) players[currentPlayer].AddMoney(200);
+
+            NextTurn();
+        }
+
+        //Doing whatever action is associated with the current space
+        if (justMoved && movingPlayers.Count == 0)
+        {
+            justMoved = false;
+            switch (players[currentPlayer].location.type)
             {
-                currentPlayer = 0;
-            }
-            else
-            {
-                currentPlayer++;
+                case Marker.SpaceType.Go:
+                    break;
+                case Marker.SpaceType.Property:
+                    break;
+                case Marker.SpaceType.PotLuck:
+                    break;
+                case Marker.SpaceType.OpportunityKnocks:
+                    break;
+                case Marker.SpaceType.FreeParking:
+                    break;
+                case Marker.SpaceType.VisitingJail:
+                    break;
+                case Marker.SpaceType.Jail:
+                    GetNode<Control>("UI/JailBail").Visible = true;
+                    break;
+                case Marker.SpaceType.GoToJail:
+                    players[currentPlayer].GoToJail();
+                    break;
+                default:
+                    break;
             }
         }
     }
@@ -132,6 +161,14 @@ public partial class GameLoop : Node
 			go.MoveTo(players[i], true);
             players[i].location = go;
         }
+
+        SetTurn(0);
+    }
+
+    public int GetParkingMoney() => parkingMoney;
+    public void AddParkingMoney(int amount)
+    {
+        parkingMoney += amount;
     }
 
     //Used to test the game by generating a predefined number of human and ai players
@@ -147,6 +184,28 @@ public partial class GameLoop : Node
             strtPlayers[i] = new TmpPlayer(true, "Player" + (i + 1));
         }
         StartGame(strtPlayers);
+    }
+
+    //Changes whos turn it is to the next player
+    private void NextTurn()
+    {
+        //updating current player value
+        if (currentPlayer == players.Length - 1)
+        {
+            SetTurn(0);
+        }
+        else
+        {
+            SetTurn(currentPlayer + 1);
+        }
+    }
+
+    //changes turn to specified value
+    private void SetTurn(int turn)
+    {
+        currentPlayer = turn;
+        //changing money display
+        GetNode<Label>("UI/Money").Text = moneySymbol + players[currentPlayer].GetMoney().ToString();
     }
 
     //Moves the given player towards the given location. Need to be called every frame
