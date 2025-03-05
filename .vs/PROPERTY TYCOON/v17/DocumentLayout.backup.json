@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Godot Projects\\property-tycoon\\",
+  "WorkspaceRootPath": "C:\\Software Engineering group work\\property-tycoon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\audiosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\audiosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +26,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SettingsMenu.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
-              "RelativeDocumentMoniker": "Scripts\\SettingsMenu.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs*",
-              "RelativeToolTip": "Scripts\\SettingsMenu.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwA8AAAAKAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T09:27:47.671Z",
+              "WhenOpened": "2025-02-19T14:01:34.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AudioSettings.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\AudioSettings.cs",
-              "RelativeDocumentMoniker": "Scripts\\AudioSettings.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\AudioSettings.cs",
-              "RelativeToolTip": "Scripts\\AudioSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Scripts\\Player.cs",
+              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeToolTip": "Scripts\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T10:45:24.448Z",
+              "WhenOpened": "2025-02-19T14:01:33.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Marker.cs",
+              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
+              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeToolTip": "Scripts\\Marker.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:01:33.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Marker.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeToolTip": "Scripts\\Marker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T19:17:58.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Scripts\\MainMenu.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\MainMenu.cs*",
-              "RelativeToolTip": "Scripts\\MainMenu.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAtAAAAAAAAAA==",
+              "Title": "GameLoop.cs",
+              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameLoop.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
+              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameLoop.cs",
+              "RelativeToolTip": "Scripts\\GameLoop.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCoAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T09:19:50.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T14:01:33.809Z"
             }
           ]
         }

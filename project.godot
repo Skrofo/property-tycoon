@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Property Tycoon"
-run/main_scene="res://Scenes/Main_Menu.tscn"
+run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,7 @@ SceneManager="*res://Scripts/SceneManager.cs"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -33,3 +34,7 @@ project/assembly_name="Property Tycoon"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")

@@ -1,3 +1,1045 @@
-[gd_scene format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=5 format=3 uid="uid://crlrehjcgp2oh"]
+
+[ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
+[ext_resource type="Texture2D" uid="uid://5j5tvlfju5oh" path="res://Assets/MonopolyTemplate.jpg" id="1_s0gxy"]
+[ext_resource type="Script" path="res://Scripts/Marker.cs" id="2_jmhgw"]
+
+[sub_resource type="SystemFont" id="SystemFont_4cq8a"]
+font_names = PackedStringArray("Impact")
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_3f8ab")
+playerMoveSpeed = 60
+playerRotateSpeed = 25
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(323, 176)
+scale = Vector2(0.384787, 0.384787)
+texture = ExtResource("1_s0gxy")
+
+[node name="Places" type="Node" parent="Board"]
+
+[node name="Go" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(472, 324)
+scale = Vector2(0.544792, 0.544792)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place1")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Go"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Go"]
+position = Vector2(-20.7906, 5.19757)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Go"]
+position = Vector2(-20.7906, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Go"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Go"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Go"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place1" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(436, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place2")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place1"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place1"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place1"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place1"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place1"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place1"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place2" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(408, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place3")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place2"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place2"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place2"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place2"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place2"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place2"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place3" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(380, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place4")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place3"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place3"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place3"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place3"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place3"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place3"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place4" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(352, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place5")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place4"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place4"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place4"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place4"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place4"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place4"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place5" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(323, 318)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place6")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place5"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place5"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place5"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place5"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place5"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place5"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place6" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(296, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place7")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place6"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place6"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place6"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place6"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place6"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place6"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place7" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(267, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place8")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place7"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place7"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place7"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place7"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place7"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place7"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place8" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(238, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place9")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place8"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place8"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place8"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place8"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place8"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place8"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place9" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(209, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../VisitingJail")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place9"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place9"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place9"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place9"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place9"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place9"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="VisitingJail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(167, 329)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place10")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place10" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(169, 290)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place11")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place10"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place10"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place10"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place10"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place10"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place10"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place11" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(180, 261)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place12")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place11"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place11"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place11"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place11"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place11"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place11"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place12" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(169, 233)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place13")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place12"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place12"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place12"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place12"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place12"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place12"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place13" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(169, 205)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place14")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place13"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place13"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place13"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place13"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place13"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place13"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place14" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(180, 176)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place15")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place14"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place14"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place14"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place14"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place14"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place14"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place15" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(169, 148)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place16")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place15"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place15"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place15"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place15"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place15"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place15"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place16" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(169, 120)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place17")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place16"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place16"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place16"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place16"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place16"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place16"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place17" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(169, 91)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place18")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place17"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place17"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place17"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place17"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place17"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place17"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place18" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(169, 62)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Parking")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place18"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place18"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place18"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place18"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place18"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place18"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Parking" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(173, 27)
+rotation = 1.5708
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place19")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Parking"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Parking"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Parking"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Parking"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Parking"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Parking"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place19" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(209, 23)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place20")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place19"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place19"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place19"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place19"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place19"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place19"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place20" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(239, 23)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place21")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place20"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place20"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place20"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place20"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place20"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place20"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place21" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(267, 23)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place22")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place21"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place21"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place21"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place21"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place21"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place21"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place22" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(295, 23)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place23")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place22"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place22"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place22"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place22"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place22"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place22"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place23" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(323, 23)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place24")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place23"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place23"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place23"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place23"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place23"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place23"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place24" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(352, 23)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place25")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place24"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place24"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place24"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place24"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place24"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place24"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place25" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(381, 23)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place26")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place25"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place25"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place25"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place25"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place25"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place25"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place26" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(409, 31)
+rotation = 3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place27")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place26"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place26"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place26"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place26"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place26"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place26"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place27" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(436, 23)
+rotation = -3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../GoToJail")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place27"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place27"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place27"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place27"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place27"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place27"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="GoToJail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(474, 28)
+rotation = -3.14159
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place28")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/GoToJail"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/GoToJail"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/GoToJail"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/GoToJail"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/GoToJail"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/GoToJail"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place28" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 62)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place29")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place28"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place28"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place28"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place28"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place28"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place28"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place29" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 91)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place30")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place29"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place29"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place29"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place29"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place29"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place29"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place30" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 120)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place31")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place30"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place30"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place30"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place30"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place30"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place30"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place31" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 148)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place32")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place31"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place31"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place31"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place31"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place31"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place31"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place32" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 177)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place33")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place32"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place32"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place32"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place32"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place32"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place32"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place33" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 205)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place34")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place33"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place33"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place33"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place33"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place33"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place33"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place34" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 233)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place35")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place34"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place34"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place34"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place34"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place34"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place34"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place35" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 262)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place36")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place35"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place35"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place35"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place35"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place35"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place35"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="Place36" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(479, 290)
+rotation = -4.71239
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Go")
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Place36"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Place36"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Place36"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Place36"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Place36"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Place36"]
+position = Vector2(23.3896, 33.7848)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 359.0
+
+[node name="RollButton" type="Button" parent="UI"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 0
+offset_left = 502.0
+offset_top = 306.0
+offset_right = 622.0
+offset_bottom = 345.0
+theme_override_fonts/font = SubResource("SystemFont_4cq8a")
+theme_override_font_sizes/font_size = 24
+text = "Roll
+"
+
+[node name="TMPDiceResult1" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 269.0
+offset_right = 544.0
+offset_bottom = 292.0
+horizontal_alignment = 1
+
+[node name="TMPDiceResult2" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 269.0
+offset_right = 617.0
+offset_bottom = 292.0
+horizontal_alignment = 1
+
+[connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
