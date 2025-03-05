@@ -16,6 +16,13 @@ public partial class PlayerSlot : Control
 
     public override void _Ready()
     {
+
+        SelectedAvatar = GetNode<TextureRect>("SelectedAvatar");
+        LeftArrow = GetNode<Button>("LeftArrow");
+        RightArrow = GetNode<Button>("RightArrow");
+        PlayerTypeButton = GetNode<Button>("PlayerTypeButton");
+        SelectedTypeLabel = GetNode<Label>("SelectedTypeLabel");
+
         // Load avatars into list
         avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/Boot.png"));
         avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/cat.png"));

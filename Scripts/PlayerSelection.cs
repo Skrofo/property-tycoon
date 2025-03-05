@@ -20,6 +20,7 @@ public partial class PlayerSelection : Control
     private Button _startButton;
     private Label _errorLabel;
     private List<PlayerSlot> _playerSlots = new List<PlayerSlot>();
+    private PackedScene GameScene;
 
     public override void _Ready()
     {
@@ -27,13 +28,14 @@ public partial class PlayerSelection : Control
         _errorLabel = GetNode<Label>("ErrorLabel");
 
         // Load all player slots
-        for (int i = 1; i <= 7; i++)
+        for (int i = 1; i <= 6; i++)
         {
             var slot = GetNode<PlayerSlot>($"PlayerSlot{i}");
             _playerSlots.Add(slot);
         }
 
         _startButton.Pressed += OnStartButtonPressed;
+        GameScene = (PackedScene)GD.Load("res://Scenes/Game.tscn");
     }
 
     // Once the strt button is selected checks if the players selected are valid, if they are then
@@ -58,11 +60,11 @@ public partial class PlayerSelection : Control
         PlayerData[] selectedPlayersArray = activePlayers.ToArray();
 
         // Stored data into singleton ENTER THE LINK FOR WHERE THE SINGLETON IS
-        GameData gameData = GetNode<GameData>("");
+        GameData gameData = GetNode<GameData>("res://Scripts/GameData.cs");
         gameData.SaveSelection(selectedPlayersArray);
 
         // Move to the game scene
-        GetTree().ChangeSceneToFile("res://Scenes/Game.tscn");
+        GetTree().ChangeSceneToPacked(GameScene);
     }
 
     // Checks to see if the players are Unique and that there is at least 1 AI player

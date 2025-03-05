@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c86moiv2bb8nc"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerSlots.cs" id="2_5xk8f"]
+[ext_resource type="Script" path="res://Scripts/PlayerSlot.cs" id="2_5xk8f"]
 [ext_resource type="Script" path="res://Scripts/PlayerSelection.cs" id="2_x1sw0"]
 [ext_resource type="Texture2D" uid="uid://cwu4qwo7ldf4j" path="res://Assets/Avatars/Boot.png" id="3_40wh2"]
 [ext_resource type="Texture2D" uid="uid://d3n3xrmbag2gk" path="res://Assets/Avatars/cat.png" id="3_86u67"]
@@ -63,6 +63,7 @@ offset_bottom = 100.0
 text = "Human"
 
 [node name="StartButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 272.0
 offset_right = 512.0
@@ -70,6 +71,7 @@ offset_bottom = 319.0
 text = "Start"
 
 [node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 208.0
 offset_right = 276.0
