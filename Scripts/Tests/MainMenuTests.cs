@@ -11,7 +11,7 @@ public class MainMenuTests
     public static void TestStartButton()
     {
         // Setup
-        var runner = ISceneRunner.Load("res://Scenes/MainMenu.tscn");
+        var runner = ISceneRunner.Load("res://Scenes/Main_Menu.tscn");
         var startButton = runner.FindChild("Start_Button") as Button;
         var mainMenu = runner.Scene().GetNode<MainMenu>(".");
 

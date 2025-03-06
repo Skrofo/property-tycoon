@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Scripts\\Tests\\MainMenuTests.cs",
               "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
               "RelativeToolTip": "Scripts\\Tests\\MainMenuTests.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T14:36:13.485Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Scripts\\MainMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T13:46:11.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T13:46:11.764Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Scripts\\Tests\\GameLoopTests.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T13:45:21.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T13:45:21.523Z"
             },
             {
               "$type": "Document",
