@@ -1,0 +1,318 @@
+[gd_scene load_steps=9 format=3 uid="uid://c86moiv2bb8nc"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerSlot.cs" id="2_5xk8f"]
+[ext_resource type="Script" path="res://Scripts/PlayerSelection.cs" id="2_x1sw0"]
+[ext_resource type="Texture2D" uid="uid://cwu4qwo7ldf4j" path="res://Assets/Avatars/Boot.png" id="3_40wh2"]
+[ext_resource type="Texture2D" uid="uid://d3n3xrmbag2gk" path="res://Assets/Avatars/cat.png" id="3_86u67"]
+[ext_resource type="Texture2D" uid="uid://dhsmj8k3gywyf" path="res://Assets/Avatars/hatstand.png" id="5_kd127"]
+[ext_resource type="Texture2D" uid="uid://c5nmbv1mjr2tm" path="res://Assets/Avatars/iron.png" id="6_818n1"]
+[ext_resource type="Texture2D" uid="uid://bjna117sutjpn" path="res://Assets/Avatars/ship.png" id="7_ialqw"]
+[ext_resource type="Texture2D" uid="uid://c1iotxr5l4qb7" path="res://Assets/Avatars/smartphone.png" id="8_fg84r"]
+
+[node name="PlayerSelectionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_x1sw0")
+
+[node name="PlayerSlot1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 64.0
+offset_right = 92.0
+offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
+
+[node name="LeftArrow" type="Button" parent="PlayerSlot1"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 47.0
+text = "<"
+
+[node name="RightArrow" type="Button" parent="PlayerSlot1"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 73.0
+offset_bottom = 47.0
+text = ">"
+
+[node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot1"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 56.0
+texture = ExtResource("3_40wh2")
+
+[node name="PlayerTypeButton" type="Button" parent="PlayerSlot1"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 105.0
+
+[node name="SelectedTypeLabel" type="Label" parent="PlayerSlot1"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 58.0
+offset_bottom = 100.0
+text = "Human"
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 272.0
+offset_right = 512.0
+offset_bottom = 319.0
+text = "Start"
+
+[node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 208.0
+offset_right = 276.0
+offset_bottom = 240.0
+
+[node name="PlayerSlot2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 132.0
+offset_top = 64.0
+offset_right = 196.0
+offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
+
+[node name="LeftArrow" type="Button" parent="PlayerSlot2"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 47.0
+text = "<"
+
+[node name="RightArrow" type="Button" parent="PlayerSlot2"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 73.0
+offset_bottom = 47.0
+text = ">"
+
+[node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 56.0
+texture = ExtResource("3_86u67")
+
+[node name="PlayerTypeButton" type="Button" parent="PlayerSlot2"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 105.0
+
+[node name="SelectedTypeLabel" type="Label" parent="PlayerSlot2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 58.0
+offset_bottom = 100.0
+text = "Human"
+
+[node name="PlayerSlot3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 239.0
+offset_top = 64.0
+offset_right = 303.0
+offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
+
+[node name="LeftArrow" type="Button" parent="PlayerSlot3"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 47.0
+text = "<"
+
+[node name="RightArrow" type="Button" parent="PlayerSlot3"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 73.0
+offset_bottom = 47.0
+text = ">"
+
+[node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot3"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 56.0
+texture = ExtResource("5_kd127")
+
+[node name="PlayerTypeButton" type="Button" parent="PlayerSlot3"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 105.0
+
+[node name="SelectedTypeLabel" type="Label" parent="PlayerSlot3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 58.0
+offset_bottom = 100.0
+text = "Human"
+
+[node name="PlayerSlot4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 343.0
+offset_top = 64.0
+offset_right = 407.0
+offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
+
+[node name="LeftArrow" type="Button" parent="PlayerSlot4"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 47.0
+text = "<"
+
+[node name="RightArrow" type="Button" parent="PlayerSlot4"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 73.0
+offset_bottom = 47.0
+text = ">"
+
+[node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot4"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 56.0
+texture = ExtResource("6_818n1")
+
+[node name="PlayerTypeButton" type="Button" parent="PlayerSlot4"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 105.0
+
+[node name="SelectedTypeLabel" type="Label" parent="PlayerSlot4"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 58.0
+offset_bottom = 100.0
+text = "Human"
+
+[node name="PlayerSlot5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 447.0
+offset_top = 64.0
+offset_right = 511.0
+offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
+
+[node name="LeftArrow" type="Button" parent="PlayerSlot5"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 47.0
+text = "<"
+
+[node name="RightArrow" type="Button" parent="PlayerSlot5"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 73.0
+offset_bottom = 47.0
+text = ">"
+
+[node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot5"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 56.0
+texture = ExtResource("7_ialqw")
+
+[node name="PlayerTypeButton" type="Button" parent="PlayerSlot5"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 105.0
+
+[node name="SelectedTypeLabel" type="Label" parent="PlayerSlot5"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 58.0
+offset_bottom = 100.0
+text = "Human"
+
+[node name="PlayerSlot6" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 551.0
+offset_top = 64.0
+offset_right = 615.0
+offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
+
+[node name="LeftArrow" type="Button" parent="PlayerSlot6"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 47.0
+text = "<"
+
+[node name="RightArrow" type="Button" parent="PlayerSlot6"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 73.0
+offset_bottom = 47.0
+text = ">"
+
+[node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot6"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 56.0
+texture = ExtResource("8_fg84r")
+
+[node name="PlayerTypeButton" type="Button" parent="PlayerSlot6"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 105.0
+
+[node name="SelectedTypeLabel" type="Label" parent="PlayerSlot6"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 58.0
+offset_bottom = 100.0
+text = "Human"
