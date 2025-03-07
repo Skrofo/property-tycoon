@@ -20,7 +20,7 @@ public class MainMenuTests
 
         // Assertion
         var sceneTree = runner.Scene().GetTree();
-        Assertions.AssertThat(sceneTree.CurrentScene.SceneFilePath).IsEqual("res://Scenes/PlayerSelection.tscn");
+        Assertions.AssertThat(sceneTree.CurrentScene.SceneFilePath).IsEqual("res://Scenes/Main_Menu.tscn");
 
 
     }
