@@ -1,16 +1,17 @@
 using Godot;
 using System;
-using static Godot.HttpRequest;
 
 public partial class CommandLine : LineEdit
 {
     private GameLoop gameLoop;
+    private LineEdit cmdLine;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
         GetNode<LineEdit>(".").Visible = false;
         gameLoop = FindParent("Game").GetNode<GameLoop>(".");
-	}
+        cmdLine = GetNode<LineEdit>(".");
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -18,8 +19,12 @@ public partial class CommandLine : LineEdit
         //Opens the command prompt on keypress
         if (Input.IsActionJustPressed("OpenCommandPrompt"))
         {
-            GetNode<LineEdit>(".").Visible = !GetNode<LineEdit>(".").Visible;
-            if (GetNode<LineEdit>(".").Visible) GetNode<LineEdit>(".").GrabFocus();
+            cmdLine.Visible = !cmdLine.Visible;
+            if (cmdLine.Visible)
+            {
+                cmdLine.GrabFocus();
+                cmdLine.Clear();
+            }
         }
     }
 
@@ -28,6 +33,7 @@ public partial class CommandLine : LineEdit
     {
         string[] words = command.ToLower().Split(' ');
 
+        bool correctCommand = true;
         switch (words[0])
         {
             case "roll"://Rolls specified number on die
@@ -40,8 +46,19 @@ public partial class CommandLine : LineEdit
                     Roll(words[1].ToInt());
                 }
                 break;
-            default:
+            case "money"://Adds specified number to money
+                gameLoop.currentPlayer.AddMoney(words[1].ToInt());
                 break;
+            case "parkingmoney"://Add specified number to free parking money
+                gameLoop.AddParkingMoney(words[1].ToInt());
+                break;
+            default:
+                correctCommand = false;
+                break;
+        }
+        if (correctCommand)// If a correct command is entered the command line is cleared
+        {
+            cmdLine.Clear();
         }
     }
 

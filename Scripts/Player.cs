@@ -7,15 +7,24 @@ using System.Threading.Tasks;
 
 namespace PropertyTycoon.Scripts
 {
-    public class Player(Node2D playerNode, bool isCpu)
+    public class Player
     {
-        public bool cpu { get; } = isCpu;
+        public bool cpu { get; }
         private int money = 0;
         public string[] properties = Array.Empty<string>();
-        public Node2D node { get; } = playerNode;
+        public Node2D node { get; }
         public Marker location = null; //Where the player currently is
         public bool passedGo = false;
         public int jailTurns = 0;
+
+        private GameLoop gameLoop; //The gameloop script
+
+        public Player(Node2D playerNode, bool isCpu)
+        {
+            cpu = isCpu;
+            node = playerNode;
+            gameLoop = node.FindParent("Game").GetNode<GameLoop>(".");
+        }
 
         public void MoveForward(int numberOfPlaces)
         {
@@ -28,16 +37,21 @@ namespace PropertyTycoon.Scripts
         {
             jailTurns = 2;
             MoveTo("Board/Places/Jail");
-            node.FindParent("Game").GetNode<GameLoop>(".").justMoved = true;
+            gameLoop.justMoved = true;
         }
 
-        //TODO:Finish bail method
-        public void PayBail()
+        //Runs when the player tries to pay their bail. Returns true if the bail was succesfully paid
+        public bool PayBail()
         {
-            AddMoney(-50);
-            node.FindParent("Game").GetNode<GameLoop>(".").AddParkingMoney(50);
-            jailTurns = 0;
-            MoveTo("Board/Places/VisitingJail");
+            if (GetMoney() >= 50)
+            {
+                AddMoney(-50);
+                gameLoop.AddParkingMoney(50);
+                jailTurns = 0;
+                MoveTo("Board/Places/VisitingJail");
+                return true;
+            }
+            else return false;
         }
 
         public int GetMoney() => money;
@@ -45,6 +59,7 @@ namespace PropertyTycoon.Scripts
         public void AddMoney(int amount)
         {
             money += amount;
+            //TODO: Add visual effect when changing player's money value
             node.FindParent("Game").GetNode<Label>("UI/Money").Text = GameLoop.moneySymbol + GetMoney().ToString();
         }
 
