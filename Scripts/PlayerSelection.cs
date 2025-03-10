@@ -34,8 +34,9 @@ public partial class PlayerSelection : Control
             _playerSlots.Add(slot);
         }
 
-        _startButton.Pressed += OnStartButtonPressed;
         GameScene = (PackedScene)GD.Load("res://Scenes/Game.tscn");
+        _startButton.Pressed += OnStartButtonPressed;
+        
     }
 
     // Once the strt button is selected checks if the players selected are valid, if they are then
@@ -60,8 +61,8 @@ public partial class PlayerSelection : Control
         PlayerData[] selectedPlayersArray = activePlayers.ToArray();
 
         // Stored data into singleton ENTER THE LINK FOR WHERE THE SINGLETON IS
-        GameData gameData = GetNode<GameData>("res://Scripts/GameData.cs");
-        gameData.SaveSelection(selectedPlayersArray);
+        //GameData gameData = GetNode<GameData>("res://Scripts/GameData.cs");
+      //  gameData.SaveSelection(selectedPlayersArray);
 
         // Move to the game scene
         GetTree().ChangeSceneToPacked(GameScene);
