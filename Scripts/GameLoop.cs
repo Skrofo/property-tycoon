@@ -28,11 +28,13 @@ public partial class GameLoop : Node
 
 	public Player[] players;
     public Dictionary<Player, Vector2> movingPlayers;//Players currently being moved and to where
-    public int currentPlayer; //Num of the player who's turn it is currently
+    public Player currentPlayer; //The player who's turn it is
 	public bool diceRolled; //Whether the diehave been rolled since the last frame
 	public int[] diceResult; //The result of both die
     private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
+
+    private int currentPlayerIndex; //Num of the player who's turn it is currently
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -60,27 +62,31 @@ public partial class GameLoop : Node
             }
         }
 
+        //Reducing jail time if current player is in jail
+
         //Waiting for player to roll dice
         if (diceRolled)
         {
             //Moving the player
 			diceRolled = false;
 			int total = diceResult[0] + diceResult[1];
-            Marker currentLocation = players[currentPlayer].location;
+            Marker currentLocation = currentPlayer.location;
             justMoved = true;
-            players[currentPlayer].MoveForward(total);
+            currentPlayer.MoveForward(total);
 
             //Checking is player passed go
-            if (players[currentPlayer].passedGo) players[currentPlayer].AddMoney(200);
-
-            NextTurn();
+            if (currentPlayer.passedGo)
+            {
+                currentPlayer.AddMoney(200);
+                currentPlayer.passedGo = false;
+            }
         }
 
         //Doing whatever action is associated with the current space
         if (justMoved && movingPlayers.Count == 0)
         {
             justMoved = false;
-            switch (players[currentPlayer].location.type)
+            switch (currentPlayer.location.type)
             {
                 case Marker.SpaceType.Go:
                     break;
@@ -91,6 +97,7 @@ public partial class GameLoop : Node
                 case Marker.SpaceType.OpportunityKnocks:
                     break;
                 case Marker.SpaceType.FreeParking:
+                    ClaimParkingMoney(currentPlayer);
                     break;
                 case Marker.SpaceType.VisitingJail:
                     break;
@@ -98,18 +105,19 @@ public partial class GameLoop : Node
                     GetNode<Control>("UI/JailBail").Visible = true;
                     break;
                 case Marker.SpaceType.GoToJail:
-                    players[currentPlayer].GoToJail();
+                    currentPlayer.GoToJail();
                     break;
                 default:
                     break;
             }
+            NextTurn();//Once the action for the current space has been (mostly) completed the turn is changed
         }
     }
 
     //Runs when the roll die button is pressed
     public void RollDiceButtonPressed()
     {
-        if (players[currentPlayer].cpu == false) //Roll die button only works if current player is human
+        if (currentPlayer.cpu == false && currentPlayer.jailTurns == 0) //Roll die button only works if current player is human and not in jail
         {
             RollDie();
         }
@@ -170,6 +178,12 @@ public partial class GameLoop : Node
     {
         parkingMoney += amount;
     }
+    public void ClaimParkingMoney(Player player)
+    {
+        //TODO: Add some kind of popup for claiming parking money
+        player.AddMoney(parkingMoney);
+        parkingMoney = 0;
+    }
 
     //Used to test the game by generating a predefined number of human and ai players
     public void TestGame(int humans, int bots)
@@ -190,22 +204,23 @@ public partial class GameLoop : Node
     private void NextTurn()
     {
         //updating current player value
-        if (currentPlayer == players.Length - 1)
+        if (currentPlayerIndex == players.Length - 1)
         {
             SetTurn(0);
         }
         else
         {
-            SetTurn(currentPlayer + 1);
+            SetTurn(currentPlayerIndex + 1);
         }
     }
 
     //changes turn to specified value
     private void SetTurn(int turn)
     {
-        currentPlayer = turn;
+        currentPlayerIndex = turn;
+        currentPlayer = players[currentPlayerIndex];
         //changing money display
-        GetNode<Label>("UI/Money").Text = moneySymbol + players[currentPlayer].GetMoney().ToString();
+        GetNode<Label>("UI/Money").Text = moneySymbol + currentPlayer.GetMoney().ToString();
     }
 
     //Moves the given player towards the given location. Need to be called every frame

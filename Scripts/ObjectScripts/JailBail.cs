@@ -12,10 +12,16 @@ public partial class JailBail : Panel
 
 	//runs if they press the pay button
 	public void Yes()
-	{
-		GameLoop gameLoop = FindParent("Game").GetNode<GameLoop>(".");
-		gameLoop.players[gameLoop.currentPlayer].PayBail();
-		GetNode(".").GetParent<Control>().Visible = false;
+    {
+        GameLoop gameLoop = FindParent("Game").GetNode<GameLoop>(".");
+		if (gameLoop.currentPlayer.PayBail())
+        {
+            GetNode(".").GetParent<Control>().Visible = false;
+        }
+        else
+        {
+            //TODO: Add visual effect when player tries to pay bail and can't
+        }
     }
 
 	//runs if they press no

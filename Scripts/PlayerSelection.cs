@@ -34,8 +34,9 @@ public partial class PlayerSelection : Control
             _playerSlots.Add(slot);
         }
 
-        _startButton.Pressed += OnStartButtonPressed;
         GameScene = (PackedScene)GD.Load("res://Scenes/Game.tscn");
+        _startButton.Pressed += OnStartButtonPressed;
+        
     }
 
     // Once the strt button is selected checks if the players selected are valid, if they are then
@@ -60,8 +61,8 @@ public partial class PlayerSelection : Control
         PlayerData[] selectedPlayersArray = activePlayers.ToArray();
 
         // Stored data into singleton ENTER THE LINK FOR WHERE THE SINGLETON IS
-        GameData gameData = GetNode<GameData>("res://Scripts/GameData.cs");
-        gameData.SaveSelection(selectedPlayersArray);
+        //GameData gameData = GetNode<GameData>("res://Scripts/GameData.cs");
+      //  gameData.SaveSelection(selectedPlayersArray);
 
         // Move to the game scene
         GetTree().ChangeSceneToPacked(GameScene);
@@ -72,6 +73,7 @@ public partial class PlayerSelection : Control
     {
         HashSet<int> usedAvatars = new HashSet<int>();
         bool hasAI = false;
+        bool hasHuman = false;
 
         foreach (var slot in _playerSlots)
         {
@@ -87,13 +89,23 @@ public partial class PlayerSelection : Control
 
             usedAvatars.Add(slot.CurrentAvatarIndex);
 
+            // Check at least one human or ai player
             if (playerType == "AI")
                 hasAI = true;
+
+            if (playerType == "Human")
+                hasHuman = true;
         }
 
         if (!hasAI)
         {
             _errorLabel.Text = "Error: Must have at least one AI player!";
+            return false;
+        }
+
+        if (!hasHuman)
+        {
+            _errorLabel.Text = "Error: Must have at least one Human player!";
             return false;
         }
 
