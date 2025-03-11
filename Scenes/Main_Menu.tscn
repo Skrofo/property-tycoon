@@ -1,13 +1,14 @@
 [gd_scene load_steps=17 format=3 uid="uid://ckhkvv8is4lf1"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_qgrkt"]
-[ext_resource type="Texture2D" uid="uid://v1dr163shoaa" path="res://icon.svg" id="1_x4dov"]
+[ext_resource type="Texture2D" uid="uid://ohodfxi4x6ii" path="res://Assets/mainmenuboard/BACKGROUND1.png" id="2_g328v"]
 
 [sub_resource type="SystemFont" id="SystemFont_k87co"]
 font_names = PackedStringArray("Impact")
 
 [sub_resource type="SystemFont" id="SystemFont_3nnsb"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2svh"]
 bg_color = Color(0.482353, 0.74902, 0.92549, 1)
@@ -61,7 +62,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_x4dov")
+texture = ExtResource("2_g328v")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

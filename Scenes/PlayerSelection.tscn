@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c86moiv2bb8nc"]
+[gd_scene load_steps=18 format=3 uid="uid://c86moiv2bb8nc"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerSlot.cs" id="2_5xk8f"]
+[ext_resource type="Texture2D" uid="uid://ohodfxi4x6ii" path="res://Assets/mainmenuboard/BACKGROUND1.png" id="2_7ds4b"]
 [ext_resource type="Script" path="res://Scripts/PlayerSelection.cs" id="2_x1sw0"]
 [ext_resource type="Texture2D" uid="uid://cwu4qwo7ldf4j" path="res://Assets/Avatars/Boot.png" id="3_40wh2"]
 [ext_resource type="Texture2D" uid="uid://d3n3xrmbag2gk" path="res://Assets/Avatars/cat.png" id="3_86u67"]
@@ -9,10 +10,46 @@
 [ext_resource type="Texture2D" uid="uid://bjna117sutjpn" path="res://Assets/Avatars/ship.png" id="7_ialqw"]
 [ext_resource type="Texture2D" uid="uid://c1iotxr5l4qb7" path="res://Assets/Avatars/smartphone.png" id="8_fg84r"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bs0n"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyjn"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2yq4"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44rjy"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o21ne"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb4uw"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quepp"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wscvp"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
 [node name="PlayerSelectionScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("2_x1sw0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7ds4b")
+expand_mode = 2
 
 [node name="PlayerSlot1" type="Control" parent="."]
 layout_mode = 3
@@ -29,6 +66,10 @@ offset_left = -13.0
 offset_top = 16.0
 offset_right = 5.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_1bs0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_spyjn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e2yq4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_44rjy")
 text = "<"
 
 [node name="RightArrow" type="Button" parent="PlayerSlot1"]
@@ -37,6 +78,10 @@ offset_left = 55.0
 offset_top = 16.0
 offset_right = 73.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o21ne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xb4uw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quepp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wscvp")
 text = ">"
 
 [node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot1"]
