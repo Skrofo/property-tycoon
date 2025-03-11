@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=11 format=3 uid="uid://crlrehjcgp2oh"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
 [ext_resource type="Script" path="res://Scripts/Marker.cs" id="2_jmhgw"]
@@ -8,6 +8,18 @@
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
 font_names = PackedStringArray("Impact")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxc2i"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw1ho"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8awge"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdlav"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_3f8ab")
@@ -1045,6 +1057,10 @@ offset_right = 622.0
 offset_bottom = 345.0
 theme_override_fonts/font = SubResource("SystemFont_4cq8a")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_fxc2i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tw1ho")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8awge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kdlav")
 text = "Roll
 "
 

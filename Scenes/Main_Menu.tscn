@@ -5,6 +5,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_k87co"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_3nnsb"]
 font_names = PackedStringArray("Impact")
