@@ -1,27 +1,208 @@
-[gd_scene load_steps=3 format=3 uid="uid://c86moiv2bb8nc"]
+[gd_scene load_steps=69 format=3 uid="uid://c86moiv2bb8nc"]
 
-[sub_resource type="CSharpScript" id="CSharpScript_2fdnd"]
-script/source = "using Godot;
-using System;
+[ext_resource type="Script" path="res://Scripts/PlayerSlot.cs" id="2_5xk8f"]
+[ext_resource type="Texture2D" uid="uid://ohodfxi4x6ii" path="res://Assets/mainmenuboard/BACKGROUND1.png" id="2_7ds4b"]
+[ext_resource type="Script" path="res://Scripts/PlayerSelection.cs" id="2_x1sw0"]
+[ext_resource type="Texture2D" uid="uid://cwu4qwo7ldf4j" path="res://Assets/Avatars/Boot.png" id="3_40wh2"]
+[ext_resource type="Texture2D" uid="uid://d3n3xrmbag2gk" path="res://Assets/Avatars/cat.png" id="3_86u67"]
+[ext_resource type="Texture2D" uid="uid://dhsmj8k3gywyf" path="res://Assets/Avatars/hatstand.png" id="5_kd127"]
+[ext_resource type="Texture2D" uid="uid://c5nmbv1mjr2tm" path="res://Assets/Avatars/iron.png" id="6_818n1"]
+[ext_resource type="Texture2D" uid="uid://bjna117sutjpn" path="res://Assets/Avatars/ship.png" id="7_ialqw"]
+[ext_resource type="Texture2D" uid="uid://c1iotxr5l4qb7" path="res://Assets/Avatars/smartphone.png" id="8_fg84r"]
 
-public partial class PlayerSelectionScreen : Control
-{
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bs0n"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-}
-"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyjn"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_84ioh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2yq4"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
 
-[node name="PlayerSelectionScreen" type="Node2D"]
-script = SubResource("CSharpScript_2fdnd")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44rjy"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o21ne"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb4uw"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quepp"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wscvp"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vexm"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l26ar"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbdep"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17470"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj5br"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlcql"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpbg0"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5103"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3b06u"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6387"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmq50"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnmhe"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrj56"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bweio"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eayve"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3faty"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fx8fq"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohuy3"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jii86"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16gai"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e05nu"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d32f"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfven"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60j3k"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5b43o"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbhyq"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwpfn"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hthl"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ds3e"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45icr"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu8il"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lw8hu"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tof64"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wo5x"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvwwg"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u3lo"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idwcf"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn5yr"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ag3ss"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjsop"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvcos"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctt6e"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27p21"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8caxq"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0fvf"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsgvr"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vl1vh"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2a01c"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxyxg"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yosve"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nysxa"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[node name="PlayerSelectionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_x1sw0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7ds4b")
+expand_mode = 2
 
 [node name="PlayerSlot1" type="Control" parent="."]
 layout_mode = 3
@@ -30,6 +211,7 @@ offset_left = 28.0
 offset_top = 64.0
 offset_right = 92.0
 offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
 
 [node name="LeftArrow" type="Button" parent="PlayerSlot1"]
 layout_mode = 0
@@ -37,14 +219,22 @@ offset_left = -13.0
 offset_top = 16.0
 offset_right = 5.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_1bs0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_spyjn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e2yq4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_44rjy")
 text = "<"
 
 [node name="RightArrow" type="Button" parent="PlayerSlot1"]
 layout_mode = 0
-offset_left = 55.0
+offset_left = 57.0
 offset_top = 16.0
-offset_right = 73.0
+offset_right = 75.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o21ne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xb4uw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quepp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wscvp")
 text = ">"
 
 [node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot1"]
@@ -53,7 +243,7 @@ offset_left = 4.0
 offset_top = 8.0
 offset_right = 55.0
 offset_bottom = 56.0
-texture = SubResource("PlaceholderTexture2D_84ioh")
+texture = ExtResource("3_40wh2")
 
 [node name="PlayerTypeButton" type="Button" parent="PlayerSlot1"]
 layout_mode = 0
@@ -61,6 +251,7 @@ offset_left = -3.0
 offset_top = 74.0
 offset_right = 62.0
 offset_bottom = 105.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0vexm")
 
 [node name="SelectedTypeLabel" type="Label" parent="PlayerSlot1"]
 layout_mode = 0
@@ -68,17 +259,23 @@ offset_left = 1.0
 offset_top = 77.0
 offset_right = 58.0
 offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_l26ar")
 text = "Human"
 
 [node name="StartButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 272.0
 offset_right = 512.0
 offset_bottom = 319.0
-disabled = true
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wbdep")
+theme_override_styles/hover = SubResource("StyleBoxFlat_17470")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pj5br")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlcql")
 text = "Start"
 
 [node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 208.0
 offset_right = 276.0
@@ -91,6 +288,7 @@ offset_left = 132.0
 offset_top = 64.0
 offset_right = 196.0
 offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
 
 [node name="LeftArrow" type="Button" parent="PlayerSlot2"]
 layout_mode = 0
@@ -98,14 +296,22 @@ offset_left = -13.0
 offset_top = 16.0
 offset_right = 5.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wpbg0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j5103")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3b06u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h6387")
 text = "<"
 
 [node name="RightArrow" type="Button" parent="PlayerSlot2"]
 layout_mode = 0
-offset_left = 55.0
+offset_left = 56.0
 offset_top = 16.0
-offset_right = 73.0
+offset_right = 74.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_xmq50")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nnmhe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrj56")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bweio")
 text = ">"
 
 [node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot2"]
@@ -114,7 +320,7 @@ offset_left = 4.0
 offset_top = 8.0
 offset_right = 55.0
 offset_bottom = 56.0
-texture = SubResource("PlaceholderTexture2D_84ioh")
+texture = ExtResource("3_86u67")
 
 [node name="PlayerTypeButton" type="Button" parent="PlayerSlot2"]
 layout_mode = 0
@@ -122,6 +328,7 @@ offset_left = -3.0
 offset_top = 74.0
 offset_right = 62.0
 offset_bottom = 105.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_eayve")
 
 [node name="SelectedTypeLabel" type="Label" parent="PlayerSlot2"]
 layout_mode = 0
@@ -138,6 +345,7 @@ offset_left = 239.0
 offset_top = 64.0
 offset_right = 303.0
 offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
 
 [node name="LeftArrow" type="Button" parent="PlayerSlot3"]
 layout_mode = 0
@@ -145,6 +353,10 @@ offset_left = -13.0
 offset_top = 16.0
 offset_right = 5.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3faty")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fx8fq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ohuy3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jii86")
 text = "<"
 
 [node name="RightArrow" type="Button" parent="PlayerSlot3"]
@@ -153,6 +365,10 @@ offset_left = 55.0
 offset_top = 16.0
 offset_right = 73.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16gai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e05nu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8d32f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wfven")
 text = ">"
 
 [node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot3"]
@@ -161,7 +377,7 @@ offset_left = 4.0
 offset_top = 8.0
 offset_right = 55.0
 offset_bottom = 56.0
-texture = SubResource("PlaceholderTexture2D_84ioh")
+texture = ExtResource("5_kd127")
 
 [node name="PlayerTypeButton" type="Button" parent="PlayerSlot3"]
 layout_mode = 0
@@ -169,6 +385,7 @@ offset_left = -3.0
 offset_top = 74.0
 offset_right = 62.0
 offset_bottom = 105.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_60j3k")
 
 [node name="SelectedTypeLabel" type="Label" parent="PlayerSlot3"]
 layout_mode = 0
@@ -185,6 +402,7 @@ offset_left = 343.0
 offset_top = 64.0
 offset_right = 407.0
 offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
 
 [node name="LeftArrow" type="Button" parent="PlayerSlot4"]
 layout_mode = 0
@@ -192,6 +410,10 @@ offset_left = -13.0
 offset_top = 16.0
 offset_right = 5.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_5b43o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pbhyq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xwpfn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1hthl")
 text = "<"
 
 [node name="RightArrow" type="Button" parent="PlayerSlot4"]
@@ -200,6 +422,10 @@ offset_left = 55.0
 offset_top = 16.0
 offset_right = 73.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_1ds3e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_45icr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu8il")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lw8hu")
 text = ">"
 
 [node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot4"]
@@ -208,7 +434,7 @@ offset_left = 4.0
 offset_top = 8.0
 offset_right = 55.0
 offset_bottom = 56.0
-texture = SubResource("PlaceholderTexture2D_84ioh")
+texture = ExtResource("6_818n1")
 
 [node name="PlayerTypeButton" type="Button" parent="PlayerSlot4"]
 layout_mode = 0
@@ -216,6 +442,7 @@ offset_left = -3.0
 offset_top = 74.0
 offset_right = 62.0
 offset_bottom = 105.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tof64")
 
 [node name="SelectedTypeLabel" type="Label" parent="PlayerSlot4"]
 layout_mode = 0
@@ -232,6 +459,7 @@ offset_left = 447.0
 offset_top = 64.0
 offset_right = 511.0
 offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
 
 [node name="LeftArrow" type="Button" parent="PlayerSlot5"]
 layout_mode = 0
@@ -239,6 +467,10 @@ offset_left = -13.0
 offset_top = 16.0
 offset_right = 5.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0wo5x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dvwwg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8u3lo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_idwcf")
 text = "<"
 
 [node name="RightArrow" type="Button" parent="PlayerSlot5"]
@@ -247,6 +479,10 @@ offset_left = 55.0
 offset_top = 16.0
 offset_right = 73.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_qn5yr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ag3ss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjsop")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvcos")
 text = ">"
 
 [node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot5"]
@@ -255,7 +491,7 @@ offset_left = 4.0
 offset_top = 8.0
 offset_right = 55.0
 offset_bottom = 56.0
-texture = SubResource("PlaceholderTexture2D_84ioh")
+texture = ExtResource("7_ialqw")
 
 [node name="PlayerTypeButton" type="Button" parent="PlayerSlot5"]
 layout_mode = 0
@@ -263,6 +499,7 @@ offset_left = -3.0
 offset_top = 74.0
 offset_right = 62.0
 offset_bottom = 105.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctt6e")
 
 [node name="SelectedTypeLabel" type="Label" parent="PlayerSlot5"]
 layout_mode = 0
@@ -279,13 +516,18 @@ offset_left = 551.0
 offset_top = 64.0
 offset_right = 615.0
 offset_bottom = 128.0
+script = ExtResource("2_5xk8f")
 
 [node name="LeftArrow" type="Button" parent="PlayerSlot6"]
 layout_mode = 0
-offset_left = -13.0
+offset_left = -14.0
 offset_top = 16.0
-offset_right = 5.0
+offset_right = 4.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_27p21")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8caxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k0fvf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dsgvr")
 text = "<"
 
 [node name="RightArrow" type="Button" parent="PlayerSlot6"]
@@ -294,6 +536,10 @@ offset_left = 55.0
 offset_top = 16.0
 offset_right = 73.0
 offset_bottom = 47.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vl1vh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2a01c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bxyxg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yosve")
 text = ">"
 
 [node name="SelectedAvatar" type="TextureRect" parent="PlayerSlot6"]
@@ -302,7 +548,7 @@ offset_left = 4.0
 offset_top = 8.0
 offset_right = 55.0
 offset_bottom = 56.0
-texture = SubResource("PlaceholderTexture2D_84ioh")
+texture = ExtResource("8_fg84r")
 
 [node name="PlayerTypeButton" type="Button" parent="PlayerSlot6"]
 layout_mode = 0
@@ -310,6 +556,7 @@ offset_left = -3.0
 offset_top = 74.0
 offset_right = 62.0
 offset_bottom = 105.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nysxa")
 
 [node name="SelectedTypeLabel" type="Label" parent="PlayerSlot6"]
 layout_mode = 0

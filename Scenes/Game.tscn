@@ -1,11 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=11 format=3 uid="uid://crlrehjcgp2oh"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
-[ext_resource type="Texture2D" uid="uid://5j5tvlfju5oh" path="res://Assets/MonopolyTemplate.jpg" id="1_s0gxy"]
 [ext_resource type="Script" path="res://Scripts/Marker.cs" id="2_jmhgw"]
+[ext_resource type="Texture2D" uid="uid://dvc2o4poylduc" path="res://Assets/boardv2.jpg" id="2_of4i4"]
+[ext_resource type="Script" path="res://Scripts/CommandLine.cs" id="4_gfg0w"]
+[ext_resource type="PackedScene" uid="uid://dfi80cf2sd7mo" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
 font_names = PackedStringArray("Impact")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxc2i"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw1ho"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8awge"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdlav"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_3f8ab")
@@ -13,9 +27,9 @@ playerMoveSpeed = 60
 playerRotateSpeed = 25
 
 [node name="Board" type="Sprite2D" parent="."]
-position = Vector2(323, 176)
-scale = Vector2(0.384787, 0.384787)
-texture = ExtResource("1_s0gxy")
+position = Vector2(322, 176)
+scale = Vector2(0.0838331, 0.0838331)
+texture = ExtResource("2_of4i4")
 
 [node name="Places" type="Node" parent="Board"]
 
@@ -44,10 +58,10 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place1" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(436, 329)
+position = Vector2(435, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
-nextMarker = NodePath("../Place2")
+nextMarker = NodePath("../OpportunityKnocks1")
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Place1"]
 position = Vector2(-20.7907, -20.7908)
@@ -67,28 +81,28 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place1"]
 position = Vector2(23.3896, 33.7848)
 
-[node name="Place2" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+[node name="OpportunityKnocks1" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
 position = Vector2(408, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place3")
 
-[node name="Marker1" type="Node2D" parent="Board/Places/Place2"]
+[node name="Marker1" type="Node2D" parent="Board/Places/OpportunityKnocks1"]
 position = Vector2(-20.7907, -20.7908)
 
-[node name="Marker2" type="Node2D" parent="Board/Places/Place2"]
+[node name="Marker2" type="Node2D" parent="Board/Places/OpportunityKnocks1"]
 position = Vector2(-20.7908, 5.19763)
 
-[node name="Marker3" type="Node2D" parent="Board/Places/Place2"]
+[node name="Marker3" type="Node2D" parent="Board/Places/OpportunityKnocks1"]
 position = Vector2(-20.7908, 31.186)
 
-[node name="Marker4" type="Node2D" parent="Board/Places/Place2"]
+[node name="Marker4" type="Node2D" parent="Board/Places/OpportunityKnocks1"]
 position = Vector2(23.3896, -20.7908)
 
-[node name="Marker5" type="Node2D" parent="Board/Places/Place2"]
+[node name="Marker5" type="Node2D" parent="Board/Places/OpportunityKnocks1"]
 position = Vector2(23.3896, 5.1976)
 
-[node name="Marker6" type="Node2D" parent="Board/Places/Place2"]
+[node name="Marker6" type="Node2D" parent="Board/Places/OpportunityKnocks1"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place3" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
@@ -116,7 +130,7 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place4" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(352, 329)
+position = Vector2(351, 325)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place5")
@@ -167,7 +181,7 @@ position = Vector2(23.3896, 33.7848)
 position = Vector2(296, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
-nextMarker = NodePath("../Place7")
+nextMarker = NodePath("../Potluck1")
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Place6"]
 position = Vector2(-20.7907, -20.7908)
@@ -187,28 +201,28 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place6"]
 position = Vector2(23.3896, 33.7848)
 
-[node name="Place7" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+[node name="Potluck1" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
 position = Vector2(267, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place8")
 
-[node name="Marker1" type="Node2D" parent="Board/Places/Place7"]
+[node name="Marker1" type="Node2D" parent="Board/Places/Potluck1"]
 position = Vector2(-20.7907, -20.7908)
 
-[node name="Marker2" type="Node2D" parent="Board/Places/Place7"]
+[node name="Marker2" type="Node2D" parent="Board/Places/Potluck1"]
 position = Vector2(-20.7908, 5.19763)
 
-[node name="Marker3" type="Node2D" parent="Board/Places/Place7"]
+[node name="Marker3" type="Node2D" parent="Board/Places/Potluck1"]
 position = Vector2(-20.7908, 31.186)
 
-[node name="Marker4" type="Node2D" parent="Board/Places/Place7"]
+[node name="Marker4" type="Node2D" parent="Board/Places/Potluck1"]
 position = Vector2(23.3896, -20.7908)
 
-[node name="Marker5" type="Node2D" parent="Board/Places/Place7"]
+[node name="Marker5" type="Node2D" parent="Board/Places/Potluck1"]
 position = Vector2(23.3896, 5.1976)
 
-[node name="Marker6" type="Node2D" parent="Board/Places/Place7"]
+[node name="Marker6" type="Node2D" parent="Board/Places/Potluck1"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place8" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
@@ -260,27 +274,53 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="VisitingJail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(167, 329)
+position = Vector2(163, 334)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place10")
+type = 5
 
 [node name="Marker1" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(-20.7907, -20.7908)
+position = Vector2(-15.5931, -59.7733)
 
 [node name="Marker2" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(-20.7908, 5.19763)
+position = Vector2(-15.593, -31.1861)
 
 [node name="Marker3" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(-20.7908, 31.186)
+position = Vector2(-15.593, -2.59884)
 
 [node name="Marker4" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(23.3896, -20.7908)
+position = Vector2(-2.59884, 20.7907)
 
 [node name="Marker5" type="Node2D" parent="Board/Places/VisitingJail"]
-position = Vector2(23.3896, 5.1976)
+position = Vector2(28.5872, 20.7907)
 
 [node name="Marker6" type="Node2D" parent="Board/Places/VisitingJail"]
+position = Vector2(59.7733, 20.7908)
+
+[node name="Jail" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(179, 318)
+scale = Vector2(0.384787, 0.384787)
+script = ExtResource("2_jmhgw")
+nextMarker = NodePath("../Place10")
+type = 6
+
+[node name="Marker1" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(-20.7907, -20.7908)
+
+[node name="Marker2" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(-20.7908, 5.19763)
+
+[node name="Marker3" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(-20.7908, 31.186)
+
+[node name="Marker4" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(23.3896, -20.7908)
+
+[node name="Marker5" type="Node2D" parent="Board/Places/Jail"]
+position = Vector2(23.3896, 5.1976)
+
+[node name="Marker6" type="Node2D" parent="Board/Places/Jail"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place10" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
@@ -413,7 +453,7 @@ position = Vector2(169, 148)
 rotation = 1.5708
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
-nextMarker = NodePath("../Place16")
+nextMarker = NodePath("../OpportunityKnocks2")
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Place15"]
 position = Vector2(-20.7907, -20.7908)
@@ -433,29 +473,29 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place15"]
 position = Vector2(23.3896, 33.7848)
 
-[node name="Place16" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+[node name="OpportunityKnocks2" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
 position = Vector2(169, 120)
 rotation = 1.5708
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place17")
 
-[node name="Marker1" type="Node2D" parent="Board/Places/Place16"]
+[node name="Marker1" type="Node2D" parent="Board/Places/OpportunityKnocks2"]
 position = Vector2(-20.7907, -20.7908)
 
-[node name="Marker2" type="Node2D" parent="Board/Places/Place16"]
+[node name="Marker2" type="Node2D" parent="Board/Places/OpportunityKnocks2"]
 position = Vector2(-20.7908, 5.19763)
 
-[node name="Marker3" type="Node2D" parent="Board/Places/Place16"]
+[node name="Marker3" type="Node2D" parent="Board/Places/OpportunityKnocks2"]
 position = Vector2(-20.7908, 31.186)
 
-[node name="Marker4" type="Node2D" parent="Board/Places/Place16"]
+[node name="Marker4" type="Node2D" parent="Board/Places/OpportunityKnocks2"]
 position = Vector2(23.3896, -20.7908)
 
-[node name="Marker5" type="Node2D" parent="Board/Places/Place16"]
+[node name="Marker5" type="Node2D" parent="Board/Places/OpportunityKnocks2"]
 position = Vector2(23.3896, 5.1976)
 
-[node name="Marker6" type="Node2D" parent="Board/Places/Place16"]
+[node name="Marker6" type="Node2D" parent="Board/Places/OpportunityKnocks2"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place17" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
@@ -514,6 +554,7 @@ rotation = 1.5708
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place19")
+type = 4
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Parking"]
 position = Vector2(-20.7907, -20.7908)
@@ -534,11 +575,10 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place19" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(209, 23)
-rotation = 3.14159
+position = Vector2(208, 20)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
-nextMarker = NodePath("../Place20")
+nextMarker = NodePath("../Potluck2")
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Place19"]
 position = Vector2(-20.7907, -20.7908)
@@ -558,34 +598,33 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place19"]
 position = Vector2(23.3896, 33.7848)
 
-[node name="Place20" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(239, 23)
-rotation = 3.14159
+[node name="Potluck2" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+position = Vector2(237, 26)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place21")
+type = 2
 
-[node name="Marker1" type="Node2D" parent="Board/Places/Place20"]
+[node name="Marker1" type="Node2D" parent="Board/Places/Potluck2"]
 position = Vector2(-20.7907, -20.7908)
 
-[node name="Marker2" type="Node2D" parent="Board/Places/Place20"]
+[node name="Marker2" type="Node2D" parent="Board/Places/Potluck2"]
 position = Vector2(-20.7908, 5.19763)
 
-[node name="Marker3" type="Node2D" parent="Board/Places/Place20"]
+[node name="Marker3" type="Node2D" parent="Board/Places/Potluck2"]
 position = Vector2(-20.7908, 31.186)
 
-[node name="Marker4" type="Node2D" parent="Board/Places/Place20"]
+[node name="Marker4" type="Node2D" parent="Board/Places/Potluck2"]
 position = Vector2(23.3896, -20.7908)
 
-[node name="Marker5" type="Node2D" parent="Board/Places/Place20"]
+[node name="Marker5" type="Node2D" parent="Board/Places/Potluck2"]
 position = Vector2(23.3896, 5.1976)
 
-[node name="Marker6" type="Node2D" parent="Board/Places/Place20"]
+[node name="Marker6" type="Node2D" parent="Board/Places/Potluck2"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place21" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(267, 23)
-rotation = 3.14159
+position = Vector2(266, 20)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place22")
@@ -609,8 +648,7 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place22" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(295, 23)
-rotation = 3.14159
+position = Vector2(294, 20)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place23")
@@ -634,8 +672,7 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place23" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(323, 23)
-rotation = 3.14159
+position = Vector2(322, 20)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place24")
@@ -659,8 +696,7 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place24" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(352, 23)
-rotation = 3.14159
+position = Vector2(351, 20)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place25")
@@ -684,8 +720,7 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place25" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(381, 23)
-rotation = 3.14159
+position = Vector2(380, 20)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place26")
@@ -709,8 +744,7 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place26" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(409, 31)
-rotation = 3.14159
+position = Vector2(407, 24)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place27")
@@ -734,8 +768,7 @@ position = Vector2(23.3896, 5.1976)
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place27" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
-position = Vector2(436, 23)
-rotation = -3.14159
+position = Vector2(435, 20)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../GoToJail")
@@ -764,6 +797,7 @@ rotation = -3.14159
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place28")
+type = 7
 
 [node name="Marker1" type="Node2D" parent="Board/Places/GoToJail"]
 position = Vector2(-20.7907, -20.7908)
@@ -813,7 +847,7 @@ position = Vector2(479, 91)
 rotation = -4.71239
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
-nextMarker = NodePath("../Place30")
+nextMarker = NodePath("../OpportunityKnocks3")
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Place29"]
 position = Vector2(-20.7907, -20.7908)
@@ -833,29 +867,29 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place29"]
 position = Vector2(23.3896, 33.7848)
 
-[node name="Place30" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+[node name="OpportunityKnocks3" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
 position = Vector2(479, 120)
 rotation = -4.71239
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place31")
 
-[node name="Marker1" type="Node2D" parent="Board/Places/Place30"]
+[node name="Marker1" type="Node2D" parent="Board/Places/OpportunityKnocks3"]
 position = Vector2(-20.7907, -20.7908)
 
-[node name="Marker2" type="Node2D" parent="Board/Places/Place30"]
+[node name="Marker2" type="Node2D" parent="Board/Places/OpportunityKnocks3"]
 position = Vector2(-20.7908, 5.19763)
 
-[node name="Marker3" type="Node2D" parent="Board/Places/Place30"]
+[node name="Marker3" type="Node2D" parent="Board/Places/OpportunityKnocks3"]
 position = Vector2(-20.7908, 31.186)
 
-[node name="Marker4" type="Node2D" parent="Board/Places/Place30"]
+[node name="Marker4" type="Node2D" parent="Board/Places/OpportunityKnocks3"]
 position = Vector2(23.3896, -20.7908)
 
-[node name="Marker5" type="Node2D" parent="Board/Places/Place30"]
+[node name="Marker5" type="Node2D" parent="Board/Places/OpportunityKnocks3"]
 position = Vector2(23.3896, 5.1976)
 
-[node name="Marker6" type="Node2D" parent="Board/Places/Place30"]
+[node name="Marker6" type="Node2D" parent="Board/Places/OpportunityKnocks3"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place31" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
@@ -888,7 +922,7 @@ position = Vector2(479, 177)
 rotation = -4.71239
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
-nextMarker = NodePath("../Place33")
+nextMarker = NodePath("../Potluck3")
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Place32"]
 position = Vector2(-20.7907, -20.7908)
@@ -908,29 +942,29 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place32"]
 position = Vector2(23.3896, 33.7848)
 
-[node name="Place33" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
+[node name="Potluck3" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
 position = Vector2(479, 205)
 rotation = -4.71239
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place34")
 
-[node name="Marker1" type="Node2D" parent="Board/Places/Place33"]
+[node name="Marker1" type="Node2D" parent="Board/Places/Potluck3"]
 position = Vector2(-20.7907, -20.7908)
 
-[node name="Marker2" type="Node2D" parent="Board/Places/Place33"]
+[node name="Marker2" type="Node2D" parent="Board/Places/Potluck3"]
 position = Vector2(-20.7908, 5.19763)
 
-[node name="Marker3" type="Node2D" parent="Board/Places/Place33"]
+[node name="Marker3" type="Node2D" parent="Board/Places/Potluck3"]
 position = Vector2(-20.7908, 31.186)
 
-[node name="Marker4" type="Node2D" parent="Board/Places/Place33"]
+[node name="Marker4" type="Node2D" parent="Board/Places/Potluck3"]
 position = Vector2(23.3896, -20.7908)
 
-[node name="Marker5" type="Node2D" parent="Board/Places/Place33"]
+[node name="Marker5" type="Node2D" parent="Board/Places/Potluck3"]
 position = Vector2(23.3896, 5.1976)
 
-[node name="Marker6" type="Node2D" parent="Board/Places/Place33"]
+[node name="Marker6" type="Node2D" parent="Board/Places/Potluck3"]
 position = Vector2(23.3896, 33.7848)
 
 [node name="Place34" type="Node2D" parent="Board/Places" node_paths=PackedStringArray("nextMarker")]
@@ -1023,6 +1057,10 @@ offset_right = 622.0
 offset_bottom = 345.0
 theme_override_fonts/font = SubResource("SystemFont_4cq8a")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_fxc2i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tw1ho")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8awge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kdlav")
 text = "Roll
 "
 
@@ -1042,4 +1080,33 @@ offset_right = 617.0
 offset_bottom = 292.0
 horizontal_alignment = 1
 
+[node name="CommandLine" type="LineEdit" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_gfg0w")
+
+[node name="JailBail" parent="UI" instance=ExtResource("5_0rhfv")]
+visible = false
+layout_mode = 1
+
+[node name="Money" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.775
+anchor_right = 1.0
+anchor_bottom = 0.131
+offset_left = -3.05176e-05
+offset_bottom = -0.0290031
+grow_horizontal = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
+[connection signal="text_submitted" from="UI/CommandLine" to="UI/CommandLine" method="CommandEntered"]
