@@ -13,7 +13,7 @@ public class MainMenuTests
         // Setup
         var runner = ISceneRunner.Load("res://Scenes/Main_Menu.tscn");
         var startButton = runner.FindChild("Start_Button") as Button;
-        var mainMenu = runner.Scene().GetNode<MainMenu>(".");
+        var mainMenu = runner.Scene().GetNode<Main_Menu>(".");
 
         // Execution
         startButton.EmitSignal("pressed");
@@ -29,7 +29,7 @@ public class MainMenuTests
     public async Task TestOptionsButton()
     {
         // Setup
-        var runner = ISceneRunner.Load("res://Scenes/Main_Menu.tscn");
+        var runner = ISceneRunner.Load("es://Scenes/Main_Menu.tscn");
         var optionsButton = runner.FindChild("Options_Button") as Button;
         var mainMenu = runner.Scene().GetNode<MainMenu>(".");
 
@@ -46,7 +46,7 @@ public class MainMenuTests
     public static void TestExitButton()
     {
         // Setup
-        var runner = ISceneRunner.Load("res://Scenes/Main_Menu.tscn");
+        var runner = ISceneRunner.Load("es://Scenes/Main_Menu.tscn");
         var exitButton = runner.FindChild("Exit_Button") as Button;
 
         // Execution
