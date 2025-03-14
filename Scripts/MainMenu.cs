@@ -19,23 +19,23 @@ public partial class MainMenu : Control
         OptionSelect = (PackedScene)GD.Load(""); //add options select link after
         
         Start_Button.Pressed += OnStartPressed;
-        Settings_Button.Pressed += OnSettingsPressed;
+        Settings_Button.Pressed += OnOptionsPressed;
         Exit_Button.Pressed += OnExitPressed;
     }
 
     private void OnStartPressed()
     {
-        //SceneManager.Instance.PreviousScenePath = "res://Scenes/Main_Menu.tscn";
-        //SceneManager.Instance.ChangeScene("res://Scenes/Settings_Menu.tscn");
+        //SceneManager.Instance.PreviousScenePath = "es://Scenes/Main_Menu.tscn";
+        //SceneManager.Instance.ChangeScene("es://Scenes/Settings_Menu.tscn");
 
         GetTree().ChangeSceneToPacked(PlayerSelect);
     }
 
-    private void OnSettingsPressed()
+    private void OnOptionsPressed()
     {
         // Record that we're coming from the Main Menu.
-        //SceneManager.Instance.PreviousScenePath = "res://Scenes/Main_Menu.tscn";
-        //SceneManager.Instance.ChangeScene("res://Scenes/Settings_Menu.tscn");
+        //SceneManager.Instance.PreviousScenePath = "es://Scenes/Main_Menu.tscn";
+        //SceneManager.Instance.ChangeScene("es://Scenes/Settings_Menu.tscn");
         GetTree().ChangeSceneToPacked(OptionSelect);
     }
 
