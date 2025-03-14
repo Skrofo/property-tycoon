@@ -47,6 +47,9 @@ public partial class GameLoop : Node
         parkingMoney = 0;
 
         TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
+        var data = GetNode<GameData>("/root/GameData");
+        if (data != null) GD.Print("Player data loaded");
+        else GD.Print("ERROR:Failed to find player data");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
