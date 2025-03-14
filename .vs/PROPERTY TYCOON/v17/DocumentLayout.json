@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Scripts\\Main_Menu.cs",
               "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Main_Menu.cs",
               "RelativeToolTip": "Scripts\\Main_Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBEAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T10:47:53.032Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Scripts\\Tests\\MainMenuTests.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T10:43:05.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T10:43:05.494Z"
             },
             {
               "$type": "Document",
