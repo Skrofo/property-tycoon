@@ -131,7 +131,6 @@ theme_override_colors/font_hover_color = Color(0.964706, 0.286275, 0.337255, 1)
 theme_override_colors/font_pressed_color = Color(0.964706, 0.286275, 0.337255, 1)
 theme_override_fonts/font = SubResource("SystemFont_3nnsb")
 theme_override_font_sizes/font_size = 24
-text = "SETTINGS"
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_diq6q")
 theme_override_styles/hover = SubResource("StyleBoxFlat_f2xi5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hr5ig")
