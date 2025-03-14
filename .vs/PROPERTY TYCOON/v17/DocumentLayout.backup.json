@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Software Engineering group work\\property-tycoon\\",
+  "WorkspaceRootPath": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\playerslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\playerslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\playerselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\playerselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\playerselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\playerslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\playerslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,41 +34,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main_Menu.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeDocumentMoniker": "Scripts\\Main_Menu.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeToolTip": "Scripts\\Main_Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T10:47:53.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainMenuTests.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
               "RelativeDocumentMoniker": "Scripts\\Tests\\MainMenuTests.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
               "RelativeToolTip": "Scripts\\Tests\\MainMenuTests.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T10:43:05.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T10:43:05.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "JailBail.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
               "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\JailBail.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
               "RelativeToolTip": "Scripts\\ObjectScripts\\JailBail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -76,11 +62,36 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameData.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameData.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameData.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameData.cs",
+              "RelativeToolTip": "Scripts\\GameData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:17:35.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Main_Menu.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Main_Menu.cs",
+              "RelativeDocumentMoniker": "Scripts\\Main_Menu.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Main_Menu.cs",
+              "RelativeToolTip": "Scripts\\Main_Menu.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBEAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T10:47:53.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PlayerSlot.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\PlayerSlot.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\PlayerSlot.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerSlot.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\PlayerSlot.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\PlayerSlot.cs",
               "RelativeToolTip": "Scripts\\PlayerSlot.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -88,27 +99,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameData.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameData.cs",
-              "RelativeDocumentMoniker": "Scripts\\GameData.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameData.cs",
-              "RelativeToolTip": "Scripts\\GameData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T10:17:35.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PlayerSelection.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\PlayerSelection.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\PlayerSelection.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerSelection.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\PlayerSelection.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\PlayerSelection.cs",
               "RelativeToolTip": "Scripts\\PlayerSelection.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwD8AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAiwD4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T10:17:35.48Z"
+              "WhenOpened": "2025-03-14T10:17:35.48Z",
+              "EditorCaption": ""
             }
           ]
         }

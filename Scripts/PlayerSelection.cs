@@ -60,9 +60,9 @@ public partial class PlayerSelection : Control
         // Converting list to array for easier storage
         PlayerData[] selectedPlayersArray = activePlayers.ToArray();
 
-        // Stored data into singleton ENTER THE LINK FOR WHERE THE SINGLETON IS
-        //GameData gameData = GetNode<GameData>("res://Scripts/GameData.cs");
-      //  gameData.SaveSelection(selectedPlayersArray);
+        // Stored data into singleton
+        GameData gameData = GetNode<GameData>("/root/GameData");
+        gameData.SaveSelection(selectedPlayersArray);
 
         // Move to the game scene
         GetTree().ChangeSceneToPacked(GameScene);
