@@ -4,10 +4,11 @@ using System;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 public partial class GameLoop : Node
 {
-	public const int MaxPlayerCount = 6;//Maximum  number  of players including bots
+    public const int MaxPlayerCount = 6;//Maximum  number  of players including bots
     public const char moneySymbol = (char)163; //If you type the pound symbol in vs it can crash godot whenever it tries to load the file so just use this instead
 
     private const string playerPieceFileType = "svg"; //Filename extension for the filetype of the player icons without the: "."
@@ -17,20 +18,20 @@ public partial class GameLoop : Node
 
     public struct TmpPlayer //Temp struct until David has done his
     {
-		public TmpPlayer(bool isCpu, string pieceName)
-		{
-			cpu = isCpu;
-			piece = pieceName;
-		}
-		public bool cpu;
-		public string piece;
+        public TmpPlayer(bool isCpu, string pieceName)
+        {
+            cpu = isCpu;
+            piece = pieceName;
+        }
+        public bool cpu;
+        public string piece;
     }
 
-	public Player[] players;
+    public Player[] players;
     public Dictionary<Player, Vector2> movingPlayers;//Players currently being moved and to where
     public Player currentPlayer; //The player who's turn it is
-	public bool diceRolled; //Whether the diehave been rolled since the last frame
-	public int[] diceResult; //The result of both die
+    public bool diceRolled; //Whether the diehave been rolled since the last frame
+    public int[] diceResult; //The result of both die
     private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
 
@@ -38,20 +39,21 @@ public partial class GameLoop : Node
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
-	{
-		//Setting startup variable values
-		diceRolled = false;
-		diceResult = new int[2];
+    {
+        //Setting startup variable values
+        diceRolled = false;
+        diceResult = new int[2];
         movingPlayers = new Dictionary<Player, Vector2>();
         justMoved = false;
         parkingMoney = 0;
+        _LoadDiceTextures();
 
         TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
-	}
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
+    {
         //Moving any players that need to be moved
         foreach (var movingPlayer in movingPlayers)
         {
@@ -68,8 +70,8 @@ public partial class GameLoop : Node
         if (diceRolled)
         {
             //Moving the player
-			diceRolled = false;
-			int total = diceResult[0] + diceResult[1];
+            diceRolled = false;
+            int total = diceResult[0] + diceResult[1];
             Marker currentLocation = currentPlayer.location;
             justMoved = true;
             currentPlayer.MoveForward(total);
@@ -122,29 +124,50 @@ public partial class GameLoop : Node
             RollDie();
         }
     }
+    private Texture2D[] _diceFaces = new Texture2D[6];
 
-    //TODO:Make the actual dice roll. This is temperory
-    public  void RollDie()
-	{
-        if (movingPlayers.Count == 0)//Making sure all player pieces are done moving before queing up more
+    //Load textures in _LoadDiceTextures()
+    public void _LoadDiceTextures()
+    {
+        _diceFaces[0] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_1.png");
+        _diceFaces[1] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_2.png");
+        _diceFaces[2] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_3.png");
+        _diceFaces[3] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_4.png");
+        _diceFaces[4] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_5.png");
+        _diceFaces[5] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_6.png");
+    }
+
+
+        //TODO:Make the actual dice roll. This is temperory
+        public void RollDie()
         {
-            //Generatin random numbers
-            Random rnd = new Random();
-            int result1 = rnd.Next(1, 7);
-            int result2 = rnd.Next(1, 7);
+            if (movingPlayers.Count == 0)//Making sure all player pieces are done moving before queing up more
+            {
 
-            //Printing results  to UI
-            GD.Print("Dice Result: " + result1 + ", " + result2);
-            GetNode<Label>("UI/TMPDiceResult1").Text = "" + result1;
-            GetNode<Label>("UI/TMPDiceResult2").Text = "" + result2;
 
-            //Saving result
-            diceResult[0] = result1;
-            diceResult[1] = result2;
-            diceRolled = true;
+                //Generatin random numbers
+                Random rnd = new Random();
+                int result1 = rnd.Next(1, 7);
+                int result2 = rnd.Next(1, 7);
+
+                GD.Print($"Dice Faces: {result1}, {result2}");
+                GetNode<TextureRect>("UI/DiceFace1").Texture = _diceFaces[result1 - 1];
+                GetNode<TextureRect>("UI/DiceFace2").Texture = _diceFaces[result2 - 1];
+
+                //Printing results  to UI
+                //GD.Print("Dice Result: " + result1 + ", " + result2);
+                //GetNode<Label>("UI/TMPDiceResult1").Text = "" + result1;
+                //GetNode<Label>("UI/TMPDiceResult2").Text = "" + result2;
+
+
+
+
+                //Saving result
+                diceResult[0] = result1;
+                diceResult[1] = result2;
+                diceRolled = true;
+            }
         }
-		
-	}
 
     public void StartGame(TmpPlayer[] playerList)
 	{

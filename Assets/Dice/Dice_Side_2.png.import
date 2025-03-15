@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvj124jlm37ea"
-path="res://.godot/imported/Dice Side 6.png-f0548eb30fbb075c035df38c2632acc9.ctex"
+uid="uid://b3jirysxw2odd"
+path="res://.godot/imported/Dice_Side_2.png-566c7713ec602545b5f1f1731cacce8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Dice/Dice Side 6.png"
-dest_files=["res://.godot/imported/Dice Side 6.png-f0548eb30fbb075c035df38c2632acc9.ctex"]
+source_file="res://Assets/Dice/Dice_Side_2.png"
+dest_files=["res://.godot/imported/Dice_Side_2.png-566c7713ec602545b5f1f1731cacce8a.ctex"]
 
 [params]
 
