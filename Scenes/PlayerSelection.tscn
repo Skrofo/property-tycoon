@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://c86moiv2bb8nc"]
+[gd_scene load_steps=73 format=3 uid="uid://c86moiv2bb8nc"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerSlot.cs" id="2_5xk8f"]
 [ext_resource type="Texture2D" uid="uid://ohodfxi4x6ii" path="res://Assets/mainmenuboard/BACKGROUND1.png" id="2_7ds4b"]
@@ -185,6 +185,18 @@ bg_color = Color(0.964706, 0.286275, 0.337255, 1)
 bg_color = Color(0.964706, 0.286275, 0.337255, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nysxa"]
+bg_color = Color(0.482353, 0.74902, 0.92549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxq5k"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txpkh"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnkpw"]
+bg_color = Color(0.964706, 0.286275, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkhmr"]
 bg_color = Color(0.482353, 0.74902, 0.92549, 1)
 
 [node name="PlayerSelectionScreen" type="Control"]
@@ -570,4 +582,13 @@ text = "Human"
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.988235, 0.972549, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.988235, 0.972549, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.988235, 0.972549, 1)
+theme_override_colors/font_focus_color = Color(0.988235, 0.988235, 0.972549, 1)
+theme_override_colors/font_color = Color(0.988235, 0.988235, 0.972549, 1)
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vxq5k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_txpkh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xnkpw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dkhmr")
 text = "< Main menu"
