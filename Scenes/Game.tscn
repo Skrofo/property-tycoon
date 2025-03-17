@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
 [ext_resource type="Texture2D" uid="uid://de6qeroyx8i04" path="res://Assets/boardv3.jpg" id="2_0sk24"]
 [ext_resource type="Script" path="res://Scripts/Marker.cs" id="2_jmhgw"]
-[ext_resource type="Script" path="res://Scripts/CommandLine.cs" id="4_gfg0w"]
+[ext_resource type="Script" path="res://Scripts/ObjectScripts/CommandPrompt.cs" id="4_qsl3a"]
 [ext_resource type="PackedScene" uid="uid://dfi80cf2sd7mo" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
@@ -26,6 +26,7 @@ position = Vector2(472, 324)
 scale = Vector2(0.544792, 0.544792)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place1")
+type = 0
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Go"]
 position = Vector2(-20.7907, -20.7908)
@@ -1072,9 +1073,10 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -31.0
+offset_right = 67.0625
 grow_horizontal = 2
 grow_vertical = 0
-script = ExtResource("4_gfg0w")
+script = ExtResource("4_qsl3a")
 
 [node name="JailBail" parent="UI" instance=ExtResource("5_0rhfv")]
 visible = false

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class CommandLine : LineEdit
+public partial class CommandPrompt : LineEdit
 {
     private GameLoop gameLoop;
     private LineEdit cmdLine;

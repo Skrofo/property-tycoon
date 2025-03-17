@@ -35,6 +35,7 @@ public partial class GameLoop : Node
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
 
     private int currentPlayerIndex; //Num of the player who's turn it is currently
+    private bool turnReady;//Whether the game is ready for the player to take their turn
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -48,7 +49,7 @@ public partial class GameLoop : Node
 
         TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
         var data = GetNode<GameData>("/root/GameData");
-        if (data != null) GD.Print("Player data loaded");
+        if (data != null) GD.Print("Player data found");
         else GD.Print("ERROR:Failed to find player data");
 	}
 
@@ -66,6 +67,11 @@ public partial class GameLoop : Node
         }
 
         //Reducing jail time if current player is in jail
+        if (currentPlayer.jailTurns > 0)
+        {
+            currentPlayer.jailTurns--;
+            NextTurn();
+        }
 
         //Waiting for player to roll dice
         if (diceRolled)
@@ -80,8 +86,7 @@ public partial class GameLoop : Node
             //Checking is player passed go
             if (currentPlayer.passedGo)
             {
-                currentPlayer.AddMoney(200);
-                currentPlayer.passedGo = false;
+                currentPlayer.PassGo();
             }
         }
 
@@ -92,6 +97,7 @@ public partial class GameLoop : Node
             switch (currentPlayer.location.type)
             {
                 case Marker.SpaceType.Go:
+                    //This should be empty as nothing happpens specifically on go, only when you pass it
                     break;
                 case Marker.SpaceType.Property:
                     break;
