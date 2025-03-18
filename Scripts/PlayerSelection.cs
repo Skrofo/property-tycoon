@@ -18,13 +18,16 @@ public partial class PlayerSelection : Control
     }
 
     private Button _startButton;
+    private Button _backButton;
     private Label _errorLabel;
     private List<PlayerSlot> _playerSlots = new List<PlayerSlot>();
     private PackedScene GameScene;
+    private PackedScene MainMenu;
 
     public override void _Ready()
     {
         _startButton = GetNode<Button>("StartButton");
+        _backButton = GetNode<Button>("BackButton");
         _errorLabel = GetNode<Label>("ErrorLabel");
 
         // Load all player slots
@@ -35,7 +38,9 @@ public partial class PlayerSelection : Control
         }
 
         GameScene = (PackedScene)GD.Load("res://Scenes/Game.tscn");
+        MainMenu = (PackedScene)GD.Load("res://Scenes/Main_Menu.tscn");
         _startButton.Pressed += OnStartButtonPressed;
+        _backButton.Pressed += OnBackButtonPressed;
         
     }
 
@@ -60,9 +65,9 @@ public partial class PlayerSelection : Control
         // Converting list to array for easier storage
         PlayerData[] selectedPlayersArray = activePlayers.ToArray();
 
-        // Stored data into singleton ENTER THE LINK FOR WHERE THE SINGLETON IS
-        //GameData gameData = GetNode<GameData>("res://Scripts/GameData.cs");
-      //  gameData.SaveSelection(selectedPlayersArray);
+        // Stored data into singleton
+        GameData gameData = GetNode<GameData>("/root/GameData");
+        gameData.SaveSelection(selectedPlayersArray);
 
         // Move to the game scene
         GetTree().ChangeSceneToPacked(GameScene);
@@ -111,6 +116,12 @@ public partial class PlayerSelection : Control
 
         _errorLabel.Text = ""; // Clears error message
         return true;
+    }
+
+    // Go back to main menu
+    private void OnBackButtonPressed()
+    {
+        GetTree().ChangeSceneToPacked(MainMenu);
     }
 }
 

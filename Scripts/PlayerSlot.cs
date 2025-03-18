@@ -56,5 +56,11 @@ public partial class PlayerSlot : Control
     {
         CurrentTypeIndex = (CurrentTypeIndex + 1) % playerTypes.Length;
         SelectedTypeLabel.Text = playerTypes[CurrentTypeIndex];
+
+        bool isNone = (SelectedTypeLabel.Text == "None");
+
+        LeftArrow.Visible = !isNone;
+        RightArrow.Visible = !isNone;
+        SelectedAvatar.Visible = !isNone;
     }
 }
