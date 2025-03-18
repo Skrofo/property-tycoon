@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Godot Projects\\property-tycoon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\resolutionmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\resolutionmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\windowmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\windowmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,29 +30,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main_Menu.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeDocumentMoniker": "Scripts\\Main_Menu.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeToolTip": "Scripts\\Main_Menu.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB0AAABOAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ResolutionModeButton.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\ResolutionModeButton.cs",
+              "RelativeDocumentMoniker": "Scripts\\ResolutionModeButton.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\ResolutionModeButton.cs",
+              "RelativeToolTip": "Scripts\\ResolutionModeButton.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T19:25:29.563Z",
+              "WhenOpened": "2025-03-18T22:20:08.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SettingsMenu.cs",
               "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
               "RelativeDocumentMoniker": "Scripts\\SettingsMenu.cs",
               "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
               "RelativeToolTip": "Scripts\\SettingsMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:17.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T22:05:26.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WindowModeButton.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\WindowModeButton.cs",
+              "RelativeDocumentMoniker": "Scripts\\WindowModeButton.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\WindowModeButton.cs",
+              "RelativeToolTip": "Scripts\\WindowModeButton.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:00:24.827Z"
             }
           ]
         }

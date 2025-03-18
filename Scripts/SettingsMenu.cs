@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Settings_Menu : Control
+public partial class SettingsMenu : Control
 {
     
     private Label headerLabel;

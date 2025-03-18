@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "D:\\Godot Projects\\property-tycoon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\resolutionmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\resolutionmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\windowmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\windowmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\playerselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\playerselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\playerslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\playerslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,100 +31,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ResolutionModeButton.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\ResolutionModeButton.cs",
+              "RelativeDocumentMoniker": "Scripts\\ResolutionModeButton.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\ResolutionModeButton.cs",
+              "RelativeToolTip": "Scripts\\ResolutionModeButton.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:20:08.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SettingsMenu.cs",
               "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
               "RelativeDocumentMoniker": "Scripts\\SettingsMenu.cs",
               "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
               "RelativeToolTip": "Scripts\\SettingsMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:17.748Z",
+              "WhenOpened": "2025-03-18T22:05:26.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GameLoop.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\GameLoop.cs",
-              "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\GameLoop.cs",
-              "RelativeToolTip": "Scripts\\GameLoop.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAswJoAAABVAAAAAAAAAA==",
+              "Title": "WindowModeButton.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\WindowModeButton.cs",
+              "RelativeDocumentMoniker": "Scripts\\WindowModeButton.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\WindowModeButton.cs",
+              "RelativeToolTip": "Scripts\\WindowModeButton.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:16.861Z",
+              "WhenOpened": "2025-03-18T22:00:24.827Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainMenuTests.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
-              "RelativeDocumentMoniker": "Scripts\\Tests\\MainMenuTests.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
-              "RelativeToolTip": "Scripts\\Tests\\MainMenuTests.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:16.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "JailBail.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
-              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\JailBail.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
-              "RelativeToolTip": "Scripts\\ObjectScripts\\JailBail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:16.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameData.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\GameData.cs",
-              "RelativeDocumentMoniker": "Scripts\\GameData.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\GameData.cs",
-              "RelativeToolTip": "Scripts\\GameData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:16.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Main_Menu.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeDocumentMoniker": "Scripts\\Main_Menu.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeToolTip": "Scripts\\Main_Menu.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBEAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:16.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlayerSlot.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\PlayerSlot.cs",
-              "RelativeDocumentMoniker": "Scripts\\PlayerSlot.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\PlayerSlot.cs",
-              "RelativeToolTip": "Scripts\\PlayerSlot.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:16.941Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerSelection.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\PlayerSelection.cs",
-              "RelativeDocumentMoniker": "Scripts\\PlayerSelection.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\PlayerSelection.cs",
-              "RelativeToolTip": "Scripts\\PlayerSelection.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAiwD4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:55:16.944Z"
             }
           ]
         }
