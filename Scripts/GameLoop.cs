@@ -10,6 +10,7 @@ public partial class GameLoop : Node
 {
     public const int MaxPlayerCount = 6;//Maximum  number  of players including bots
     public const char moneySymbol = (char)163; //If you type the pound symbol in vs it can crash godot whenever it tries to load the file so just use this instead
+    public const int StartingMoney = 1500; //How much money each player starts with
 
     private const string playerPieceFileType = "svg"; //Filename extension for the filetype of the player icons without the: "."
 
@@ -203,6 +204,7 @@ public partial class GameLoop : Node
 			var go = GetNode<Marker>("Board/Places/Go");
 			go.MoveTo(players[i], true);
             players[i].location = go;
+            players[i].AddMoney(StartingMoney);
         }
 
         SetTurn(0);

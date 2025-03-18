@@ -46,6 +46,7 @@ settings/test/test_lookup_folder="Tests"
 settings/test/test_discovery=true
 settings/test/flaky_check_enable=true
 ui/inspector/node_collapse=false
+ui/toolbar/run_overall=true
 
 [input]
 

@@ -46,7 +46,7 @@ namespace PropertyTycoon.Scripts
         }
 
         //Causes the current card to execute the action associated with it
-        public void ExecuteAction( GameLoop gameLoop)
+        public bool ExecuteAction( GameLoop gameLoop)
         {
             if (type == CardType.OpportunityKnocks)
             {
@@ -57,7 +57,7 @@ namespace PropertyTycoon.Scripts
                         break;
                     default:
                         GD.PrintErr($"Couldn't find action associated with Opportunity Knocks card: {name}");
-                        break;
+                        return false;
                 }
             }
             else if (type == CardType.PotLuck)
@@ -66,13 +66,15 @@ namespace PropertyTycoon.Scripts
                 {
                     default:
                         GD.PrintErr($"Couldn't find action associated with Pot Luck card: {name}");
-                        break;
+                        return false;
                 }
             }
+            return true;
         }
 
         public static String[] GetCards(CardType type)
         {
+            //creating the global path for the card directory
             string folderPath = null;
             if (type == CardType.OpportunityKnocks)
             {
