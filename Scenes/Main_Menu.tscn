@@ -135,7 +135,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_diq6q")
 theme_override_styles/hover = SubResource("StyleBoxFlat_f2xi5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hr5ig")
 theme_override_styles/normal = SubResource("StyleBoxFlat_mvec5")
-text = "OPTIONS"
+text = "SETTINGS"
 
 [node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
