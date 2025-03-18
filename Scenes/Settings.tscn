@@ -1,16 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b16tiqhcd8qy"]
+[gd_scene load_steps=2 format=3 uid="uid://nc3w74wki62s"]
 
-[ext_resource type="Script" path="res://Scripts/SettingsMenu.cs" id="1_fu1n7"]
-[ext_resource type="Script" path="res://Scripts/BackButton.cs" id="2_04qd1"]
+[ext_resource type="Script" path="res://Scripts/SettingsMenu.cs" id="1_g3bw2"]
 
-[node name="Settings_Menu" type="Control"]
+[node name="SettingsMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fu1n7")
+script = ExtResource("1_g3bw2")
 
 [node name="header_label" type="Label" parent="."]
 layout_mode = 0
@@ -31,14 +30,13 @@ offset_right = 624.0
 offset_bottom = 171.0
 text = "Accessibility Settings"
 
-[node name="back_button" type="Button" parent="."]
+[node name="mainmenu_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 289.0
 offset_top = 179.0
 offset_right = 385.0
 offset_bottom = 210.0
-text = "Back"
-script = ExtResource("2_04qd1")
+text = "Main Menu"
 
 [node name="defaultsettings_button" type="Button" parent="."]
 layout_mode = 0
