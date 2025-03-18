@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\objectscripts\\commandprompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\commandprompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\objectscripts\\carddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\carddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +25,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\mainmenutests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\godot\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,50 +46,99 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Marker.cs",
-              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
-              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
-              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
-              "RelativeToolTip": "Scripts\\Marker.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwDUAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CommandPrompt.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEwAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T16:56:06.904Z",
+              "WhenOpened": "2025-03-18T15:27:29.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Card.cs",
+              "RelativeDocumentMoniker": "Scripts\\Card.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Card.cs",
+              "RelativeToolTip": "Scripts\\Card.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T18:37:24.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CardDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\ObjectScripts\\CardDisplay.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\CardDisplay.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\ObjectScripts\\CardDisplay.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\CardDisplay.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCAAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T16:20:18.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JailBail.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\JailBail.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\JailBail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T16:08:36.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Marker.cs",
+              "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
+              "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeToolTip": "Scripts\\Marker.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwFAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T16:56:06.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Player.cs",
               "RelativeToolTip": "Scripts\\Player.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwB8AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T16:53:23.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T16:53:23.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "GameLoop.cs",
               "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
               "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeToolTip": "Scripts\\GameLoop.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwGgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T16:17:19.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Main_Menu.cs",
               "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Main_Menu.cs",
               "RelativeDocumentMoniker": "Scripts\\Main_Menu.cs",
@@ -81,19 +146,31 @@
               "RelativeToolTip": "Scripts\\Main_Menu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T10:47:53.032Z"
+              "WhenOpened": "2025-03-14T10:47:53.032Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainMenuTests.cs",
               "DocumentMoniker": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
               "RelativeDocumentMoniker": "Scripts\\Tests\\MainMenuTests.cs",
               "ToolTip": "C:\\Users\\alals\\Documents\\Godot\\property-tycoon\\Scripts\\Tests\\MainMenuTests.cs",
               "RelativeToolTip": "Scripts\\Tests\\MainMenuTests.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T10:43:05.494Z"
+              "WhenOpened": "2025-03-14T10:43:05.494Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }

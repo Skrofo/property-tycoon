@@ -35,7 +35,6 @@ public partial class GameLoop : Node
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
 
     private int currentPlayerIndex; //Num of the player who's turn it is currently
-    private bool turnReady;//Whether the game is ready for the player to take their turn
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -50,7 +49,7 @@ public partial class GameLoop : Node
         TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
         var data = GetNode<GameData>("/root/GameData");
         if (data != null) GD.Print("Player data found");
-        else GD.Print("ERROR:Failed to find player data");
+        else GD.PrintErr("Can't find player data");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -94,6 +93,7 @@ public partial class GameLoop : Node
         if (justMoved && movingPlayers.Count == 0)
         {
             justMoved = false;
+            GD.Print($"Player {currentPlayerIndex} landed on a {currentPlayer.location.type} space");
             switch (currentPlayer.location.type)
             {
                 case Marker.SpaceType.Go:
@@ -101,14 +101,17 @@ public partial class GameLoop : Node
                     break;
                 case Marker.SpaceType.Property:
                     break;
-                case Marker.SpaceType.PotLuck:
-                    break;
                 case Marker.SpaceType.OpportunityKnocks:
+                    GetNode<CardDisplay>("UI/CardDisplay").Show(Card.CardType.OpportunityKnocks);
+                    break;
+                case Marker.SpaceType.PotLuck:
+                    GetNode<CardDisplay>("UI/CardDisplay").Show(Card.CardType.PotLuck);
                     break;
                 case Marker.SpaceType.FreeParking:
                     ClaimParkingMoney(currentPlayer);
                     break;
                 case Marker.SpaceType.VisitingJail:
+                    //This should be empty as "Just visiting" space does nothing by itself
                     break;
                 case Marker.SpaceType.Jail:
                     GetNode<Control>("UI/JailBail").Visible = true;
