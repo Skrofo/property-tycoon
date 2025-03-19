@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://pbsic3d4osmx" path="res://Assets/Card/PotLuck/Pot Luck.png" id="4_srb2r"]
 [ext_resource type="PackedScene" uid="uid://dfi80cf2sd7mo" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
 [ext_resource type="Texture2D" uid="uid://bgir7hyabkfmb" path="res://Assets/Card/OpportunityKnocks/Opportunity Knocks.png" id="5_xc0fm"]
-[ext_resource type="PackedScene" path="res://Objects/CardDisplay.tscn" id="8_netr8"]
+[ext_resource type="PackedScene" uid="uid://b8u2o7n3yivb7" path="res://Objects/CardDisplay.tscn" id="8_netr8"]
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
 font_names = PackedStringArray("Impact")
