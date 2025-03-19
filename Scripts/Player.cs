@@ -1,6 +1,7 @@
 ﻿using Godot;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,13 @@ namespace PropertyTycoon.Scripts
                 return true;
             }
             else return false;
+        }
+
+        public void PassGo()
+        {
+            GD.Print("Passed Go!");
+            AddMoney(200);
+            passedGo = false;
         }
 
         public int GetMoney() => money;
