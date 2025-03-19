@@ -6,7 +6,7 @@ public partial class Main_Menu : Control
     private Button Start_Button;
     private Button Options_Button;
     private Button Exit_Button;
-    //private PackedScene PlayerSelect;
+    private PackedScene PlayerSelect;
     //private PackedScene OptionSelect;
 
     public override void _Ready()
