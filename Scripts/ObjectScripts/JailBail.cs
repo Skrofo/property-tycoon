@@ -1,13 +1,13 @@
 using Godot;
 using System;
 
-public partial class JailBail : Panel
+public partial class JailBail : Control
 {
 	[Export] public int fineAmount;//How much jail bail is
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        GetNode(".").GetParent<Control>().Visible = false;
+        GetNode<Control>(".").Visible = false;
     }
 
 	//runs if they press the pay button
@@ -16,7 +16,7 @@ public partial class JailBail : Panel
         GameLoop gameLoop = FindParent("Game").GetNode<GameLoop>(".");
 		if (gameLoop.currentPlayer.PayBail())
         {
-            GetNode(".").GetParent<Control>().Visible = false;
+            GetNode<Control>(".").Visible = false;
         }
         else
         {
@@ -27,6 +27,6 @@ public partial class JailBail : Panel
 	//runs if they press no
 	public void No()
 	{
-        GetNode<Panel>(".").Visible = false;
+        GetNode<Control>(".").Visible = false;
     }
 }

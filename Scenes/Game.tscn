@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=10 format=3 uid="uid://crlrehjcgp2oh"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
 [ext_resource type="Texture2D" uid="uid://de6qeroyx8i04" path="res://Assets/boardv3.jpg" id="2_0sk24"]
 [ext_resource type="Script" path="res://Scripts/Marker.cs" id="2_jmhgw"]
 [ext_resource type="Script" path="res://Scripts/CommandLine.cs" id="4_gfg0w"]
 [ext_resource type="PackedScene" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
+[ext_resource type="Script" path="res://Scripts/ObjectScripts/CommandPrompt.cs" id="4_qsl3a"]
+[ext_resource type="Texture2D" uid="uid://pbsic3d4osmx" path="res://Assets/Card/PotLuck/Pot Luck.png" id="4_srb2r"]
+[ext_resource type="PackedScene" uid="uid://dfi80cf2sd7mo" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
+[ext_resource type="Texture2D" uid="uid://bgir7hyabkfmb" path="res://Assets/Card/OpportunityKnocks/Opportunity Knocks.png" id="5_xc0fm"]
+[ext_resource type="PackedScene" uid="uid://b8u2o7n3yivb7" path="res://Objects/CardDisplay.tscn" id="8_netr8"]
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
 font_names = PackedStringArray("Impact")
@@ -26,6 +31,7 @@ position = Vector2(472, 324)
 scale = Vector2(0.544792, 0.544792)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place1")
+type = 0
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Go"]
 position = Vector2(-20.7907, -20.7908)
@@ -1030,7 +1036,22 @@ position = Vector2(23.3896, 5.1976)
 [node name="Marker6" type="Node2D" parent="Board/Places/Place36"]
 position = Vector2(23.3896, 33.7848)
 
+[node name="Cards" type="Node" parent="."]
+
+[node name="PotLuckCard" type="Sprite2D" parent="Cards"]
+position = Vector2(388, 244)
+rotation = -0.785398
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_srb2r")
+
+[node name="OpportunityKnocksCard" type="Sprite2D" parent="Cards"]
+position = Vector2(258, 111)
+rotation = 2.35619
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("5_xc0fm")
+
 [node name="UI" type="Control" parent="."]
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 640.0
@@ -1062,22 +1083,6 @@ offset_top = 256.0
 offset_right = 616.0
 offset_bottom = 296.0
 
-[node name="CommandLine" type="LineEdit" parent="UI"]
-visible = false
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -31.0
-grow_horizontal = 2
-grow_vertical = 0
-script = ExtResource("4_gfg0w")
-
-[node name="JailBail" parent="UI" instance=ExtResource("5_0rhfv")]
-visible = false
-layout_mode = 1
-
 [node name="Money" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
@@ -1089,6 +1094,27 @@ offset_bottom = -0.0290031
 grow_horizontal = 0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="JailBail" parent="UI" instance=ExtResource("5_0rhfv")]
+visible = false
+layout_mode = 1
+
+[node name="CardDisplay" parent="UI" instance=ExtResource("8_netr8")]
+visible = false
+layout_mode = 1
+
+[node name="CommandLine" type="LineEdit" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 67.0625
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_qsl3a")
 
 [connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
 [connection signal="text_submitted" from="UI/CommandLine" to="UI/CommandLine" method="CommandEntered"]

@@ -10,6 +10,7 @@ public partial class GameLoop : Node
 {
     public const int MaxPlayerCount = 6;//Maximum  number  of players including bots
     public const char moneySymbol = (char)163; //If you type the pound symbol in vs it can crash godot whenever it tries to load the file so just use this instead
+    public const int StartingMoney = 1500; //How much money each player starts with
 
     private const string playerPieceFileType = "svg"; //Filename extension for the filetype of the player icons without the: "."
 
@@ -49,7 +50,10 @@ public partial class GameLoop : Node
         _LoadDiceTextures();
 
         TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
-    }
+        var data = GetNode<GameData>("/root/GameData");
+        if (data != null) GD.Print("Player data found");
+        else GD.PrintErr("Can't find player data");
+	}
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
@@ -65,6 +69,11 @@ public partial class GameLoop : Node
         }
 
         //Reducing jail time if current player is in jail
+        if (currentPlayer.jailTurns > 0)
+        {
+            currentPlayer.jailTurns--;
+            NextTurn();
+        }
 
         //Waiting for player to roll dice
         if (diceRolled)
@@ -79,8 +88,7 @@ public partial class GameLoop : Node
             //Checking is player passed go
             if (currentPlayer.passedGo)
             {
-                currentPlayer.AddMoney(200);
-                currentPlayer.passedGo = false;
+                currentPlayer.PassGo();
             }
         }
 
@@ -88,20 +96,25 @@ public partial class GameLoop : Node
         if (justMoved && movingPlayers.Count == 0)
         {
             justMoved = false;
+            GD.Print($"Player {currentPlayerIndex} landed on a {currentPlayer.location.type} space");
             switch (currentPlayer.location.type)
             {
                 case Marker.SpaceType.Go:
+                    //This should be empty as nothing happpens specifically on go, only when you pass it
                     break;
                 case Marker.SpaceType.Property:
                     break;
-                case Marker.SpaceType.PotLuck:
-                    break;
                 case Marker.SpaceType.OpportunityKnocks:
+                    GetNode<CardDisplay>("UI/CardDisplay").Show(Card.CardType.OpportunityKnocks);
+                    break;
+                case Marker.SpaceType.PotLuck:
+                    GetNode<CardDisplay>("UI/CardDisplay").Show(Card.CardType.PotLuck);
                     break;
                 case Marker.SpaceType.FreeParking:
                     ClaimParkingMoney(currentPlayer);
                     break;
                 case Marker.SpaceType.VisitingJail:
+                    //This should be empty as "Just visiting" space does nothing by itself
                     break;
                 case Marker.SpaceType.Jail:
                     GetNode<Control>("UI/JailBail").Visible = true;
@@ -191,6 +204,7 @@ public partial class GameLoop : Node
 			var go = GetNode<Marker>("Board/Places/Go");
 			go.MoveTo(players[i], true);
             players[i].location = go;
+            players[i].AddMoney(StartingMoney);
         }
 
         SetTurn(0);

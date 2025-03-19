@@ -39,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8mc3n")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -54,8 +55,6 @@ offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_a3gci")
-script = ExtResource("1_8mc3n")
-fineAmount = 50
 
 [node name="No" type="Button" parent="Panel"]
 layout_mode = 1
@@ -112,5 +111,5 @@ accept your sentence?"
 label_settings = SubResource("LabelSettings_64lfw")
 horizontal_alignment = 1
 
-[connection signal="pressed" from="Panel/No" to="Panel" method="No"]
-[connection signal="pressed" from="Panel/Yes" to="Panel" method="Yes"]
+[connection signal="pressed" from="Panel/No" to="." method="No"]
+[connection signal="pressed" from="Panel/Yes" to="." method="Yes"]
