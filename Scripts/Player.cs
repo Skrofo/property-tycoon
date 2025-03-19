@@ -71,7 +71,7 @@ namespace PropertyTycoon.Scripts
             node.FindParent("Game").GetNode<Label>("UI/Money").Text = GameLoop.moneySymbol + GetMoney().ToString();
         }
 
-        private void MoveTo(string path)
+        public void MoveTo(string path)
         {
             location?.RemovePlayer(this);
             location = node.FindParent("Game").GetNode<Marker>(path);

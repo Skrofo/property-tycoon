@@ -55,6 +55,37 @@ namespace PropertyTycoon.Scripts
                     case "Opportunity Knocks Card - 1.png"://Bank pays player £50
                         gameLoop.currentPlayer.AddMoney(50);
                         break;
+                    case "Opportunity Knocks Card - 2.png"://Bank pays player £100
+                        gameLoop.currentPlayer.AddMoney(100);
+                        break;
+                    //case "Opportunity Knocks Card - 3.png"://Player moves to Turing Heights
+                    //    break;
+                    //case "Opportunity Knocks Card - 4.png": //player moves
+                    //    gameLoop.currentPlayer.AddMoney(100);
+                    //    break;
+                    case "Opportunity Knocks Card - 5.png"://Player puts £15 on Free Parking
+                        gameLoop.currentPlayer.AddMoney(-15);
+                        gameLoop.AddParkingMoney(15);
+                        break;
+                    case "Opportunity Knocks Card - 6.png"://Player pays £150 to bank
+                        gameLoop.currentPlayer.AddMoney(-150);
+                        break;
+                    /*
+                    case "Opportunity Knocks Card - 7.png"://Player moves
+                        gameLoop.currentPlayer.AddMoney(-150);
+                        break;
+                    */
+                    case "Opportunity Knocks Card - 8.png"://Bank pays player £150
+                        gameLoop.currentPlayer.AddMoney(150);
+                        break;
+                    /*
+                    case "Opportunity Knocks Card - 9.png"://Player pays £40 to bank for house and £115 for hotel
+                        gameLoop.currentPlayer.AddMoney(-150);
+                        break;
+                    */
+                    case "Opportunity Knocks Card - 10.png"://Advance to GO
+                        gameLoop.currentPlayer.MoveTo("Board/Places/Go");
+                        break;
                     default:
                         GD.PrintErr($"Couldn't find action associated with Opportunity Knocks card: {name}");
                         return false;
