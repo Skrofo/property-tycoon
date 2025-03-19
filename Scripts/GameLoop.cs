@@ -16,6 +16,8 @@ public partial class GameLoop : Node
 
     [Export] public int playerMoveSpeed;//How fast the player's piece moves to it's next space.
     [Export] public int playerRotateSpeed;//How fast the player's piece rotates to align with it's side of the board
+    [Export] public int humanPlayers = 1;//When running a test game, how many human players are there?
+    [Export] public int aiPlayers = 0;//When running a test game, how many ai players are there?
 
     public struct TmpPlayer //Temp struct until David has done his
     {
@@ -49,7 +51,7 @@ public partial class GameLoop : Node
         parkingMoney = 0;
         _LoadDiceTextures();
 
-        TestGame(1, 0);//First num is human players, second is ai players (Ai currently not implemented)
+        TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
         var data = GetNode<GameData>("/root/GameData");
         if (data != null) GD.Print("Player data found");
         else GD.PrintErr("Can't find player data");
