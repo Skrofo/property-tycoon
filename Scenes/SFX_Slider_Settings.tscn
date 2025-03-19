@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5b6vlpat6cel"]
+
+[ext_resource type="PackedScene" uid="uid://c7015m8qsqeec" path="res://Scenes/Audio_Slider_Settings.tscn" id="1_rrd0a"]
+[ext_resource type="Script" path="res://Scripts/SFXSliderSettings.cs" id="2_gh6vu"]
+
+[node name="SFX_Slider_Settings" instance=ExtResource("1_rrd0a")]
+script = ExtResource("2_gh6vu")
+
+[node name="Audio_Name_Lbl" parent="HBoxContainer" index="0"]
+text = "SFX Volume"

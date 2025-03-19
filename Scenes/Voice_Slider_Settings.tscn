@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvgo3yi4e7i1x"]
+
+[ext_resource type="PackedScene" uid="uid://c7015m8qsqeec" path="res://Scenes/Audio_Slider_Settings.tscn" id="1_ti4hg"]
+[ext_resource type="Script" path="res://Scripts/VoiceSliderSettings.cs" id="2_tgqnq"]
+
+[node name="Voice_Slider_Settings" instance=ExtResource("1_ti4hg")]
+script = ExtResource("2_tgqnq")
+
+[node name="Audio_Name_Lbl" parent="HBoxContainer" index="0"]
+text = "Voice Volume"
