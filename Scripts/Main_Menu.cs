@@ -15,8 +15,8 @@ public partial class Main_Menu : Control
         Options_Button = GetNode<Button>("MarginContainer/HBoxContainer/VBoxContainer/Settings_Button");
         Exit_Button = GetNode<Button>("MarginContainer/HBoxContainer/VBoxContainer/Exit_Button");
 
-        //PlayerSelect = (PackedScene)GD.Load("res://Scenes/PlayerSelection.tscn"); 
-        //OptionSelect = (PackedScene)GD.Load("res://Scenes/Settings_Menu.tcsn"); 
+        //PlayerSelect = (PackedScene)GD.Load("es://Scenes/PlayerSelection.tscn"); 
+        //OptionSelect = (PackedScene)GD.Load("es://Scenes/Settings_Menu.tcsn"); 
         
         Start_Button.Pressed += OnStartPressed;
         Options_Button.Pressed += OnOptionsPressed;
