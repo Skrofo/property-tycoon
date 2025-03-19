@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://k1wh45ggvuli"]
+
+[ext_resource type="PackedScene" uid="uid://c7015m8qsqeec" path="res://Scenes/Audio_Slider_Settings.tscn" id="1_5ljve"]
+[ext_resource type="Script" path="res://Scripts/MusicSliderSettings.cs" id="2_q18v3"]
+
+[node name="Music_Slider_Settings" instance=ExtResource("1_5ljve")]
+script = ExtResource("2_q18v3")
+
+[node name="Audio_Name_Lbl" parent="HBoxContainer" index="0"]
+text = "Music Volume"

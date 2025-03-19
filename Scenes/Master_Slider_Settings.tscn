@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj3is1cigm4um"]
+
+[ext_resource type="PackedScene" uid="uid://c7015m8qsqeec" path="res://Scenes/Audio_Slider_Settings.tscn" id="1_q7b4j"]
+[ext_resource type="Script" path="res://Scripts/MasterSliderSettings.cs" id="2_h1qtr"]
+
+[node name="Master_Slider_Settings" instance=ExtResource("1_q7b4j")]
+script = ExtResource("2_h1qtr")
