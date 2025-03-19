@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dk5vwktrteidv"]
+[gd_scene load_steps=7 format=3 uid="uid://dk5vwktrteidv"]
 
 [ext_resource type="PackedScene" uid="uid://b3g5n3q5yu1hk" path="res://Scenes/Window_Mode_Button.tscn" id="1_6kg5u"]
+[ext_resource type="PackedScene" uid="uid://dj3is1cigm4um" path="res://Scenes/Master_Slider_Settings.tscn" id="1_coga7"]
+[ext_resource type="PackedScene" uid="uid://k1wh45ggvuli" path="res://Scenes/Music_Slider_Settings.tscn" id="2_inthq"]
 [ext_resource type="PackedScene" uid="uid://cqnkgiai3i2k8" path="res://Scenes/Resolution_Mode_Button.tscn" id="2_ng0yh"]
+[ext_resource type="PackedScene" uid="uid://c5b6vlpat6cel" path="res://Scenes/SFX_Slider_Settings.tscn" id="3_lk4f3"]
+[ext_resource type="PackedScene" uid="uid://dvgo3yi4e7i1x" path="res://Scenes/Voice_Slider_Settings.tscn" id="4_irs7b"]
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -23,10 +27,9 @@ offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -42,17 +45,27 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Sound/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/ScrollContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-text = "Master Volume"
+theme_override_constants/separation = 40
+
+[node name="Master_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_coga7")]
+layout_mode = 2
+
+[node name="Music_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_inthq")]
+layout_mode = 2
+
+[node name="SFX_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_lk4f3")]
+layout_mode = 2
+
+[node name="Voice_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_irs7b")]
+layout_mode = 2
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
