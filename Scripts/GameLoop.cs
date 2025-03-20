@@ -52,8 +52,8 @@ public partial class GameLoop : Node
         _LoadDiceTextures();
 
         TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
-        var data = GetNode<GameData>("/root/GameData");
-        if (data != null) GD.Print("Player data found");
+        var playerData = GetNode<GameData>("/root/GameData");
+        if (playerData != null) GD.Print($"Player data found for {playerData.SelectedPlayers.Length} players");
         else GD.PrintErr("Can't find player data");
 	}
 
@@ -184,12 +184,16 @@ public partial class GameLoop : Node
             }
         }
 
-    public void StartGame(TmpPlayer[] playerList)
+    public void StartGame(PlayerSelection.PlayerData[] playerList)
 	{
-		players = new Player[playerList.Length];
+        //Vector2 textureSize = Texture.GetSize();
+        //Scale = TargetSize / textureSize;
+        players = new Player[playerList.Length];
 
 		//Creating player pieces
 		PackedScene player = GD.Load<PackedScene>("res://Objects/Player.tscn");
+        List<Texture2D> textures = PlayerSlot.GetTextures();
+
         for (int i = 0; i < players.Length; i++)
         {
 			//Creating player piece object
@@ -197,10 +201,11 @@ public partial class GameLoop : Node
 			AddChild(instance);
 			instance.Name += i + 1;//Making match the naming convention: player1, player2...
 
-			Texture2D texture = GD.Load<Texture2D>("res://Assets/PlayerIcons/" + playerList[i].piece + '.' + playerPieceFileType);
-			instance.GetChild<Sprite2D>(0).Texture = texture;
+			instance.GetChild<Sprite2D>(0).Texture = textures[playerList[i].AvatarIndex];
+            bool cpu = false;
+            if (playerList[i].PlayerType == "AI") cpu = true;
 
-			players[i] = new Player(instance, playerList[i].cpu);
+            players[i] = new Player(instance, cpu);
 
 			//Moving player piece to start pos
 			var go = GetNode<Marker>("Board/Places/Go");
@@ -227,14 +232,14 @@ public partial class GameLoop : Node
     //Used to test the game by generating a predefined number of human and ai players
     public void TestGame(int humans, int bots)
     {
-        TmpPlayer[] strtPlayers = new TmpPlayer[humans + bots];
+        PlayerSelection.PlayerData[] strtPlayers = new PlayerSelection.PlayerData[humans + bots];
         for (int i = 0; i < humans; i++)
         {
-            strtPlayers[i] = new TmpPlayer(false, "Player" + (i + 1));
+            strtPlayers[i] = new PlayerSelection.PlayerData(i, "Human");
         }
         for (int i = humans; i < humans + bots; i++)
         {
-            strtPlayers[i] = new TmpPlayer(true, "Player" + (i + 1));
+            strtPlayers[i] = new PlayerSelection.PlayerData(i, "Human");
         }
         StartGame(strtPlayers);
     }
@@ -253,7 +258,7 @@ public partial class GameLoop : Node
         }
     }
 
-    //changes turn to specified value
+    //changes which player's turn it is to a specified value
     private void SetTurn(int turn)
     {
         currentPlayerIndex = turn;
