@@ -91,11 +91,11 @@ namespace PropertyTycoon.Scripts
                                                     //TODO: rent functionality
                         break;
                     */
-                    /*
+                    
                     case "Opportunity Knocks Card - 12.png": // player moves back 3 spaces
-                        gameLoop.currentPlayer.MoveTo(); //TODO: functionality for moving backwards
+                        gameLoop.currentPlayer.MoveBackward(3); 
                         break;
-                    */
+                    
                     case "Opportunity Knocks Card - 13.png": // player moves to Skywalker drive
                         gameLoop.currentPlayer.MoveTo("Board/Places/Place12");
                         break;
@@ -106,10 +106,11 @@ namespace PropertyTycoon.Scripts
                         gameLoop.currentPlayer.AddMoney(-30);
                         gameLoop.AddParkingMoney(30);
                         break;
-                    /*
+                    
                     case "Opportunity Knocks Card - 16.png": // get out of jail
-                        break; //TODO: get out of jail functionality
-                        */
+                        gameLoop.currentPlayer.hasGetOutOfJail = true;
+                        break;
+                        
                     default:
                         GD.PrintErr($"Couldn't find action associated with Opportunity Knocks card: {name}");
                         return false;
@@ -167,16 +168,28 @@ namespace PropertyTycoon.Scripts
                     case "Pot Luck Card - 15.png": //bank pays player £25
                         gameLoop.currentPlayer.AddMoney(25);
                         break;
-                    /*
+                    
                     case "Pot Luck Card - 16.png": //player receives £10 from each player
-                        gameLoop.currentPlayer.AddMoney(200); //TODO: functionality for getting £10 from each player
+                        int moneyGained = 0;
+
+                        for (int i = 0; i < gameLoop.players.Length; i++)
+                        {
+                            
+                            if (i != gameLoop.currentPlayerIndex)
+                            {
+                                gameLoop.players[i].AddMoney(-10);
+                                moneyGained += 10;
+                            }
+                            
+                        }
+                        gameLoop.currentPlayer.AddMoney(moneyGained);
                         break;
-                    */
-                    /*
+                    
+                    
                     case "Pot Luck Card - 17.png": //Get out of jail
-                        gameLoop.currentPlayer.AddMoney(200); //TODO: get out of jail functionality
+                        gameLoop.currentPlayer.hasGetOutOfJail= true; 
                         break;
-                    */
+                    
                     default:
                         GD.PrintErr($"Couldn't find action associated with Pot Luck card: {name}");
                         return false;

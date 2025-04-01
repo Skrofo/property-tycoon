@@ -11,6 +11,7 @@ namespace PropertyTycoon.Scripts
     public class Player
     {
         public bool cpu { get; }
+        public bool hasGetOutOfJail = false;
         private int money = 0;
         public string[] properties = Array.Empty<string>();
         public Node2D node { get; }
@@ -34,6 +35,13 @@ namespace PropertyTycoon.Scripts
             location.MoveTo(this);
         }
 
+        public void MoveBackward(int numberOfPlaces)
+        {
+            location?.RemovePlayer(this);
+            location = location.GetNthPreviousPos(numberOfPlaces, this);
+            location.MoveTo(this);
+        }
+
         public void GoToJail()
         {
             jailTurns = 2;
@@ -48,11 +56,16 @@ namespace PropertyTycoon.Scripts
             {
                 AddMoney(-50);
                 gameLoop.AddParkingMoney(50);
-                jailTurns = 0;
-                MoveTo("Board/Places/VisitingJail");
+                getOutOfJail();
                 return true;
             }
             else return false;
+        }
+
+        public void getOutOfJail()
+        {
+            jailTurns = 0;
+            MoveTo("Board/Places/VisitingJail");
         }
 
         public void PassGo()

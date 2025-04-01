@@ -35,10 +35,11 @@ public partial class GameLoop : Node
     public Player currentPlayer; //The player who's turn it is
     public bool diceRolled; //Whether the diehave been rolled since the last frame
     public int[] diceResult; //The result of both die
-    private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
+    public int currentPlayerIndex; //Num of the player who's turn it is currently
 
-    private int currentPlayerIndex; //Num of the player who's turn it is currently
+    private int parkingMoney; //How much money is on free parking
+
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -119,7 +120,14 @@ public partial class GameLoop : Node
                     //This should be empty as "Just visiting" space does nothing by itself
                     break;
                 case Marker.SpaceType.Jail:
-                    GetNode<Control>("UI/JailBail").Visible = true;
+                    if (currentPlayer.hasGetOutOfJail)
+                    {
+                        GetNode<Control>("UI/GetOutOfJailFree").Visible = true;
+                    }
+                    else
+                    {
+                        GetNode<Control>("UI/JailBail").Visible = true;
+                    }
                     break;
                 case Marker.SpaceType.GoToJail:
                     currentPlayer.GoToJail();

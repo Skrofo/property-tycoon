@@ -18,8 +18,9 @@ public partial class Marker : Node2D
     }
 
     [Export] public Marker nextMarker;//The place on the board after this one
-
     [Export] public SpaceType type = SpaceType.Property;
+
+    public Marker prevMarker;//The place on the board before this one
 
     private List<Player> players;//The players that are currently on this place
     private Vector2I[] markerPos;
@@ -35,6 +36,14 @@ public partial class Marker : Node2D
         for (int i = 0; i < markerPos.Length; i++)
         {
             markerPos[i] = (Vector2I)GetNode<Node2D>("Marker"+(i+1)).GlobalPosition;
+        }
+
+
+        // Check if this marker has a next marker (the next space on the board)
+        if (nextMarker != null)
+        {
+            // Set the previous marker of the next space to be this marker
+            nextMarker.prevMarker = this;
         }
     }
 
@@ -108,6 +117,27 @@ public partial class Marker : Node2D
             {
                 game.movingPlayers.Add(players[i], new Vector2I((int)GetNode<Node2D>(".").GlobalPosition.X, markerPos[players.Count].Y));
             }
+        }
+    }
+
+    //Gets the nth previous position. E.g: The 3rd previous position is the position 3  spaces  behind this one.
+    //If a players is given and one of the passed position is go, the players will "pass go"
+    public Marker GetNthPreviousPos(int pos, Player player = null)
+    {
+        if (pos > 0 && prevMarker != null)
+        {
+            if (prevMarker.type == SpaceType.Go)
+            {
+                if (player != null)
+                {
+                    player.passedGo = true;
+                }
+            }
+            return prevMarker.GetNthPreviousPos(pos - 1, player);
+        }
+        else
+        {
+            return GetNode<Marker>(".");
         }
     }
 }

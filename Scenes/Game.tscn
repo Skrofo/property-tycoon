@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=11 format=3 uid="uid://crlrehjcgp2oh"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
 [ext_resource type="Texture2D" uid="uid://de6qeroyx8i04" path="res://Assets/boardv3.jpg" id="2_0sk24"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dfi80cf2sd7mo" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
 [ext_resource type="Texture2D" uid="uid://bgir7hyabkfmb" path="res://Assets/Card/OpportunityKnocks/Opportunity Knocks.png" id="5_xc0fm"]
 [ext_resource type="PackedScene" uid="uid://b8u2o7n3yivb7" path="res://Objects/CardDisplay.tscn" id="8_netr8"]
+[ext_resource type="PackedScene" uid="uid://bya50x0vnutrs" path="res://Objects/GetOutOfJailFree.tscn" id="9_qb4kc"]
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
 font_names = PackedStringArray("Impact")
@@ -78,6 +79,7 @@ position = Vector2(408, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place3")
+type = 3
 
 [node name="Marker1" type="Node2D" parent="Board/Places/OpportunityKnocks1"]
 position = Vector2(-20.7907, -20.7908)
@@ -198,6 +200,7 @@ position = Vector2(267, 329)
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place8")
+type = 2
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Potluck1"]
 position = Vector2(-20.7907, -20.7908)
@@ -471,6 +474,7 @@ rotation = 1.5708
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place17")
+type = 3
 
 [node name="Marker1" type="Node2D" parent="Board/Places/OpportunityKnocks2"]
 position = Vector2(-20.7907, -20.7908)
@@ -865,6 +869,7 @@ rotation = -4.71239
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place31")
+type = 3
 
 [node name="Marker1" type="Node2D" parent="Board/Places/OpportunityKnocks3"]
 position = Vector2(-20.7907, -20.7908)
@@ -940,6 +945,7 @@ rotation = -4.71239
 scale = Vector2(0.384787, 0.384787)
 script = ExtResource("2_jmhgw")
 nextMarker = NodePath("../Place34")
+type = 2
 
 [node name="Marker1" type="Node2D" parent="Board/Places/Potluck3"]
 position = Vector2(-20.7907, -20.7908)
@@ -1113,6 +1119,10 @@ offset_right = 67.0625
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_qsl3a")
+
+[node name="GetOutOfJailFree" parent="UI" instance=ExtResource("9_qb4kc")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
 [connection signal="text_submitted" from="UI/CommandLine" to="UI/CommandLine" method="CommandEntered"]
