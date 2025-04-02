@@ -24,12 +24,7 @@ public partial class PlayerSlot : Control
         SelectedTypeLabel = GetNode<Label>("SelectedTypeLabel");
 
         // Load avatars into list
-        avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/Boot.png"));
-        avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/cat.png"));
-        avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/hatstand.png"));
-        avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/iron.png"));
-        avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/ship.png"));
-        avatars.Add((Texture2D)GD.Load("res://Assets/Avatars/smartphone.png"));
+        avatars = GetTextures();
 
         // Make sure we have avatars
         if (avatars.Count > 0)
@@ -44,6 +39,20 @@ public partial class PlayerSlot : Control
         LeftArrow.Pressed += () => ChangeAvatar(-1);
         RightArrow.Pressed += () => ChangeAvatar(1);
         PlayerTypeButton.Pressed += ChangePlayerType;
+    }
+
+    //Returns the avatars textures
+    public static List<Texture2D> GetTextures()
+    {
+        List<Texture2D> textures = new();
+        textures.Add((Texture2D)GD.Load("res://Assets/Avatars/Boot.png"));
+        textures.Add((Texture2D)GD.Load("res://Assets/Avatars/cat.png"));
+        textures.Add((Texture2D)GD.Load("res://Assets/Avatars/hatstand.png"));
+        textures.Add((Texture2D)GD.Load("res://Assets/Avatars/iron.png"));
+        textures.Add((Texture2D)GD.Load("res://Assets/Avatars/ship.png"));
+        textures.Add((Texture2D)GD.Load("res://Assets/Avatars/smartphone.png"));
+
+        return textures;
     }
 
     private void ChangeAvatar(int direction)

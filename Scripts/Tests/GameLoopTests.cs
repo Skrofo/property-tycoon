@@ -5,6 +5,7 @@ using PropertyTycoon.Scripts;
 using System.Threading.Tasks;
 using System.Threading;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using System.Collections.Generic;
 
 [TestSuite]
 public class GameLoopTests
@@ -28,9 +29,10 @@ public class GameLoopTests
     }
 
     [TestCase]
-    public static void PlayerMovement()
+    public static void GetPlayerPieceTextures()
     {
-
+        List<Texture2D> textures = PlayerSlot.GetTextures();
+        Assertions.AssertArray(textures).IsNotEmpty();
     }
 
     [TestCase(1,0, TestName = "Test Game(1 human, 0 ai)")]
