@@ -32,6 +32,7 @@ public partial class GameLoop : Node
     public Player currentPlayer; //The player who's turn it is
     public bool diceRolled; //Whether the diehave been rolled since the last frame
     public int[] diceResult; //The result of both die
+    private int _doublesCount = 0;
     private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
 
@@ -111,6 +112,27 @@ public partial class GameLoop : Node
                     break;
                 default:
                     break;
+            }
+            if (diceResult[0] == diceResult[1])
+            {
+                _doublesCount++;
+                Console.WriteLine($"Doubles! You've rolled {_doublesCount} doubles");
+
+                if (_doublesCount >= 3)
+                {
+                    //go to jail
+                    currentPlayer.GoToJail();
+                    _doublesCount = 0;
+                }
+                else
+                {
+                    //TODO give current player another turn
+                }
+
+            }
+            else
+            {
+                _doublesCount = 0;
             }
             NextTurn();//Once the action for the current space has been (mostly) completed the turn is changed
         }
