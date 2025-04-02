@@ -77,7 +77,7 @@ public partial class PlayerSelection : Control
     private bool ValidateSelections()
     {
         HashSet<int> usedAvatars = new HashSet<int>();
-        bool hasAI = false;
+        //bool hasAI = false;
         bool hasHuman = false;
 
         foreach (var slot in _playerSlots)
@@ -95,18 +95,18 @@ public partial class PlayerSelection : Control
             usedAvatars.Add(slot.CurrentAvatarIndex);
 
             // Check at least one human or ai player
-            if (playerType == "AI")
-                hasAI = true;
+          //  if (playerType == "AI")
+            //    hasAI = true;
 
             if (playerType == "Human")
                 hasHuman = true;
         }
 
-        if (!hasAI)
-        {
-            _errorLabel.Text = "Error: Must have at least one AI player!";
-            return false;
-        }
+       // if (!hasAI)
+        //{
+          //  _errorLabel.Text = "Error: Must have at least one AI player!";
+            //return false;
+        //}
 
         if (!hasHuman)
         {

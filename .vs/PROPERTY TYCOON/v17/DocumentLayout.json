@@ -1,42 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Software Engineering group work\\property-tycoon\\",
+  "WorkspaceRootPath": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\playerselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\playerselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\objectscripts\\carddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\objectscripts\\carddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\carddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\software engineering group work\\property-tycoon\\scripts\\tests\\cardtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\tests\\cardtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\cardtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\objectscripts\\getoutofjailfreedisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\getoutofjailfreedisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,52 +58,62 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "JailBail.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
-              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\JailBail.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
-              "RelativeToolTip": "Scripts\\ObjectScripts\\JailBail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PlayerSelection.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\PlayerSelection.cs",
+              "RelativeDocumentMoniker": "Scripts\\PlayerSelection.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\PlayerSelection.cs",
+              "RelativeToolTip": "Scripts\\PlayerSelection.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:38:19.287Z",
+              "WhenOpened": "2025-04-02T12:26:11.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "JailBail.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\JailBail.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\JailBail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T15:38:19.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "GetOutOfJailFreeDisplay.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
               "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
               "RelativeToolTip": "Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:38:09.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T15:38:09.095Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "GameLoopTests.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Tests\\GameLoopTests.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\GameLoopTests.cs",
               "RelativeDocumentMoniker": "Scripts\\Tests\\GameLoopTests.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Tests\\GameLoopTests.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\GameLoopTests.cs",
               "RelativeToolTip": "Scripts\\Tests\\GameLoopTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:53:40.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T19:53:40.758Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Card.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Card.cs",
               "RelativeDocumentMoniker": "Scripts\\Card.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Card.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Card.cs",
               "RelativeToolTip": "Scripts\\Card.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAIwKUAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAIwKUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T13:43:47.837Z",
               "EditorCaption": ""
@@ -108,66 +122,61 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Player.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Player.cs",
               "RelativeToolTip": "Scripts\\Player.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAcwDoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:43:47.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:43:47.847Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "CardTests.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Tests\\CardTests.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\CardTests.cs",
               "RelativeDocumentMoniker": "Scripts\\Tests\\CardTests.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Tests\\CardTests.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\CardTests.cs",
               "RelativeToolTip": "Scripts\\Tests\\CardTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:27:34.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T16:27:34.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameLoop.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameLoop.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\GameLoop.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeToolTip": "Scripts\\GameLoop.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAgwCYAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:43:47.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:43:47.85Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "CardDisplay.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\CardDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\CardDisplay.cs",
               "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\CardDisplay.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\ObjectScripts\\CardDisplay.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\CardDisplay.cs",
               "RelativeToolTip": "Scripts\\ObjectScripts\\CardDisplay.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:43:47.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:43:47.84Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Marker.cs",
-              "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Marker.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Marker.cs",
               "RelativeDocumentMoniker": "Scripts\\Marker.cs",
-              "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Marker.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Marker.cs",
               "RelativeToolTip": "Scripts\\Marker.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:43:47.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:43:47.845Z"
             }
           ]
         },
