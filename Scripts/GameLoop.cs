@@ -51,10 +51,18 @@ public partial class GameLoop : Node
         parkingMoney = 0;
         _LoadDiceTextures();
 
-        TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
+        
         var playerData = GetNode<GameData>("/root/GameData");
-        if (playerData != null) GD.Print($"Player data found for {playerData.SelectedPlayers.Length} players");
-        else GD.PrintErr("Can't find player data");
+        if (playerData != null)
+        {
+            GD.Print($"Player data found for {playerData.SelectedPlayers.Length} players");
+            StartGame(playerData.SelectedPlayers);
+        }
+        else 
+        { 
+            GD.PrintErr("Can't find player data");
+            TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
+        }
 	}
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
