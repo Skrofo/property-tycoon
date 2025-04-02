@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc6sfgc7hhf7w"
+path="res://.godot/imported/tekno-kick-loop-176-bpm-292894 (PLACEHOLDER SETTINGS MUSIC).mp3-4f13f247c5c235cff637f4a9298273a8.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/tekno-kick-loop-176-bpm-292894 (PLACEHOLDER SETTINGS MUSIC).mp3"
+dest_files=["res://.godot/imported/tekno-kick-loop-176-bpm-292894 (PLACEHOLDER SETTINGS MUSIC).mp3-4f13f247c5c235cff637f4a9298273a8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

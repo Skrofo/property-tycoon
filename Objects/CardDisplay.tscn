@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8u2o7n3yivb7"]
+
+[ext_resource type="Script" path="res://Scripts/ObjectScripts/CardDisplay.cs" id="1_dwvse"]
+[ext_resource type="Texture2D" uid="uid://bgir7hyabkfmb" path="res://Assets/Card/OpportunityKnocks/Opportunity Knocks.png" id="1_wk78r"]
+
+[node name="CardDisplay" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dwvse")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1500.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.12, 0.12)
+pivot_offset = Vector2(-95.6, -70)
+texture = ExtResource("1_wk78r")
+metadata/_edit_use_anchors_ = true
