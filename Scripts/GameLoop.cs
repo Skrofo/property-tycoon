@@ -40,9 +40,6 @@ public partial class GameLoop : Node
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
     public int currentPlayerIndex; //Num of the player who's turn it is currently
 
-    private int parkingMoney; //How much money is on free parking
-
-
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
