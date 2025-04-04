@@ -79,7 +79,13 @@ public partial class GameLoop : Node
         }
 
         //Reducing jail time if current player is in jail
-        if (currentPlayer.jailTurns > 0)
+        if (currentPlayer.jailTurns == 1)
+        {
+            currentPlayer.GoToJail();
+            currentPlayer.jailTurns--;
+            NextTurn();
+        }
+        if (currentPlayer.jailTurns > 1)
         {
             currentPlayer.jailTurns--;
             NextTurn();
