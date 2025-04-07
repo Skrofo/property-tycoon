@@ -39,6 +39,11 @@ public partial class GameLoop : Node
     private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
     public int currentPlayerIndex; //Num of the player who's turn it is currently
+    private bool _extraTurn = false;
+    private void GrantExtraTurn()
+    {
+        _extraTurn = true;
+    }
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -155,6 +160,7 @@ public partial class GameLoop : Node
                 }
                 else
                 {
+                    GrantExtraTurn();
                     //TODO give current player another turn
                 }
 
@@ -283,6 +289,25 @@ public partial class GameLoop : Node
     //Changes whos turn it is to the next player
     private void NextTurn()
     {
+        if (!_extraTurn)
+        {
+            if (currentPlayerIndex == players.Length - 1)
+            {
+                SetTurn(0);
+            }
+            else
+            {
+                SetTurn(currentPlayerIndex + 1);
+            }
+            _doublesCount = 0;
+        }
+        else
+        {
+            _extraTurn = false;
+            //print message that says another turn is granted
+            diceRolled = false;
+            GetNode<Button>("UI/RollDiceButton").Disabled = false;
+        }
         //updating current player value
         if (currentPlayerIndex == players.Length - 1)
         {
