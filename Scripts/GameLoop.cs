@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using static PlayerSelection;
 
 public partial class GameLoop : Node
 {
@@ -51,16 +52,26 @@ public partial class GameLoop : Node
         parkingMoney = 0;
         _LoadDiceTextures();
 
-        
+
         var playerData = GetNode<GameData>("/root/GameData");
         if (playerData != null)
         {
             GD.Print($"Player data found for {playerData.SelectedPlayers.Length} players");
-            StartGame(playerData.SelectedPlayers);
+     
         }
         else 
         { 
             GD.PrintErr("Can't find player data");
+            
+        }
+
+        if (playerData.SelectedPlayers.Length > 1)
+        {
+            StartGame(playerData.SelectedPlayers);
+        }
+
+        else
+        {
             TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
         }
 	}
@@ -68,6 +79,9 @@ public partial class GameLoop : Node
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
+        //TODO: call updateplayercardvalues
+
+
         //Moving any players that need to be moved
         foreach (var movingPlayer in movingPlayers)
         {
@@ -236,6 +250,7 @@ public partial class GameLoop : Node
 			var instance = (Node2D)player.Instantiate();
 			AddChild(instance);
 			instance.Name += i + 1;//Making match the naming convention: player1, player2...
+            GD.Print(instance.Name);
 
 			instance.GetChild<Sprite2D>(0).Texture = textures[playerList[i].AvatarIndex];
             bool cpu = false;
@@ -243,13 +258,15 @@ public partial class GameLoop : Node
 
             players[i] = new Player(instance, cpu);
 
-			//Moving player piece to start pos
-			var go = GetNode<Marker>("Board/Places/Go");
+            //TODO: initialise the players cards (array?)
+
+            //Moving player piece to start pos
+            var go = GetNode<Marker>("Board/Places/Go");
 			go.MoveTo(players[i], true);
             players[i].location = go;
             players[i].AddMoney(StartingMoney);
-        }
 
+        }
         SetTurn(0);
     }
 
@@ -299,8 +316,12 @@ public partial class GameLoop : Node
     {
         currentPlayerIndex = turn;
         currentPlayer = players[currentPlayerIndex];
+        //changing the current player
+        GetNode<Label>("UI/CurrentPlayer").Text = ($"Player {currentPlayerIndex + 1}'s turn");
         //changing money display
         GetNode<Label>("UI/Money").Text = moneySymbol + currentPlayer.GetMoney().ToString();
+
+        //TODO: add players owned properties
     }
 
     //Moves the given player towards the given location. Need to be called every frame
@@ -308,4 +329,5 @@ public partial class GameLoop : Node
     {
         player.node.GlobalPosition = player.node.GlobalPosition.MoveToward(pos, (float)(delta * playerMoveSpeed));
     }
+
 }
