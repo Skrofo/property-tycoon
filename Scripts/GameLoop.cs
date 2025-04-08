@@ -337,10 +337,16 @@ public partial class GameLoop : Node
         currentPlayer = players[currentPlayerIndex];
         //changing the current player
         GetNode<Label>("UI/CurrentPlayer").Text = ($"Player {currentPlayerIndex + 1}'s turn");
+        GetNode<Label>("UI/CurrentPlayerProp").Text = ($"Player {currentPlayerIndex + 1}'s \nproperties");
         //changing money display
         GetNode<Label>("UI/Money").Text = moneySymbol + currentPlayer.GetMoney().ToString();
 
+        //changing player avatar
+        GetNode<TextureRect>("UI/Avatar").Texture = currentPlayer.node.GetChild<Sprite2D>(0).Texture;
+
         //TODO: add players owned properties
+
+        GetNode<Label>("UI/Properties").Text = ("");
     }
 
     //Moves the given player towards the given location. Need to be called every frame
