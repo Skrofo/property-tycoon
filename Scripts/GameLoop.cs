@@ -147,29 +147,27 @@ public partial class GameLoop : Node
                 default:
                     break;
             }
-            if (diceResult[0] == diceResult[1])
+            if (diceResult[0] != diceResult[1])
             {
-                _doublesCount++;
-                Console.WriteLine($"Doubles! You've rolled {_doublesCount} doubles");
-
-                if (_doublesCount >= 3)
-                {
-                    //go to jail
-                    currentPlayer.GoToJail();
-                    _doublesCount = 0;
-                }
-                else
-                {
-                    GrantExtraTurn();
-                    //TODO give current player another turn
-                }
-
+                NextTurn();
+                _doublesCount = 0;
+                //Console.WriteLine($"Doubles! You've rolled {_doublesCount} doubles");
             }
             else
             {
-                _doublesCount = 0;
+                _doublesCount++;
             }
-            NextTurn();//Once the action for the current space has been (mostly) completed the turn is changed
+            if (_doublesCount == 3)
+            {
+               //go to jail
+               currentPlayer.GoToJail();
+               _doublesCount = 0;
+            }
+            else
+            {
+                GrantExtraTurn();
+                //TODO give current player another turn
+            }
         }
     }
 
@@ -207,17 +205,10 @@ public partial class GameLoop : Node
                 int result1 = rnd.Next(1, 7);
                 int result2 = rnd.Next(1, 7);
 
+                //Printing results  to UI
                 GD.Print($"Dice Faces: {result1}, {result2}");
                 GetNode<TextureRect>("UI/DiceFace1").Texture = _diceFaces[result1 - 1];
                 GetNode<TextureRect>("UI/DiceFace2").Texture = _diceFaces[result2 - 1];
-
-                //Printing results  to UI
-                //GD.Print("Dice Result: " + result1 + ", " + result2);
-                //GetNode<Label>("UI/TMPDiceResult1").Text = "" + result1;
-                //GetNode<Label>("UI/TMPDiceResult2").Text = "" + result2;
-
-
-
 
                 //Saving result
                 diceResult[0] = result1;
@@ -289,8 +280,9 @@ public partial class GameLoop : Node
     //Changes whos turn it is to the next player
     private void NextTurn()
     {
-        if (!_extraTurn)
+        do
         {
+            //updating current player value
             if (currentPlayerIndex == players.Length - 1)
             {
                 SetTurn(0);
@@ -300,23 +292,25 @@ public partial class GameLoop : Node
                 SetTurn(currentPlayerIndex + 1);
             }
             _doublesCount = 0;
-        }
-        else
-        {
-            _extraTurn = false;
-            //print message that says another turn is granted
-            diceRolled = false;
-            GetNode<Button>("UI/RollDiceButton").Disabled = false;
-        }
-        //updating current player value
-        if (currentPlayerIndex == players.Length - 1)
-        {
-            SetTurn(0);
-        }
-        else
-        {
-            SetTurn(currentPlayerIndex + 1);
-        }
+
+            //Exit the loop if no extra turn is granted
+            if (!_extraTurn)
+            {
+                break;
+            }
+        } while (!_extraTurn);
+
+        //Reset the extra turn flag for the next turn
+        _extraTurn = false;
+                                                           
+                                                                                    //if (currentPlayerIndex == players.Length - 1)
+                                                                                    //    {
+                                                                                    //        SetTurn(0);
+                                                                                    //    }
+                                                                                    //    else
+                                                                                    //    {
+                                                                                    //        SetTurn(currentPlayerIndex + 1);
+                                                                                    //    }
     }
 
     //changes which player's turn it is to a specified value
