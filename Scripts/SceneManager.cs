@@ -1,12 +1,18 @@
 using Godot;
 using System;
 
+// The SceneManager class is responsible for managing scene transitions,
+// and it holds a reference to the file path of the previously active scene.
+// This facilitates navigating back to a prior scene if needed.
+
 public partial class SceneManager : Node
 {
-    // This variable stores the file path of the previous scene.
+    // This property stores the file path of the previously active scene.
+    // It should be set before initiating a scene change to allow the user to return to the current scene later.
     public string PreviousScenePath { get; set; } = "";
 
-    // (Optional) Make this singleton easily accessible.
+    // A singleton instance of the SceneManager is created for easy global access.
+    // This pattern ensures that only one instance of the SceneManager exists throughout the game.
     public static SceneManager Instance { get; private set; }
 
     public override void _Ready()
@@ -14,18 +20,18 @@ public partial class SceneManager : Node
         Instance = this;
     }
 
-    /// <summary>
-    /// Changes to a new scene.
-    /// Before switching, you should set PreviousScenePath to the current scene's file path.
-    /// </summary>
+    // Changes the active scene to a new scene specified by the file path.
     public void ChangeScene(string newScenePath)
     {
         GetTree().ChangeSceneToFile(newScenePath);
     }
 
-    /// <summary>
-    /// Changes back to the previously recorded scene.
-    /// </summary>
+
+    // Transitions back to the previously recorded scene, if available.
+  
+    // The method first checks whether a valid previous scene file path has been recorded.
+    // If a previous scene is present, it prints a message to the output and performs the transition.
+    // If not, it prints that no previous scene was recorded.
     public void GoBack()
     {
         if (!string.IsNullOrEmpty(PreviousScenePath))
