@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using static PlayerSelection;
 
 public partial class GameLoop : Node
 {
@@ -35,11 +36,15 @@ public partial class GameLoop : Node
     public Player currentPlayer; //The player who's turn it is
     public bool diceRolled; //Whether the diehave been rolled since the last frame
     public int[] diceResult; //The result of both die
+    private int _doublesCount = 0;
+    private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
     public int currentPlayerIndex; //Num of the player who's turn it is currently
-
-    private int parkingMoney; //How much money is on free parking
-
+    private bool _extraTurn = false;
+    private void GrantExtraTurn()
+    {
+        _extraTurn = true;
+    }
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -52,15 +57,36 @@ public partial class GameLoop : Node
         parkingMoney = 0;
         _LoadDiceTextures();
 
-        TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
-        var data = GetNode<GameData>("/root/GameData");
-        if (data != null) GD.Print("Player data found");
-        else GD.PrintErr("Can't find player data");
+
+        var playerData = GetNode<GameData>("/root/GameData");
+        if (playerData != null)
+        {
+            GD.Print($"Player data found for {playerData.SelectedPlayers.Length} players");
+     
+        }
+        else 
+        { 
+            GD.PrintErr("Can't find player data");
+            
+        }
+
+        if (playerData.SelectedPlayers.Length > 1)
+        {
+            StartGame(playerData.SelectedPlayers);
+        }
+
+        else
+        {
+            TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
+        }
 	}
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
+        //TODO: call updateplayercardvalues
+
+
         //Moving any players that need to be moved
         foreach (var movingPlayer in movingPlayers)
         {
@@ -135,7 +161,27 @@ public partial class GameLoop : Node
                 default:
                     break;
             }
-            NextTurn();//Once the action for the current space has been (mostly) completed the turn is changed
+            if (diceResult[0] != diceResult[1])
+            {
+                NextTurn();
+                _doublesCount = 0;
+                //Console.WriteLine($"Doubles! You've rolled {_doublesCount} doubles");
+            }
+            else
+            {
+                _doublesCount++;
+            }
+            if (_doublesCount == 3)
+            {
+               //go to jail
+               currentPlayer.GoToJail();
+               _doublesCount = 0;
+            }
+            else
+            {
+                GrantExtraTurn();
+                //TODO give current player another turn
+            }
         }
     }
 
@@ -173,17 +219,10 @@ public partial class GameLoop : Node
                 int result1 = rnd.Next(1, 7);
                 int result2 = rnd.Next(1, 7);
 
+                //Printing results  to UI
                 GD.Print($"Dice Faces: {result1}, {result2}");
                 GetNode<TextureRect>("UI/DiceFace1").Texture = _diceFaces[result1 - 1];
                 GetNode<TextureRect>("UI/DiceFace2").Texture = _diceFaces[result2 - 1];
-
-                //Printing results  to UI
-                //GD.Print("Dice Result: " + result1 + ", " + result2);
-                //GetNode<Label>("UI/TMPDiceResult1").Text = "" + result1;
-                //GetNode<Label>("UI/TMPDiceResult2").Text = "" + result2;
-
-
-
 
                 //Saving result
                 diceResult[0] = result1;
@@ -192,31 +231,39 @@ public partial class GameLoop : Node
             }
         }
 
-    public void StartGame(TmpPlayer[] playerList)
+    public void StartGame(PlayerSelection.PlayerData[] playerList)
 	{
-		players = new Player[playerList.Length];
+        //Vector2 textureSize = Texture.GetSize();
+        //Scale = TargetSize / textureSize;
+        players = new Player[playerList.Length];
 
 		//Creating player pieces
 		PackedScene player = GD.Load<PackedScene>("res://Objects/Player.tscn");
+        List<Texture2D> textures = PlayerSlot.GetTextures();
+
         for (int i = 0; i < players.Length; i++)
         {
 			//Creating player piece object
 			var instance = (Node2D)player.Instantiate();
 			AddChild(instance);
 			instance.Name += i + 1;//Making match the naming convention: player1, player2...
+            GD.Print(instance.Name);
 
-			Texture2D texture = GD.Load<Texture2D>("res://Assets/PlayerIcons/" + playerList[i].piece + '.' + playerPieceFileType);
-			instance.GetChild<Sprite2D>(0).Texture = texture;
+			instance.GetChild<Sprite2D>(0).Texture = textures[playerList[i].AvatarIndex];
+            bool cpu = false;
+            if (playerList[i].PlayerType == "AI") cpu = true;
 
-			players[i] = new Player(instance, playerList[i].cpu);
+            players[i] = new Player(instance, cpu);
 
-			//Moving player piece to start pos
-			var go = GetNode<Marker>("Board/Places/Go");
+            //TODO: initialise the players cards (array?)
+
+            //Moving player piece to start pos
+            var go = GetNode<Marker>("Board/Places/Go");
 			go.MoveTo(players[i], true);
             players[i].location = go;
             players[i].AddMoney(StartingMoney);
-        }
 
+        }
         SetTurn(0);
     }
 
@@ -235,14 +282,14 @@ public partial class GameLoop : Node
     //Used to test the game by generating a predefined number of human and ai players
     public void TestGame(int humans, int bots)
     {
-        TmpPlayer[] strtPlayers = new TmpPlayer[humans + bots];
+        PlayerSelection.PlayerData[] strtPlayers = new PlayerSelection.PlayerData[humans + bots];
         for (int i = 0; i < humans; i++)
         {
-            strtPlayers[i] = new TmpPlayer(false, "Player" + (i + 1));
+            strtPlayers[i] = new PlayerSelection.PlayerData(i, "Human");
         }
         for (int i = humans; i < humans + bots; i++)
         {
-            strtPlayers[i] = new TmpPlayer(true, "Player" + (i + 1));
+            strtPlayers[i] = new PlayerSelection.PlayerData(i, "Human");
         }
         StartGame(strtPlayers);
     }
@@ -250,24 +297,56 @@ public partial class GameLoop : Node
     //Changes whos turn it is to the next player
     private void NextTurn()
     {
-        //updating current player value
-        if (currentPlayerIndex == players.Length - 1)
+        do
         {
-            SetTurn(0);
-        }
-        else
-        {
-            SetTurn(currentPlayerIndex + 1);
-        }
+            //updating current player value
+            if (currentPlayerIndex == players.Length - 1)
+            {
+                SetTurn(0);
+            }
+            else
+            {
+                SetTurn(currentPlayerIndex + 1);
+            }
+            _doublesCount = 0;
+
+            //Exit the loop if no extra turn is granted
+            if (!_extraTurn)
+            {
+                break;
+            }
+        } while (!_extraTurn);
+
+        //Reset the extra turn flag for the next turn
+        _extraTurn = false;
+                                                           
+                                                                                    //if (currentPlayerIndex == players.Length - 1)
+                                                                                    //    {
+                                                                                    //        SetTurn(0);
+                                                                                    //    }
+                                                                                    //    else
+                                                                                    //    {
+                                                                                    //        SetTurn(currentPlayerIndex + 1);
+                                                                                    //    }
     }
 
-    //changes turn to specified value
+    //changes which player's turn it is to a specified value
     private void SetTurn(int turn)
     {
         currentPlayerIndex = turn;
         currentPlayer = players[currentPlayerIndex];
+        //changing the current player
+        GetNode<Label>("UI/CurrentPlayer").Text = ($"Player {currentPlayerIndex + 1}'s turn");
+        GetNode<Label>("UI/CurrentPlayerProp").Text = ($"Player {currentPlayerIndex + 1}'s \nproperties");
         //changing money display
         GetNode<Label>("UI/Money").Text = moneySymbol + currentPlayer.GetMoney().ToString();
+
+        //changing player avatar
+        GetNode<TextureRect>("UI/Avatar").Texture = currentPlayer.node.GetChild<Sprite2D>(0).Texture;
+
+        //TODO: add players owned properties
+
+        GetNode<Label>("UI/Properties").Text = ("");
     }
 
     //Moves the given player towards the given location. Need to be called every frame
@@ -275,4 +354,5 @@ public partial class GameLoop : Node
     {
         player.node.GlobalPosition = player.node.GlobalPosition.MoveToward(pos, (float)(delta * playerMoveSpeed));
     }
+
 }

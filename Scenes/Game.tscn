@@ -17,6 +17,7 @@ font_names = PackedStringArray("Impact")
 script = ExtResource("1_3f8ab")
 playerMoveSpeed = 60
 playerRotateSpeed = 25
+humanPlayers = 3
 
 [node name="Board" type="Sprite2D" parent="."]
 position = Vector2(322, 176)
@@ -1087,14 +1088,41 @@ offset_top = 256.0
 offset_right = 616.0
 offset_bottom = 296.0
 
+[node name="CurrentPlayer" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 64.0
+offset_right = 640.0
+offset_bottom = 104.0
+text = "Player X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CurrentPlayerProp" type="Label" parent="UI"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 159.0
+offset_bottom = 57.0
+text = "Player X's
+ properties"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Properties" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 344.0
+
 [node name="Money" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.775
 anchor_right = 1.0
 anchor_bottom = 0.131
-offset_left = -3.05176e-05
-offset_bottom = -0.0290031
+offset_top = 120.0
+offset_bottom = 119.971
 grow_horizontal = 0
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1123,6 +1151,13 @@ script = ExtResource("4_qsl3a")
 [node name="GetOutOfJailFree" parent="UI" instance=ExtResource("9_qb4kc")]
 visible = false
 layout_mode = 1
+
+[node name="Avatar" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 8.0
+offset_right = 600.0
+offset_bottom = 64.0
 
 [connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
 [connection signal="text_submitted" from="UI/CommandLine" to="UI/CommandLine" method="CommandEntered"]
