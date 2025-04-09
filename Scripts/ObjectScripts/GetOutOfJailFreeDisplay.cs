@@ -1,9 +1,11 @@
 using Godot;
+using PropertyTycoon.Scripts;
 using System;
 
 public partial class GetOutOfJailFreeDisplay : Control
 {
     private GameLoop gameLoop;
+    private Player player;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -11,18 +13,23 @@ public partial class GetOutOfJailFreeDisplay : Control
         GetNode<Control>(".").Visible = false;
     }
 
-    public void Yes()
+    public void ShowMenu(Player bailedPlayer)
     {
-        gameLoop.currentPlayer.hasGetOutOfJail = false;
-        gameLoop.currentPlayer.getOutOfJail();
-        GetNode<Control>(".").Visible = false;
+        player = bailedPlayer;
+        GetNode<Control>(".").Visible = true;
     }
 
-
+    public void Yes()
+    {
+        player.hasGetOutOfJail = false;
+        player.getOutOfJail();
+        GetNode<Control>(".").Visible = false;
+        gameLoop.NextTurn(true);
+    }
 
     public void No()
     {
         GetNode<Control>(".").Visible = false;
-        gameLoop.GetNode<Control>("UI/JailBail").Visible = true;
+        gameLoop.GetNode<JailBail>("UI/JailBail").ShowMenu(player);
     }
 }

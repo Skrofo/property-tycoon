@@ -1,19 +1,13 @@
 using Godot;
 using PropertyTycoon.Scripts;
 using System;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using static PlayerSelection;
 
 public partial class GameLoop : Node
 {
     public const int MaxPlayerCount = 6;//Maximum  number  of players including bots
     public const char moneySymbol = (char)163; //If you type the pound symbol in vs it can crash godot whenever it tries to load the file so just use this instead
     public const int StartingMoney = 1500; //How much money each player starts with
-
-    private const string playerPieceFileType = "svg"; //Filename extension for the filetype of the player icons without the: "."
 
     [Export] public int playerMoveSpeed;//How fast the player's piece moves to it's next space.
     [Export] public int playerRotateSpeed;//How fast the player's piece rotates to align with it's side of the board
@@ -40,11 +34,6 @@ public partial class GameLoop : Node
     private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
     public int currentPlayerIndex; //Num of the player who's turn it is currently
-    private bool _extraTurn = false;
-    private void GrantExtraTurn()
-    {
-        _extraTurn = true;
-    }
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -101,7 +90,7 @@ public partial class GameLoop : Node
         if (currentPlayer.jailTurns > 0)
         {
             currentPlayer.jailTurns--;
-            NextTurn();
+            NextTurn(true);
         }
 
         //Waiting for player to roll dice
@@ -129,9 +118,11 @@ public partial class GameLoop : Node
             switch (currentPlayer.location.type)
             {
                 case Marker.SpaceType.Go:
+                    NextTurn();
                     //This should be empty as nothing happpens specifically on go, only when you pass it
                     break;
                 case Marker.SpaceType.Property:
+                    NextTurn();
                     break;
                 case Marker.SpaceType.OpportunityKnocks:
                     GetNode<CardDisplay>("UI/CardDisplay").Show(Card.CardType.OpportunityKnocks);
@@ -141,18 +132,20 @@ public partial class GameLoop : Node
                     break;
                 case Marker.SpaceType.FreeParking:
                     ClaimParkingMoney(currentPlayer);
+                    NextTurn();
                     break;
                 case Marker.SpaceType.VisitingJail:
+                    NextTurn();
                     //This should be empty as "Just visiting" space does nothing by itself
                     break;
                 case Marker.SpaceType.Jail:
                     if (currentPlayer.hasGetOutOfJail)
                     {
-                        GetNode<Control>("UI/GetOutOfJailFree").Visible = true;
+                        GetNode<GetOutOfJailFreeDisplay>("UI/GetOutOfJailFree").ShowMenu(currentPlayer);
                     }
                     else
                     {
-                        GetNode<Control>("UI/JailBail").Visible = true;
+                        GetNode<JailBail>("UI/JailBail").ShowMenu(currentPlayer);
                     }
                     break;
                 case Marker.SpaceType.GoToJail:
@@ -161,27 +154,7 @@ public partial class GameLoop : Node
                 default:
                     break;
             }
-            if (diceResult[0] != diceResult[1])
-            {
-                NextTurn();
-                _doublesCount = 0;
-                //Console.WriteLine($"Doubles! You've rolled {_doublesCount} doubles");
-            }
-            else
-            {
-                _doublesCount++;
-            }
-            if (_doublesCount == 3)
-            {
-               //go to jail
-               currentPlayer.GoToJail();
-               _doublesCount = 0;
-            }
-            else
-            {
-                GrantExtraTurn();
-                //TODO give current player another turn
-            }
+            //NextTurn();
         }
     }
 
@@ -295,11 +268,11 @@ public partial class GameLoop : Node
     }
 
     //Changes whos turn it is to the next player
-    private void NextTurn()
+    public void NextTurn(bool forceNext = false)
     {
-        do
+        if (diceResult[0] != diceResult[1] || forceNext)
         {
-            //updating current player value
+            _doublesCount = 0;
             if (currentPlayerIndex == players.Length - 1)
             {
                 SetTurn(0);
@@ -308,26 +281,15 @@ public partial class GameLoop : Node
             {
                 SetTurn(currentPlayerIndex + 1);
             }
-            _doublesCount = 0;
-
-            //Exit the loop if no extra turn is granted
-            if (!_extraTurn)
+        }
+        else
+        {
+            _doublesCount++;
+            if (_doublesCount == 3)
             {
-                break;
+                currentPlayer.GoToJail();
             }
-        } while (!_extraTurn);
-
-        //Reset the extra turn flag for the next turn
-        _extraTurn = false;
-                                                           
-                                                                                    //if (currentPlayerIndex == players.Length - 1)
-                                                                                    //    {
-                                                                                    //        SetTurn(0);
-                                                                                    //    }
-                                                                                    //    else
-                                                                                    //    {
-                                                                                    //        SetTurn(currentPlayerIndex + 1);
-                                                                                    //    }
+        }
     }
 
     //changes which player's turn it is to a specified value

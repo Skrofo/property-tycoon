@@ -44,7 +44,6 @@ namespace PropertyTycoon.Scripts
 
         public void GoToJail()
         {
-            jailTurns = 2;
             MoveTo("Board/Places/Jail");
             gameLoop.justMoved = true;
         }
