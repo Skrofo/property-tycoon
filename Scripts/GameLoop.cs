@@ -73,7 +73,6 @@ public partial class GameLoop : Node
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-        //TODO: call updateplayercardvalues
 
 
         //Moving any players that need to be moved
@@ -227,8 +226,6 @@ public partial class GameLoop : Node
             if (playerList[i].PlayerType == "AI") cpu = true;
 
             players[i] = new Player(instance, cpu);
-
-            //TODO: initialise the players cards (array?)
 
             //Moving player piece to start pos
             var go = GetNode<Marker>("Board/Places/Go");
