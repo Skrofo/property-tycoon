@@ -13,6 +13,7 @@ public partial class PlayerSlot : Control
     public int CurrentAvatarIndex = 0;
     public int CurrentTypeIndex = 0; // 0 = Human, 1 = AI, 2 = None
     private string[] playerTypes = { "Human", "AI", "None" };
+    static int counter = 0;
 
     public override void _Ready()
     {
@@ -29,6 +30,7 @@ public partial class PlayerSlot : Control
         // Make sure we have avatars
         if (avatars.Count > 0)
         {
+            CurrentAvatarIndex = GetUniqueAvatarIndex();
             SelectedAvatar.Texture = avatars[CurrentAvatarIndex];
         }
 
@@ -71,5 +73,11 @@ public partial class PlayerSlot : Control
         LeftArrow.Visible = !isNone;
         RightArrow.Visible = !isNone;
         SelectedAvatar.Visible = !isNone;
+    }
+    private int GetUniqueAvatarIndex()
+    {
+        int index = counter % avatars.Count;
+        counter++;
+        return index;
     }
 }
