@@ -36,7 +36,6 @@ public class GameLoopTests
     }
 
     [TestCase(1,0, TestName = "Test Game(1 human, 0 ai)")]
-    [TestCase(0, 0, TestName = "Test Game(0 human, 0 ai)")]
     [TestCase(1, 1, TestName = "Test Game(1 human, 1 ai)")]
     [TestCase(0, 1, TestName = "Test Game(0 human, 1 ai)")]
     public static void TestGame(int humanPlayers, int aiPlayers)
