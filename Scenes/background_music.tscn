@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://4hu7m1h60byx"]
+
+[ext_resource type="AudioStream" uid="uid://drj7m77efxas4" path="res://Audio/Music/minecraftbackgroundmusic.mp3" id="1_lcvfe"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_lcvfe")
+autoplay = true
+bus = &"Music"
