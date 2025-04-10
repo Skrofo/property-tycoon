@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://crlrehjcgp2oh"]
+[gd_scene load_steps=11 format=3 uid="uid://crlrehjcgp2oh"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_3f8ab"]
 [ext_resource type="Texture2D" uid="uid://de6qeroyx8i04" path="res://Assets/boardv3.jpg" id="2_0sk24"]
@@ -7,18 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://pbsic3d4osmx" path="res://Assets/Card/PotLuck/Pot Luck.png" id="4_srb2r"]
 [ext_resource type="PackedScene" uid="uid://dfi80cf2sd7mo" path="res://Objects/JailBail.tscn" id="5_0rhfv"]
 [ext_resource type="Texture2D" uid="uid://bgir7hyabkfmb" path="res://Assets/Card/OpportunityKnocks/Opportunity Knocks.png" id="5_xc0fm"]
-[ext_resource type="PackedScene" uid="uid://b5v0eof0w3xgw" path="res://Objects/ClaimFreeParking.tscn" id="6_srn8j"]
-[ext_resource type="PackedScene" uid="uid://b8u2o7n3yivb7" path="res://Objects/CardDisplay.tscn" id="8_netr8"]
-[ext_resource type="PackedScene" uid="uid://bya50x0vnutrs" path="res://Objects/GetOutOfJailFree.tscn" id="9_qb4kc"]
+[ext_resource type="PackedScene" path="res://Objects/CardDisplay.tscn" id="8_netr8"]
+[ext_resource type="PackedScene" path="res://Objects/GetOutOfJailFree.tscn" id="9_qb4kc"]
 
 [sub_resource type="SystemFont" id="SystemFont_4cq8a"]
 font_names = PackedStringArray("Impact")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kceo5"]
-bg_color = Color(0.482353, 0.74902, 0.92549, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ooei3"]
-font_size = 12
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_3f8ab")
@@ -1095,47 +1088,17 @@ offset_top = 256.0
 offset_right = 616.0
 offset_bottom = 296.0
 
-[node name="CurrentPlayer" type="Label" parent="UI"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 64.0
-offset_right = 640.0
-offset_bottom = 104.0
-text = "Player X"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CurrentPlayerProp" type="Label" parent="UI"]
-layout_mode = 0
-offset_top = 8.0
-offset_right = 159.0
-offset_bottom = 57.0
-text = "Player X's
- properties"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Properties" type="Label" parent="UI"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 64.0
-offset_right = 144.0
-offset_bottom = 344.0
-
 [node name="Money" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.775
 anchor_right = 1.0
 anchor_bottom = 0.131
-offset_top = 120.0
-offset_bottom = 119.971
+offset_left = -3.05176e-05
+offset_bottom = -0.0290031
 grow_horizontal = 0
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ClaimFreeParking" parent="UI" instance=ExtResource("6_srn8j")]
-visible = false
 
 [node name="JailBail" parent="UI" instance=ExtResource("5_0rhfv")]
 visible = false
@@ -1161,61 +1124,6 @@ script = ExtResource("4_qsl3a")
 [node name="GetOutOfJailFree" parent="UI" instance=ExtResource("9_qb4kc")]
 visible = false
 layout_mode = 1
-
-[node name="Avatar" type="TextureRect" parent="UI"]
-layout_mode = 0
-offset_left = 536.0
-offset_top = 8.0
-offset_right = 600.0
-offset_bottom = 64.0
-
-[node name="BankruptPlayer" type="Label" parent="UI"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 272.0
-offset_right = 144.0
-offset_bottom = 328.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VictoryPanel" type="Panel" parent="UI"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -111.0
-offset_top = -68.0
-offset_right = 109.0
-offset_bottom = 34.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kceo5")
-
-[node name="Label" type="Label" parent="UI/VictoryPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.529
-offset_left = -1.0
-offset_top = 57.0
-offset_right = -1.0
-offset_bottom = 43.042
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.988235, 0.988235, 0.972549, 1)
-text = "You're the winner :3 "
-label_settings = SubResource("LabelSettings_ooei3")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Avatar" type="TextureRect" parent="UI/VictoryPanel"]
-layout_mode = 0
-offset_left = 79.0
-offset_top = 8.5
-offset_right = 143.0
-offset_bottom = 64.5
 
 [connection signal="pressed" from="UI/RollButton" to="." method="RollDiceButtonPressed"]
 [connection signal="text_submitted" from="UI/CommandLine" to="UI/CommandLine" method="CommandEntered"]

@@ -1,7 +1,10 @@
 using Godot;
 using PropertyTycoon.Scripts;
 using System;
+using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 
 public partial class GameLoop : Node
 {
@@ -9,10 +12,23 @@ public partial class GameLoop : Node
     public const char moneySymbol = (char)163; //If you type the pound symbol in vs it can crash godot whenever it tries to load the file so just use this instead
     public const int StartingMoney = 1500; //How much money each player starts with
 
+    private const string playerPieceFileType = "svg"; //Filename extension for the filetype of the player icons without the: "."
+
     [Export] public int playerMoveSpeed;//How fast the player's piece moves to it's next space.
     [Export] public int playerRotateSpeed;//How fast the player's piece rotates to align with it's side of the board
     [Export] public int humanPlayers = 1;//When running a test game, how many human players are there?
     [Export] public int aiPlayers = 0;//When running a test game, how many ai players are there?
+
+    public struct TmpPlayer //Temp struct until David has done his
+    {
+        public TmpPlayer(bool isCpu, string pieceName)
+        {
+            cpu = isCpu;
+            piece = pieceName;
+        }
+        public bool cpu;
+        public string piece;
+    }
 
     public Player[] players;
     public Dictionary<Player, Vector2> movingPlayers;//Players currently being moved and to where
@@ -42,26 +58,16 @@ public partial class GameLoop : Node
         parkingMoney = 0;
         _diceFaces = LoadDiceTextures();
 
-
+        
         var playerData = GetNode<GameData>("/root/GameData");
         if (playerData != null)
         {
             GD.Print($"Player data found for {playerData.SelectedPlayers.Length} players");
-     
+            StartGame(playerData.SelectedPlayers);
         }
         else 
         { 
             GD.PrintErr("Can't find player data");
-            
-        }
-
-        if (playerData.SelectedPlayers.Length > 1)
-        {
-            StartGame(playerData.SelectedPlayers);
-        }
-
-        else
-        {
             TestGame(humanPlayers, aiPlayers);//First num is human players, second is ai players (Ai currently not implemented)
         }
 	}
@@ -69,8 +75,6 @@ public partial class GameLoop : Node
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-
-
         //Moving any players that need to be moved
         foreach (var movingPlayer in movingPlayers)
         {
@@ -85,7 +89,7 @@ public partial class GameLoop : Node
         if (currentPlayer.jailTurns > 0)
         {
             currentPlayer.jailTurns--;
-            NextTurn(true);
+            NextTurn();
         }
 
         //Waiting for player to roll dice
@@ -120,11 +124,9 @@ public partial class GameLoop : Node
             switch (currentPlayer.location.type)
             {
                 case Marker.SpaceType.Go:
-                    NextTurn();
                     //This should be empty as nothing happpens specifically on go, only when you pass it
                     break;
                 case Marker.SpaceType.Property:
-                    NextTurn();
                     break;
                 case Marker.SpaceType.OpportunityKnocks:
                     GetNode<CardDisplay>("UI/CardDisplay").Show(Card.CardType.OpportunityKnocks);
@@ -136,17 +138,16 @@ public partial class GameLoop : Node
                     ClaimParkingMoney(currentPlayer);
                     break;
                 case Marker.SpaceType.VisitingJail:
-                    NextTurn();
                     //This should be empty as "Just visiting" space does nothing by itself
                     break;
                 case Marker.SpaceType.Jail:
                     if (currentPlayer.hasGetOutOfJail)
                     {
-                        GetNode<GetOutOfJailFreeDisplay>("UI/GetOutOfJailFree").ShowMenu(currentPlayer);
+                        GetNode<Control>("UI/GetOutOfJailFree").Visible = true;
                     }
                     else
                     {
-                        GetNode<JailBail>("UI/JailBail").ShowMenu(currentPlayer);
+                        GetNode<Control>("UI/JailBail").Visible = true;
                     }
                     break;
                 case Marker.SpaceType.GoToJail:
@@ -155,7 +156,27 @@ public partial class GameLoop : Node
                 default:
                     break;
             }
-            //NextTurn();
+            if (diceResult[0] != diceResult[1])
+            {
+                NextTurn();
+                _doublesCount = 0;
+                //Console.WriteLine($"Doubles! You've rolled {_doublesCount} doubles");
+            }
+            else
+            {
+                _doublesCount++;
+            }
+            if (_doublesCount == 3)
+            {
+               //go to jail
+               currentPlayer.GoToJail();
+               _doublesCount = 0;
+            }
+            else
+            {
+                GrantExtraTurn();
+                //TODO give current player another turn
+            }
         }
     }
 
@@ -186,12 +207,6 @@ public partial class GameLoop : Node
     {
         //Making sure all player pieces are done moving before queing up more
         if (movingPlayers.Count == 0)            {
-
-        //Make the actual dice roll.
-        public void RollDie()
-        {
-            if (movingPlayers.Count == 0)//Making sure all player pieces are done moving before queing up more
-            {
 
 
             //Generatin random numbers
@@ -227,7 +242,6 @@ public partial class GameLoop : Node
 			var instance = (Node2D)player.Instantiate();
 			AddChild(instance);
 			instance.Name += i + 1;//Making match the naming convention: player1, player2...
-            GD.Print(instance.Name);
 
 			instance.GetChild<Sprite2D>(0).Texture = textures[playerList[i].AvatarIndex];
             bool cpu = false;
@@ -235,13 +249,13 @@ public partial class GameLoop : Node
 
             players[i] = new Player(instance, cpu);
 
-            //Moving player piece to start pos
-            var go = GetNode<Marker>("Board/Places/Go");
+			//Moving player piece to start pos
+			var go = GetNode<Marker>("Board/Places/Go");
 			go.MoveTo(players[i], true);
             players[i].location = go;
             players[i].AddMoney(StartingMoney);
-
         }
+
         SetTurn(0);
     }
 
@@ -252,8 +266,9 @@ public partial class GameLoop : Node
     }
     public void ClaimParkingMoney(Player player)
     {
-        // popup for claiming parking money
-        GetNode<ClaimFreeParking>("UI/ClaimFreeParking").ShowMenu(player);   
+        //TODO: Add some kind of popup for claiming parking money
+        player.AddMoney(parkingMoney);
+        parkingMoney = 0;
     }
 
     //Used to test the game by generating a predefined number of human and ai players
@@ -272,12 +287,11 @@ public partial class GameLoop : Node
     }
 
     //Changes whos turn it is to the next player
-    public void NextTurn(bool forceNext = false)
+    private void NextTurn()
     {
-        if (diceResult[0] != diceResult[1] || forceNext)
+        do
         {
-            CheckBankrupt(currentPlayer);
-            _doublesCount = 0;
+            //updating current player value
             if (currentPlayerIndex == players.Length - 1)
             {
                 SetTurn(0);
@@ -286,15 +300,26 @@ public partial class GameLoop : Node
             {
                 SetTurn(currentPlayerIndex + 1);
             }
-        }
-        else
-        {
-            _doublesCount++;
-            if (_doublesCount == 3)
+            _doublesCount = 0;
+
+            //Exit the loop if no extra turn is granted
+            if (!_extraTurn)
             {
-                currentPlayer.GoToJail();
+                break;
             }
-        }
+        } while (!_extraTurn);
+
+        //Reset the extra turn flag for the next turn
+        _extraTurn = false;
+                                                           
+                                                                                    //if (currentPlayerIndex == players.Length - 1)
+                                                                                    //    {
+                                                                                    //        SetTurn(0);
+                                                                                    //    }
+                                                                                    //    else
+                                                                                    //    {
+                                                                                    //        SetTurn(currentPlayerIndex + 1);
+                                                                                    //    }
     }
 
     //changes which player's turn it is to a specified value
@@ -302,46 +327,13 @@ public partial class GameLoop : Node
     {
         currentPlayerIndex = turn;
         currentPlayer = players[currentPlayerIndex];
-        //changing the current player
-        GetNode<Label>("UI/CurrentPlayer").Text = ($"Player {currentPlayerIndex + 1}'s turn");
-        GetNode<Label>("UI/CurrentPlayerProp").Text = ($"Player {currentPlayerIndex + 1}'s \nproperties");
         //changing money display
         GetNode<Label>("UI/Money").Text = moneySymbol + currentPlayer.GetMoney().ToString();
-
-        //changing player avatar
-        GetNode<TextureRect>("UI/Avatar").Texture = currentPlayer.node.GetChild<Sprite2D>(0).Texture;
-
-        //TODO: add players owned properties
-
-        GetNode<Label>("UI/Properties").Text = ("");
     }
 
     //Moves the given player towards the given location. Need to be called every frame
     private void Move(double delta, Player player, Vector2 pos)
     {
         player.node.GlobalPosition = player.node.GlobalPosition.MoveToward(pos, (float)(delta * playerMoveSpeed));
-    }
-
-    // check if the current player is bankrupt if all players are bankrupt unless 1, end the game
-    public void CheckBankrupt(Player player)
-    {
-
-        // Check if player has no money. if so, remove them from the game
-        currentPlayer = players[currentPlayerIndex];
-        if (currentPlayer.GetMoney() <= 0)
-        {
-            player.node.Visible = false; // Remove player from the game
-            GetNode<Label>("UI/BankruptPlayer").Text = ($"Player {currentPlayerIndex + 1}\n is bankrupt\n and is out");
-            var playerList = new List<Player>(players);
-            playerList.Remove(player);
-            players = playerList.ToArray();
-        }
-
-        //Check for Last player standing
-        if (players.Length == 1)
-        {
-            GetNode<TextureRect>("UI/VictoryPanel/Avatar").Texture = players[0].node.GetChild<Sprite2D>(0).Texture;
-            GetNode<Panel>("UI/VictoryPanel").Visible = true;
-        }
     }
 }
