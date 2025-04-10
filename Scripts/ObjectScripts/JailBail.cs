@@ -8,11 +8,13 @@ public partial class JailBail : Control
 
     private Player player;
     private GameLoop gameLoop;
+    private string originalText;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
         gameLoop = FindParent("Game").GetNode<GameLoop>(".");
         GetNode<Control>(".").Visible = false;
+        originalText = GetNode<Label>("Panel/Label").Text;
     }
 
     public void ShowMenu(Player bailedPlayer)
@@ -31,7 +33,9 @@ public partial class JailBail : Control
         }
         else
         {
-            //TODO: Add visual effect when player tries to pay bail and can't
+            // Add visual effect when player tries to pay bail and can't
+            GetNode<Label>("Panel/Label").Text = "You don't have enough\n money to pay bail!";
+            
         }
     }
 
@@ -41,5 +45,6 @@ public partial class JailBail : Control
         GetNode<Control>(".").Visible = false;
         player.jailTurns = 3;
         gameLoop.NextTurn(true);
+        GetNode<Label>("Panel/Label").Text = originalText;
     }
 }
