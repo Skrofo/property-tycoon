@@ -1,7 +1,5 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Godot Projects\\property-tycoon\\",
-  "Documents": [],
   "WorkspaceRootPath": "C:\\Users\\alals\\Documents\\GitHub\\property-tycoon\\",
   "Documents": [
     {
@@ -52,7 +50,6 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
           "SelectedChildIndex": 4,
           "Children": [
             {
@@ -103,7 +100,7 @@
               "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
               "ToolTip": "C:\\Users\\alals\\Documents\\GitHub\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeToolTip": "Scripts\\GameLoop.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAiwAcBAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T16:18:58.308Z",
               "EditorCaption": ""

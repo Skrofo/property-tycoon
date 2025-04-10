@@ -261,11 +261,11 @@ public partial class GameLoop : Node
     //Changes whos turn it is to the next player
     public void NextTurn(bool forceNext = false)
     {
+        aiRolled = false;
         if (diceResult[0] != diceResult[1] || forceNext)
         {
             CheckBankrupt(currentPlayer);
             _doublesCount = 0;
-            aiRolled = false;
             if (currentPlayerIndex == players.Length - 1)
             {
                 SetTurn(0);
