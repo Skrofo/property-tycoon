@@ -8,7 +8,6 @@ public partial class ClaimFreeParking : Control
     private string FreeParkingText;
     private Player player;
     private GameLoop gameLoop;
-    private Card card;
     private int FreeParkingAmount;
 
     public override void _Ready()
@@ -18,6 +17,8 @@ public partial class ClaimFreeParking : Control
         GetNode<Control>(".").Visible = false;
     }
 
+
+    // allows player to click off the screen
     public override void _Process(double delta)
     {
         if (Input.IsActionJustPressed("DismissGameMenu") && GetNode<Control>(".").Visible == true)
@@ -27,10 +28,12 @@ public partial class ClaimFreeParking : Control
         }
     }
 
+    // shows the menu for when a player lands on free parking
     public void ShowMenu(Player Player)
     {
         FreeParkingAmount = gameLoop.GetParkingMoney();
         GetNode<Control>(".").Visible = true;
+        // checks what the value is in free parking. If it is 0, then the player cannot claim anything
         if (FreeParkingAmount == 0)
         {
             GetNode<Label>("Panel/Label").Text = ($"Free Parking Amount is {PoundSymbol}0!\n Nothing to Claim :(");
