@@ -256,6 +256,7 @@ public partial class GameLoop : Node
     {
         if (diceResult[0] != diceResult[1] || forceNext)
         {
+            CheckBankrupt(currentPlayer);
             _doublesCount = 0;
             if (currentPlayerIndex == players.Length - 1)
             {
@@ -301,4 +302,26 @@ public partial class GameLoop : Node
         player.node.GlobalPosition = player.node.GlobalPosition.MoveToward(pos, (float)(delta * playerMoveSpeed));
     }
 
+    // check if the current player is bankrupt if all players are bankrupt unless 1, end the game
+    public void CheckBankrupt(Player player)
+    {
+
+        // Check if player has no money. if so, remove them from the game
+        currentPlayer = players[currentPlayerIndex];
+        if (currentPlayer.GetMoney() <= 0)
+        {
+            player.node.Visible = false; // Remove player from the game
+            GetNode<Label>("UI/BankruptPlayer").Text = ($"Player {currentPlayerIndex + 1}\n is bankrupt\n and is out");
+            var playerList = new List<Player>(players);
+            playerList.Remove(player);
+            players = playerList.ToArray();
+        }
+
+        //Check for Last player standing
+        if (players.Length == 1)
+        {
+            GetNode<TextureRect>("UI/VictoryPanel/Avatar").Texture = players[0].node.GetChild<Sprite2D>(0).Texture;
+            GetNode<Panel>("UI/VictoryPanel").Visible = true;
+        }
+    }
 }
