@@ -55,6 +55,7 @@ public partial class CommandPrompt : LineEdit
                 break;
             case "parkingmoney"://Add specified number to free parking money
                 gameLoop.AddParkingMoney(words[1].ToInt());
+                GD.Print($"Free parking money is now {gameLoop.GetParkingMoney()}");
                 break;
             case "card"://Shows a card, if the second word is a card type it shows a random card of that type. If the second word is a card name it shows that card.(if the card name has spaces enclose it in speech marks)
                 if (words[1] == "opportunity")
