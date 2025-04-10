@@ -7,7 +7,7 @@ public partial class MusicSliderSettings : Control
     [Export]
     public string BusName { get; set; } = "Music";
 
-    // (Optional) This is the text for the left Label (caption). Adjust as you wish or remove if unnecessary.
+    
     [Export]
     public string LabelText { get; set; } = "Music Volume";
 
@@ -21,7 +21,7 @@ public partial class MusicSliderSettings : Control
         // Get references to your child nodes inside the HBoxContainer
         audioNameLabel = GetNode<Label>("HBoxContainer/Audio_Name_Lbl");           // The first Label
         slider = GetNode<HSlider>("HBoxContainer/HSlider");       // The slider
-        audioNumLabel = GetNode<Label>("HBoxContainer/Audio_Num_Lbl");          // The second Label (rename in the scene if needed)
+        audioNumLabel = GetNode<Label>("HBoxContainer/Audio_Num_Lbl");          // The second Label
 
         // Set the caption text on the left label
         audioNameLabel.Text = LabelText;
@@ -33,7 +33,7 @@ public partial class MusicSliderSettings : Control
         float currentDb = AudioServer.GetBusVolumeDb(busIndex);
         slider.Value = DbToLinear(currentDb);
 
-        // Update the right label text (show a percentage, for example)
+        // Update the right label text
         UpdateValueLabel();
 
         // Connect the slider’s ValueChanged signal
@@ -57,9 +57,6 @@ public partial class MusicSliderSettings : Control
         audioNumLabel.Text = Mathf.Round(percent).ToString();
     }
 
-    /// <summary>
-    /// Converts decibels to a linear 0..1 value for the slider.
-    /// </summary>
     private float DbToLinear(float db)
     {
         // If volume is extremely low, clamp to 0
@@ -69,15 +66,11 @@ public partial class MusicSliderSettings : Control
         return Mathf.Pow(10f, db / 20f);
     }
 
-    /// <summary>
-    /// Converts a linear 0..1 slider value to decibels.
-    /// </summary>
     private float LinearToDb(float linear)
     {
         if (linear <= 0f)
             return -80f; // a typical “silent” floor in dB
 
         return 20f * (float)Math.Log10(linear);
-        //an issue above log10 doesnt work ******************************
     }
 }
