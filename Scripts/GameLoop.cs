@@ -44,6 +44,7 @@ public partial class GameLoop : Node
     {
         _extraTurn = true;
     }
+    private Texture2D[] _diceFaces = new Texture2D[6];
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -54,7 +55,7 @@ public partial class GameLoop : Node
         movingPlayers = new Dictionary<Player, Vector2>();
         justMoved = false;
         parkingMoney = 0;
-        _LoadDiceTextures();
+        _diceFaces = LoadDiceTextures();
 
         
         var playerData = GetNode<GameData>("/root/GameData");
@@ -106,6 +107,13 @@ public partial class GameLoop : Node
                 currentPlayer.PassGo();
             }
         }
+
+        //FIXME AI players rolling the die (BROKEN)
+        //if (currentPlayer.cpu && diceRolled == false)
+        //{
+        //    RollDie();
+        //    diceRolled = true;
+        //}
 
         //Doing whatever action is associated with the current space
         if (justMoved && movingPlayers.Count == 0)
@@ -179,18 +187,20 @@ public partial class GameLoop : Node
             RollDie();
         }
     }
-    private Texture2D[] _diceFaces = new Texture2D[6];
 
     //Load textures in _LoadDiceTextures()
-    public void _LoadDiceTextures()
+    public static Texture2D[] LoadDiceTextures()
     {
-        _diceFaces[0] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_1.png");
-        _diceFaces[1] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_2.png");
-        _diceFaces[2] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_3.png");
-        _diceFaces[3] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_4.png");
-        _diceFaces[4] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_5.png");
-        _diceFaces[5] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_6.png");
+        Texture2D[] dieTextures = new Texture2D[6];
+        dieTextures[0] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_1.png");
+        dieTextures[1] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_2.png");
+        dieTextures[2] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_3.png");
+        dieTextures[3] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_4.png");
+        dieTextures[4] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_5.png");
+        dieTextures[5] = GD.Load<Texture2D>("res://Assets/Dice/Dice_Side_6.png");
+        return dieTextures;
     }
+
 
 
         //TODO:Make the actual dice roll. This is temperory
@@ -198,8 +208,6 @@ public partial class GameLoop : Node
         {
             if (movingPlayers.Count == 0)//Making sure all player pieces are done moving before queing up more
             {
-
-
                 //Generatin random numbers
                 Random rnd = new Random();
                 int result1 = rnd.Next(1, 7);
