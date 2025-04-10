@@ -9,7 +9,8 @@ public partial class SettingsMenu : Control
 
     public override void _Ready()
     {
-        // Get node references
+        // Get node references and assign it to a variable
+
         //headerLabel = GetNode<Label>("header_label");
         exitButton = GetNode<Button>("MarginContainer/VBoxContainer/ExitButton");
         
@@ -24,6 +25,7 @@ public partial class SettingsMenu : Control
     {
         GD.Print("Exit Button Pressed!");
         // Return to Main Menu.
+        //Scene handling handled in scenemanager.cs
         SceneManager.Instance.GoBack();
     }
 

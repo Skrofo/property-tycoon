@@ -8,6 +8,44 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+  "WorkspaceRootPath": "C:\\Users\\alals\\Documents\\GitHub\\property-tycoon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\windowmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\windowmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\voiceslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\voiceslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\sfxslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\sfxslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\resolutionmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\resolutionmodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\musicslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\musicslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\masterslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\masterslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\alals\\documents\\github\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+  "WorkspaceRootPath": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -32,6 +70,19 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\objectscripts\\getoutofjailfreedisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\getoutofjailfreedisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\david\\documents\\software eng\\property-tycoon\\scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -51,6 +102,7 @@
         {
           "DockedWidth": 240,
           "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,6 +119,14 @@
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T19:53:40.758Z",
+              "Title": "SceneManager.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SceneManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\SceneManager.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SceneManager.cs",
+              "RelativeToolTip": "Scripts\\SceneManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:35:36.808Z",
               "EditorCaption": ""
             },
             {
@@ -93,6 +153,63 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T13:43:47.85Z",
               "EditorCaption": ""
+              "Title": "WindowModeButton.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\WindowModeButton.cs",
+              "RelativeDocumentMoniker": "Scripts\\WindowModeButton.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\WindowModeButton.cs",
+              "RelativeToolTip": "Scripts\\WindowModeButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:35:33.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VoiceSliderSettings.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\VoiceSliderSettings.cs",
+              "RelativeDocumentMoniker": "Scripts\\VoiceSliderSettings.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\VoiceSliderSettings.cs",
+              "RelativeToolTip": "Scripts\\VoiceSliderSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:35:31.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SFXSliderSettings.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SFXSliderSettings.cs",
+              "RelativeDocumentMoniker": "Scripts\\SFXSliderSettings.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SFXSliderSettings.cs",
+              "RelativeToolTip": "Scripts\\SFXSliderSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:35:27.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SettingsMenu.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
+              "RelativeDocumentMoniker": "Scripts\\SettingsMenu.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
+              "RelativeToolTip": "Scripts\\SettingsMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:35:24.124Z",
+              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "ClaimFreeParking.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\ClaimFreeParking.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\ClaimFreeParking.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\ClaimFreeParking.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\ClaimFreeParking.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCMAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.272Z"
             },
             {
               "$type": "Document",
@@ -165,6 +282,15 @@
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T13:43:47.84Z"
+              "Title": "ResolutionModeButton.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\ResolutionModeButton.cs",
+              "RelativeDocumentMoniker": "Scripts\\ResolutionModeButton.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\ResolutionModeButton.cs",
+              "RelativeToolTip": "Scripts\\ResolutionModeButton.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:34:53.777Z",
+              "WhenOpened": "2025-04-10T16:18:58.303Z"
             },
             {
               "$type": "Document",
@@ -177,6 +303,123 @@
               "ViewState": "AgIAACcAAAAAAAAAAAAowBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T13:43:47.845Z"
+              "Title": "GameData.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameData.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameData.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameData.cs",
+              "RelativeToolTip": "Scripts\\GameData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameLoop.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameLoop.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameLoop.cs",
+              "RelativeToolTip": "Scripts\\GameLoop.cs",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAiwAcBAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAADsBAAAAAAAAAAAiwEwBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MusicSliderSettings.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\MusicSliderSettings.cs",
+              "RelativeDocumentMoniker": "Scripts\\MusicSliderSettings.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\MusicSliderSettings.cs",
+              "RelativeToolTip": "Scripts\\MusicSliderSettings.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowEkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:34:05.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MasterSliderSettings.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\MasterSliderSettings.cs",
+              "RelativeDocumentMoniker": "Scripts\\MasterSliderSettings.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\MasterSliderSettings.cs",
+              "RelativeToolTip": "Scripts\\MasterSliderSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T18:31:32.587Z",
+              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "CommandPrompt.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\CommandPrompt.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDkAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JailBail.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\JailBail.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\JailBail.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\JailBail.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetOutOfJailFreeDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
+              "RelativeToolTip": "Scripts\\ObjectScripts\\GetOutOfJailFreeDisplay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Card.cs",
+              "RelativeDocumentMoniker": "Scripts\\Card.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Card.cs",
+              "RelativeToolTip": "Scripts\\Card.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAADwv6UAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Player.cs",
+              "RelativeToolTip": "Scripts\\Player.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwv1MAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Marker.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeDocumentMoniker": "Scripts\\Marker.cs",
+              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Marker.cs",
+              "RelativeToolTip": "Scripts\\Marker.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:18:58.319Z"
             }
           ]
         },

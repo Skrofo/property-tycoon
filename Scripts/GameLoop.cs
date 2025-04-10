@@ -46,6 +46,8 @@ public partial class GameLoop : Node
     }
     private Texture2D[] _diceFaces = new Texture2D[6];
 
+    private bool aiRolled;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -56,6 +58,9 @@ public partial class GameLoop : Node
         justMoved = false;
         parkingMoney = 0;
         _diceFaces = LoadDiceTextures();
+        _LoadDiceTextures();
+        aiRolled = false;
+
 
         
         var playerData = GetNode<GameData>("/root/GameData");
@@ -89,6 +94,12 @@ public partial class GameLoop : Node
         {
             currentPlayer.jailTurns--;
             NextTurn();
+        }
+
+        if (currentPlayer.cpu && !diceRolled && !aiRolled && movingPlayers.Count == 0)
+        {
+            RollDie();
+            aiRolled = true;
         }
 
         //Waiting for player to roll dice
@@ -288,7 +299,8 @@ public partial class GameLoop : Node
     //Changes whos turn it is to the next player
     private void NextTurn()
     {
-        do
+        aiRolled = false;
+        if (diceResult[0] != diceResult[1] || forceNext)
         {
             //updating current player value
             if (currentPlayerIndex == players.Length - 1)
@@ -334,5 +346,29 @@ public partial class GameLoop : Node
     private void Move(double delta, Player player, Vector2 pos)
     {
         player.node.GlobalPosition = player.node.GlobalPosition.MoveToward(pos, (float)(delta * playerMoveSpeed));
+    }
+
+    // check if the current player is bankrupt if all players are bankrupt unless 1, end the game
+    public void CheckBankrupt(Player player)
+    {
+
+        // Check if player has no money. if so, remove them from the game
+        currentPlayer = players[currentPlayerIndex];
+        if (currentPlayer.GetMoney() <= 0)
+        {
+            player.node.Visible = false; // Remove player from the game
+            GetNode<Label>("UI/BankruptPlayer").Text = ($"Player {currentPlayerIndex + 1}\n is bankrupt\n and is out");
+            var playerList = new List<Player>(players);
+            playerList.Remove(player);
+            players = playerList.ToArray();
+        }
+
+        //Check for Last player standing
+        if (players.Length == 1)
+        {
+            GetNode<TextureRect>("UI/VictoryPanel/Avatar").Texture = players[0].node.GetChild<Sprite2D>(0).Texture;
+            GetNode<Panel>("UI/VictoryPanel").Visible = true;
+            GetTree().Paused = true;
+        }
     }
 }
