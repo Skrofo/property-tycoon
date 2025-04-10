@@ -35,14 +35,14 @@ public partial class ResolutionModeButton : Node
 
     private void OnResolutionSelected(long index)
     {
-        /* // Get the resolution as Vector2.
-         Vector2 res = RESOLUTION_DICTIONARY[(int)index].resolution;
+        // Get the resolution as Vector2.
+        Vector2 res = RESOLUTION_DICTIONARY[(int)index].resolution;
 
-         // Convert Vector2 to Vector2i since DisplayServer.WindowSetSize expects integers.
-         Vector2i windowSize = new Vector2i((int)res.x, (int)res.y);
-         DisplayServer.WindowSetSize(windowSize);
+        // Convert Vector2 to Vector2i since DisplayServer.WindowSetSize expects integers.
+        Vector2I windowSize = (Vector2I)res;
+        DisplayServer.WindowSetSize(windowSize);
 
-         GD.Print($"Changed resolution to: {res}");*/
+        GD.Print($"Changed resolution to: {res}");
         GD.Print("Resolution Changed");
 
     }

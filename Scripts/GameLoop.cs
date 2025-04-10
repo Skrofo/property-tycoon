@@ -1,11 +1,7 @@
 using Godot;
 using PropertyTycoon.Scripts;
 using System;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using static PlayerSelection;
 
 public partial class GameLoop : Node
 {
@@ -13,23 +9,10 @@ public partial class GameLoop : Node
     public const char moneySymbol = (char)163; //If you type the pound symbol in vs it can crash godot whenever it tries to load the file so just use this instead
     public const int StartingMoney = 1500; //How much money each player starts with
 
-    private const string playerPieceFileType = "svg"; //Filename extension for the filetype of the player icons without the: "."
-
     [Export] public int playerMoveSpeed;//How fast the player's piece moves to it's next space.
     [Export] public int playerRotateSpeed;//How fast the player's piece rotates to align with it's side of the board
     [Export] public int humanPlayers = 1;//When running a test game, how many human players are there?
     [Export] public int aiPlayers = 0;//When running a test game, how many ai players are there?
-
-    public struct TmpPlayer //Temp struct until David has done his
-    {
-        public TmpPlayer(bool isCpu, string pieceName)
-        {
-            cpu = isCpu;
-            piece = pieceName;
-        }
-        public bool cpu;
-        public string piece;
-    }
 
     public Player[] players;
     public Dictionary<Player, Vector2> movingPlayers;//Players currently being moved and to where
@@ -40,11 +23,6 @@ public partial class GameLoop : Node
     private int parkingMoney; //How much money is on free parking
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
     public int currentPlayerIndex; //Num of the player who's turn it is currently
-    private bool _extraTurn = false;
-    private void GrantExtraTurn()
-    {
-        _extraTurn = true;
-    }
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -84,7 +62,6 @@ public partial class GameLoop : Node
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-        //TODO: call updateplayercardvalues
 
 
         //Moving any players that need to be moved
@@ -101,7 +78,7 @@ public partial class GameLoop : Node
         if (currentPlayer.jailTurns > 0)
         {
             currentPlayer.jailTurns--;
-            NextTurn();
+            NextTurn(true);
         }
 
         //Waiting for player to roll dice
@@ -129,9 +106,11 @@ public partial class GameLoop : Node
             switch (currentPlayer.location.type)
             {
                 case Marker.SpaceType.Go:
+                    NextTurn();
                     //This should be empty as nothing happpens specifically on go, only when you pass it
                     break;
                 case Marker.SpaceType.Property:
+                    NextTurn();
                     break;
                 case Marker.SpaceType.OpportunityKnocks:
                     GetNode<CardDisplay>("UI/CardDisplay").Show(Card.CardType.OpportunityKnocks);
@@ -143,16 +122,17 @@ public partial class GameLoop : Node
                     ClaimParkingMoney(currentPlayer);
                     break;
                 case Marker.SpaceType.VisitingJail:
+                    NextTurn();
                     //This should be empty as "Just visiting" space does nothing by itself
                     break;
                 case Marker.SpaceType.Jail:
                     if (currentPlayer.hasGetOutOfJail)
                     {
-                        GetNode<Control>("UI/GetOutOfJailFree").Visible = true;
+                        GetNode<GetOutOfJailFreeDisplay>("UI/GetOutOfJailFree").ShowMenu(currentPlayer);
                     }
                     else
                     {
-                        GetNode<Control>("UI/JailBail").Visible = true;
+                        GetNode<JailBail>("UI/JailBail").ShowMenu(currentPlayer);
                     }
                     break;
                 case Marker.SpaceType.GoToJail:
@@ -161,27 +141,7 @@ public partial class GameLoop : Node
                 default:
                     break;
             }
-            if (diceResult[0] != diceResult[1])
-            {
-                NextTurn();
-                _doublesCount = 0;
-                //Console.WriteLine($"Doubles! You've rolled {_doublesCount} doubles");
-            }
-            else
-            {
-                _doublesCount++;
-            }
-            if (_doublesCount == 3)
-            {
-               //go to jail
-               currentPlayer.GoToJail();
-               _doublesCount = 0;
-            }
-            else
-            {
-                GrantExtraTurn();
-                //TODO give current player another turn
-            }
+            //NextTurn();
         }
     }
 
@@ -207,7 +167,7 @@ public partial class GameLoop : Node
     }
 
 
-        //TODO:Make the actual dice roll. This is temperory
+        //Make the actual dice roll.
         public void RollDie()
         {
             if (movingPlayers.Count == 0)//Making sure all player pieces are done moving before queing up more
@@ -255,8 +215,6 @@ public partial class GameLoop : Node
 
             players[i] = new Player(instance, cpu);
 
-            //TODO: initialise the players cards (array?)
-
             //Moving player piece to start pos
             var go = GetNode<Marker>("Board/Places/Go");
 			go.MoveTo(players[i], true);
@@ -274,9 +232,8 @@ public partial class GameLoop : Node
     }
     public void ClaimParkingMoney(Player player)
     {
-        //TODO: Add some kind of popup for claiming parking money
-        player.AddMoney(parkingMoney);
-        parkingMoney = 0;
+        // popup for claiming parking money
+        GetNode<ClaimFreeParking>("UI/ClaimFreeParking").ShowMenu(player);   
     }
 
     //Used to test the game by generating a predefined number of human and ai players
@@ -295,11 +252,12 @@ public partial class GameLoop : Node
     }
 
     //Changes whos turn it is to the next player
-    private void NextTurn()
+    public void NextTurn(bool forceNext = false)
     {
-        do
+        if (diceResult[0] != diceResult[1] || forceNext)
         {
-            //updating current player value
+            CheckBankrupt(currentPlayer);
+            _doublesCount = 0;
             if (currentPlayerIndex == players.Length - 1)
             {
                 SetTurn(0);
@@ -308,26 +266,15 @@ public partial class GameLoop : Node
             {
                 SetTurn(currentPlayerIndex + 1);
             }
-            _doublesCount = 0;
-
-            //Exit the loop if no extra turn is granted
-            if (!_extraTurn)
+        }
+        else
+        {
+            _doublesCount++;
+            if (_doublesCount == 3)
             {
-                break;
+                currentPlayer.GoToJail();
             }
-        } while (!_extraTurn);
-
-        //Reset the extra turn flag for the next turn
-        _extraTurn = false;
-                                                           
-                                                                                    //if (currentPlayerIndex == players.Length - 1)
-                                                                                    //    {
-                                                                                    //        SetTurn(0);
-                                                                                    //    }
-                                                                                    //    else
-                                                                                    //    {
-                                                                                    //        SetTurn(currentPlayerIndex + 1);
-                                                                                    //    }
+        }
     }
 
     //changes which player's turn it is to a specified value
@@ -355,4 +302,26 @@ public partial class GameLoop : Node
         player.node.GlobalPosition = player.node.GlobalPosition.MoveToward(pos, (float)(delta * playerMoveSpeed));
     }
 
+    // check if the current player is bankrupt if all players are bankrupt unless 1, end the game
+    public void CheckBankrupt(Player player)
+    {
+
+        // Check if player has no money. if so, remove them from the game
+        currentPlayer = players[currentPlayerIndex];
+        if (currentPlayer.GetMoney() <= 0)
+        {
+            player.node.Visible = false; // Remove player from the game
+            GetNode<Label>("UI/BankruptPlayer").Text = ($"Player {currentPlayerIndex + 1}\n is bankrupt\n and is out");
+            var playerList = new List<Player>(players);
+            playerList.Remove(player);
+            players = playerList.ToArray();
+        }
+
+        //Check for Last player standing
+        if (players.Length == 1)
+        {
+            GetNode<TextureRect>("UI/VictoryPanel/Avatar").Texture = players[0].node.GetChild<Sprite2D>(0).Texture;
+            GetNode<Panel>("UI/VictoryPanel").Visible = true;
+        }
+    }
 }
