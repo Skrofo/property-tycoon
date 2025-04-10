@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4uasi7x7weol"]
+[gd_scene load_steps=5 format=3 uid="uid://c4uasi7x7weol"]
 
 [ext_resource type="Script" path="res://Scripts/SettingsMenu.cs" id="1_fu1n7"]
 [ext_resource type="Script" path="res://Scripts/BackButton.cs" id="2_04qd1"]
 [ext_resource type="PackedScene" uid="uid://dk5vwktrteidv" path="res://Scenes/Settings_Tab_Container.tscn" id="2_22ojb"]
-[ext_resource type="AudioStream" uid="uid://bc6sfgc7hhf7w" path="res://Audio/Music/tekno-kick-loop-176-bpm-292894 (PLACEHOLDER SETTINGS MUSIC).mp3" id="4_im38w"]
 
 [sub_resource type="SystemFont" id="SystemFont_7srhc"]
 font_names = PackedStringArray("Impact")
@@ -52,9 +51,3 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Exit"
 script = ExtResource("2_04qd1")
-
-[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_im38w")
-volume_db = -6.99
-autoplay = true
-bus = &"Music"

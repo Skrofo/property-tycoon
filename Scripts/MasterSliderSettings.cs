@@ -77,7 +77,7 @@ public partial class MasterSliderSettings : Control
         if (linear <= 0f)
             return -80f; // a typical “silent” floor in dB
 
-        return 20f * Mathf.Log(linear);
+        return 20f * (float)Math.Log10(linear);
         //an issue above log10 doesnt work ******************************
     }
 }

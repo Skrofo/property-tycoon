@@ -12,7 +12,7 @@ namespace PropertyTycoon.Scripts
     {
         public bool cpu { get; }
         public bool hasGetOutOfJail = false;
-        private int money = 0;
+        public int money = 0;
         public string[] properties = Array.Empty<string>();
         public Node2D node { get; }
         public Marker location = null; //Where the player currently is
@@ -44,7 +44,6 @@ namespace PropertyTycoon.Scripts
 
         public void GoToJail()
         {
-            jailTurns = 2;
             MoveTo("Board/Places/Jail");
             gameLoop.justMoved = true;
         }

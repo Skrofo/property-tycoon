@@ -26,6 +26,7 @@ public partial class CardDisplay : Control
         {
             GetNode<Control>(".").Visible = false;
             card.ExecuteAction(gameLoop);
+            gameLoop.NextTurn(true);
         }
     }
 
