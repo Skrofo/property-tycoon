@@ -17,7 +17,6 @@ font_names = PackedStringArray("Impact")
 script = ExtResource("1_3f8ab")
 playerMoveSpeed = 60
 playerRotateSpeed = 25
-humanPlayers = 3
 
 [node name="Board" type="Sprite2D" parent="."]
 position = Vector2(322, 176)
