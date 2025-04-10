@@ -330,6 +330,7 @@ public partial class GameLoop : Node
         {
             GetNode<TextureRect>("UI/VictoryPanel/Avatar").Texture = players[0].node.GetChild<Sprite2D>(0).Texture;
             GetNode<Panel>("UI/VictoryPanel").Visible = true;
+            GetTree().Paused = true;
         }
     }
 }
