@@ -131,7 +131,6 @@ public partial class GameLoop : Node
                     break;
                 case Marker.SpaceType.FreeParking:
                     ClaimParkingMoney(currentPlayer);
-                    NextTurn();
                     break;
                 case Marker.SpaceType.VisitingJail:
                     NextTurn();
@@ -179,7 +178,7 @@ public partial class GameLoop : Node
     }
 
 
-        //TODO:Make the actual dice roll. This is temperory
+        //Make the actual dice roll.
         public void RollDie()
         {
             if (movingPlayers.Count == 0)//Making sure all player pieces are done moving before queing up more
@@ -244,9 +243,8 @@ public partial class GameLoop : Node
     }
     public void ClaimParkingMoney(Player player)
     {
-        //TODO: Add some kind of popup for claiming parking money
-        player.AddMoney(parkingMoney);
-        parkingMoney = 0;
+        // popup for claiming parking money
+        GetNode<ClaimFreeParking>("UI/ClaimFreeParking").ShowMenu(player);   
     }
 
     //Used to test the game by generating a predefined number of human and ai players
