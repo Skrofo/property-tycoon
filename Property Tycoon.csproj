@@ -10,6 +10,7 @@
     <Content Remove="C:\Users\alals\.nuget\packages\gdunit4.api\4.3.1\contentFiles\any\net8.0\LICENSE" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Objects\" />
     <Folder Include="Scenes\" />
   </ItemGroup>
   <ItemGroup>

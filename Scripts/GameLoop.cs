@@ -24,6 +24,8 @@ public partial class GameLoop : Node
     public bool justMoved; //Tells the game whether the current player has triggered the event relevent for their current space after rolling for it
     public int currentPlayerIndex; //Num of the player who's turn it is currently
 
+    private bool aiRolled;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -34,6 +36,7 @@ public partial class GameLoop : Node
         justMoved = false;
         parkingMoney = 0;
         _LoadDiceTextures();
+        aiRolled = false;
 
 
         var playerData = GetNode<GameData>("/root/GameData");
@@ -62,8 +65,6 @@ public partial class GameLoop : Node
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-
-
         //Moving any players that need to be moved
         foreach (var movingPlayer in movingPlayers)
         {
@@ -79,6 +80,12 @@ public partial class GameLoop : Node
         {
             currentPlayer.jailTurns--;
             NextTurn(true);
+        }
+
+        if (currentPlayer.cpu && !diceRolled && !aiRolled && movingPlayers.Count == 0)
+        {
+            RollDie();
+            aiRolled = true;
         }
 
         //Waiting for player to roll dice
@@ -254,6 +261,7 @@ public partial class GameLoop : Node
     //Changes whos turn it is to the next player
     public void NextTurn(bool forceNext = false)
     {
+        aiRolled = false;
         if (diceResult[0] != diceResult[1] || forceNext)
         {
             CheckBankrupt(currentPlayer);
@@ -322,6 +330,7 @@ public partial class GameLoop : Node
         {
             GetNode<TextureRect>("UI/VictoryPanel/Avatar").Texture = players[0].node.GetChild<Sprite2D>(0).Texture;
             GetNode<Panel>("UI/VictoryPanel").Visible = true;
+            GetTree().Paused = true;
         }
     }
 }
