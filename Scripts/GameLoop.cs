@@ -14,17 +14,6 @@ public partial class GameLoop : Node
     [Export] public int humanPlayers = 1;//When running a test game, how many human players are there?
     [Export] public int aiPlayers = 0;//When running a test game, how many ai players are there?
 
-    public struct TmpPlayer //Temp struct until David has done his
-    {
-        public TmpPlayer(bool isCpu, string pieceName)
-        {
-            cpu = isCpu;
-            piece = pieceName;
-        }
-        public bool cpu;
-        public string piece;
-    }
-
     public Player[] players;
     public Dictionary<Player, Vector2> movingPlayers;//Players currently being moved and to where
     public Player currentPlayer; //The player who's turn it is
