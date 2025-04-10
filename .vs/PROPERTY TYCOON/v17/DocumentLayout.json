@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\objectscripts\\carddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\objectscripts\\carddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\tests\\gamelooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|c:\\users\\lucas\\documents\\godot game files\\property-tycoon\\scripts\\objectscripts\\jailbail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 240,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,19 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "GameLoopTests.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Tests\\GameLoopTests.cs",
               "RelativeDocumentMoniker": "Scripts\\Tests\\GameLoopTests.cs",
               "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Tests\\GameLoopTests.cs",
               "RelativeToolTip": "Scripts\\Tests\\GameLoopTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwB4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:53:40.758Z"
+              "WhenOpened": "2025-03-31T19:53:40.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Card.cs",
               "RelativeDocumentMoniker": "Scripts\\Card.cs",
@@ -78,21 +79,7 @@
               "RelativeToolTip": "Scripts\\Card.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAAIwKUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:43:47.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameLoop.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\GameLoop.cs",
-              "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
-              "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\GameLoop.cs",
-              "RelativeToolTip": "Scripts\\GameLoop.cs",
-              "ViewState": "AgIAACIBAAAAAAAAAAAAADkBAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:43:47.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:43:47.837Z"
             },
             {
               "$type": "Document",
@@ -108,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
@@ -116,8 +103,7 @@
               "RelativeToolTip": "Scripts\\Player.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAhwBMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:43:47.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:43:47.847Z"
             },
             {
               "$type": "Document",
@@ -133,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerSelection.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\PlayerSelection.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerSelection.cs",
@@ -157,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CardDisplay.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\ObjectScripts\\CardDisplay.cs",
               "RelativeDocumentMoniker": "Scripts\\ObjectScripts\\CardDisplay.cs",
@@ -188,6 +174,40 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "219159ca-3b24-410f-aa9b-411e06cc93d9",
+        "Display": 0,
+        "X": 237,
+        "Y": 233,
+        "Width": 1304,
+        "Height": 588,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameLoop.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\GameLoop.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\Godot Game Files\\property-tycoon\\Scripts\\GameLoop.cs",
+              "RelativeToolTip": "Scripts\\GameLoop.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAswMAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:43:47.85Z",
+              "EditorCaption": ""
             }
           ]
         }

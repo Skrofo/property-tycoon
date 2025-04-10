@@ -15,17 +15,28 @@ public class GameLoopTests
     {
         //Setup
         var runner = ISceneRunner.Load("res://Scenes/Game.tscn");//Loading the scene for testing
+        GameLoop gameLoop = runner.Scene().GetNode<GameLoop>(".");
         Button rollDieButton = runner.FindChild("RollButton") as Button;
-        Vector2 buttonPos = rollDieButton.GlobalPosition;
-        Label[] diceResults = [runner.FindChild("TMPDiceResult1") as Label, runner.FindChild("TMPDiceResult2") as Label];
-        string[] originalValues = [diceResults[0].Text, diceResults[1].Text];
+        TextureRect[] die = new TextureRect[2];
+        die[0] = runner.Scene().GetNode<TextureRect>("UI/DiceFace1");
+        die[1] = runner.Scene().GetNode<TextureRect>("UI/DiceFace2");
+        Texture2D[] dieTextures = GameLoop.LoadDiceTextures();
+        bool correctDieFaces = true;
 
         //Execution
         rollDieButton.EmitSignal("pressed");
+        for (int i = 0; i < 2; i++) //Loops once for each die
+        {
+            GD.Print($"die result 1: {gameLoop.diceResult[0]} \ndie result 2: {gameLoop.diceResult[1]}");
+            if (die[i].Texture != dieTextures[gameLoop.diceResult[i]-1])
+            {
+                correctDieFaces = false;
+            }
+        }
 
-        //Assertion
-        bool diffOutputs = diceResults[0].Text != originalValues[0] && diceResults[1].Text != originalValues[1];
-        Assertions.AssertBool(diffOutputs).IsTrue();
+
+            //Assertion
+            Assertions.AssertBool(correctDieFaces).IsTrue();
     }
 
     [TestCase]
