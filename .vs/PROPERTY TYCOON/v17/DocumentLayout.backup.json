@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\Godot Projects\\property-tycoon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|d:\\godot projects\\property-tycoon\\scripts\\masterslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF63D41-AF9F-4F7C-976F-95EB98F785BE}|Property Tycoon.csproj|solutionrelative:scripts\\masterslidersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
   "WorkspaceRootPath": "C:\\Software Engineering group work\\property-tycoon\\",
   "Documents": [
     {
@@ -98,8 +90,6 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "SelectedChildIndex": 8,
           "SelectedChildIndex": 1,
           "SelectedChildIndex": 9,
           "SelectedChildIndex": 4,
@@ -110,24 +100,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main_Menu.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeDocumentMoniker": "Scripts\\Main_Menu.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\Main_Menu.cs",
-              "RelativeToolTip": "Scripts\\Main_Menu.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:06:12.496Z",
-              "EditorCaption": ""
-              "DocumentIndex": 3,
               "DocumentIndex": 0,
               "Title": "MasterSliderSettings.cs",
+              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\MasterSliderSettings.cs",
+              "RelativeDocumentMoniker": "Scripts\\MasterSliderSettings.cs",
+              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\MasterSliderSettings.cs",
+              "RelativeToolTip": "Scripts\\MasterSliderSettings.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwv0UAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:33:53.243Z",
+              "EditorCaption": ""
               "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\MasterSliderSettings.cs",
               "RelativeDocumentMoniker": "Scripts\\MasterSliderSettings.cs",
               "ToolTip": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\MasterSliderSettings.cs",
               "RelativeToolTip": "Scripts\\MasterSliderSettings.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowE8AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAkwD4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T14:43:52.731Z",
               "DocumentIndex": 2,
@@ -159,8 +146,7 @@
               "RelativeToolTip": "Scripts\\ObjectScripts\\ClaimFreeParking.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwCMAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T13:44:22.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T13:44:22.756Z"
             },
             {
               "$type": "Document",
@@ -203,7 +189,7 @@
               "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
               "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameLoop.cs",
               "RelativeToolTip": "Scripts\\GameLoop.cs",
-              "ViewState": "AgIAADcBAAAAAAAAAAAgwEMBAABzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T15:52:13.561Z",
               "EditorCaption": ""
@@ -267,16 +253,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SceneManager.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SceneManager.cs",
-              "RelativeDocumentMoniker": "Scripts\\SceneManager.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SceneManager.cs",
-              "RelativeToolTip": "Scripts\\SceneManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:05:33.562Z",
-              "EditorCaption": ""
               "DocumentIndex": 6,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Software Engineering group work\\property-tycoon\\Scripts\\Player.cs",
@@ -308,40 +284,6 @@
               "ViewState": "AgIAAEAAAAAAAAAAAADwv1MAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T15:52:13.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CardTests.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\CardTests.cs",
-              "RelativeDocumentMoniker": "Scripts\\Tests\\CardTests.cs",
-              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\Tests\\CardTests.cs",
-              "RelativeToolTip": "Scripts\\Tests\\CardTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T15:52:13.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SettingsMenu.cs",
-              "DocumentMoniker": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
-              "RelativeDocumentMoniker": "Scripts\\SettingsMenu.cs",
-              "ToolTip": "D:\\Godot Projects\\property-tycoon\\Scripts\\SettingsMenu.cs",
-              "RelativeToolTip": "Scripts\\SettingsMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:06:53.263Z",
-              "EditorCaption": ""
-              "Title": "GameLoop.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameLoop.cs",
-              "RelativeDocumentMoniker": "Scripts\\GameLoop.cs",
-              "ToolTip": "C:\\Users\\david\\Documents\\software eng\\property-tycoon\\Scripts\\GameLoop.cs",
-              "RelativeToolTip": "Scripts\\GameLoop.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAqwFsBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T15:52:13.561Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
